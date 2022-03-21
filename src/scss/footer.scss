@@ -78,8 +78,7 @@
 			height: 20px;
 			left: 0;
 			bottom: 15%;
-			background: url("../img/icons/phone.png");
-			background-repeat: no-repeat;
+			background: url("../img/icons/phone.png") no-repeat;
 		}
 		@media (max-width: $mobileSmall) {
 			order: 2;
@@ -102,8 +101,7 @@
 			height: 20px;
 			left: 0;
 			bottom: 15%;
-			background: url("../img/icons/mail.png");
-			background-repeat: no-repeat;
+			background: url("../img/icons/mail.png") no-repeat;
 		}
 		transition: all 0.3s ease 0s;
 		@media (any-hover: hover) {

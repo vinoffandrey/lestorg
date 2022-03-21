@@ -173,7 +173,7 @@
 			height: 65px;
 			left: -55%;
 			bottom: 40%;
-			background: url("../img/main/arrow.png");
+			background-image: url("../img/main/arrow.png");
 			background-repeat: no-repeat;
 			background-size: contain;
 			@media (max-width: $tablet) {
@@ -258,8 +258,7 @@
 				height: 20px;
 				right: 5px;
 				bottom: 8%;
-				background: url("../img/main/fail.png");
-				background-repeat: no-repeat;
+				background: url("../img/main/fail.png") no-repeat;
 				@media (max-width: $mobile) {
 					bottom: -3%;
 				}
@@ -281,7 +280,7 @@
 			height: 20px;
 			right: 5px;
 			bottom: -20%;
-			background: url("../img/main/right-arrow.png");
+			background-image: url("../img/main/right-arrow.png");
 			background-repeat: no-repeat;
 			background-size: 20px;
 			@media (max-width: $mobile) {
@@ -366,7 +365,7 @@
 
 .advantages {
 	&__section {
-		background: url("../img/advantages/advantages_bg.png");
+		background-image: url("../img/advantages/advantages_bg.png");
 		background-repeat: no-repeat;
 		background-size: cover;
 		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
@@ -619,11 +618,12 @@
 	&__section {
 		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
 		@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
-		background: url("../img/cooperation/man.png");
+		background-image: url("../img/cooperation/man.png");
+		background-repeat: no-repeat;
 		background-position: right bottom;
 		background-size: cover;
 		@media (max-width: 950px) {
-			background: none;
+			background-image: none;
 		}
 	}
 
