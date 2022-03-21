@@ -19,7 +19,7 @@ EffectFade, Lazy, Manipulation
 // Базовые стили
 import "../../scss/base/swiper.scss";
 // Полный набор стилей из scss/libs/swiper.scss
-// import "../../scss/libs/swiper.scss";
+//import "../../scss/libs/swiper.scss";
 // Полный набор стилей из node_modules
 // import 'swiper/css';
 
@@ -45,8 +45,8 @@ function initSliders() {
 	bildSliders();
 
 	// Перечень слайдеров
-	if (document.querySelector('.swiper')) {
-		new Swiper('.swiper', {
+	if (document.querySelector('.main__swiper')) {
+		new Swiper('.main__body-left', {
 			// Подключаем модули слайдера
 			// для конкретного случая
 			modules: [Navigation, Pagination],
@@ -61,13 +61,13 @@ function initSliders() {
 			observeParents: true,
 			slidesPerView: 1,
 			spaceBetween: 32,
-			autoHeight: true,
+			autoHeight: false,
 			speed: 800,
 			//touchRatio: 0,
 			//simulateTouch: false,
 			loop: true,
 			//preloadImages: false,
-			//lazy: true,
+			lazy: true,
 			// Dotts
 			pagination: {
 				el: '.main-slider__bullets',
@@ -99,6 +99,69 @@ function initSliders() {
 				},
 			},
 			*/
+			on: {
+
+			}
+		});
+	}
+
+	if (document.querySelector('.slider__swiper')) {
+		new Swiper('.slider__container', {
+			// Подключаем модули слайдера
+			// для конкретного случая
+			modules: [Navigation, Pagination],
+			/*
+			effect: 'fade',
+			autoplay: {
+				delay: 3000,
+				disableOnInteraction: false,
+			},
+			*/
+			observer: true,
+			observeParents: true,
+			slidesPerView: 3,
+			slidesPerGroup: 2,
+			spaceBetween: 32,
+			autoHeight: false,
+			speed: 800,
+			//touchRatio: 0,
+			//simulateTouch: false,
+			loop: true,
+			//preloadImages: false,
+			lazy: true,
+			// Dotts
+			pagination: {
+				el: '.slider-slider__bullets',
+				clickable: true,
+			},
+			// Arrows
+			//navigation: {
+			//nextEl: '.main-slider__arrows .main-slider__arrow-next',
+			//	prevEl: '.main-slider__arrows .main-slider__arrow-prev',
+			//},
+
+			breakpoints: {
+				320: {
+					slidesPerView: 1,
+					spaceBetween: 20,
+					slidesPerGroup: 1,
+				},
+				668: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					slidesPerGroup: 1,
+				},
+				992: {
+					slidesPerView: 2,
+					spaceBetween: 20,
+					slidesPerGroup: 1,
+				},
+				1068: {
+					slidesPerView: 3,
+					spaceBetween: 30,
+				},
+			},
+
 			on: {
 
 			}

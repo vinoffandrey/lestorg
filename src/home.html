@@ -4,75 +4,265 @@
 "title":"Главная"
 })
 
-<body>
+<body style="overflow-x: hidden;">
 	<div class="wrapper">
 		@@include('html/_header.htm',{})
 		<main class="page">
-			<!--<div class="card-preview-slider" data-href="https://www.google.com/">
-				<div class="slider">
-					<div class="slider__wrapper">
-						<div class="slider__items">
-							<div class="slider__item">
-								<img id="card-preview-slide-1-1" class="_lazy _active"
-									data-src="https://unsplash.it/300/200?image=40" />
+			<section class="main__section">
+				<div class="main__container">
+					<div class="main__title">
+						<h1>Лесторг</h1>
+						<span>производство и реализация
+							пиломатериала и погонажной
+							продукции</span>
+					</div>
+					<div class="main__body">
+						<div class="main__body-left">
+							<div class="main__body-swiper main__swiper">
+								<div class="swiper__item ">
+									<img src="img/main/main_1.png" alt="Брус">
+								</div>
+								<div class="swiper__item ">
+									<img src="img/main/main_2.png" alt="Брус">
+								</div>
+								<div class="swiper__item ">
+									<img src="img/main/main_3.png" alt="Брус">
+								</div>
+								<div class="swiper__item ">
+									<img src="img/main/main_4.png" alt="Брус">
+								</div>
+
 							</div>
-							<div class="slider__item">
-								<img id="card-preview-slide-2-1" class="_lazy"
-									data-src="https://unsplash.it/300/200?image=41" />
+							<div class="main-slider__bullets bullets">
+
 							</div>
-							<div class="slider__item">
-								<img id="card-preview-slide-3-1" class="_lazy"
-									data-src="https://unsplash.it/300/200?image=43" />
+						</div>
+						<div class="main__body-right">
+							<div class="main__form-body">
+								<div class="main__form-title">
+									Расчитаем <span class="yellow">бесплатно</span>
+									<span class="small">точное количество пиломатериала</span>
+								</div>
+								<form id="form" data-popup-message="#popup__message" data-dev action="" method="">
+									<div class="main__form-input">
+										<input placeholder="Ваше имя" required autocomplete="off" type="text" name="form[]"
+											data-error="Ошибка" data-value="Ваше имя" class="input">
+									</div>
+									<div class="main__form-input">
+										<input placeholder="Ваш телефон" required autocomplete="off" type="text" name="form[]"
+											data-error="Ошибка" data-value="" class="input _phone">
+									</div>
+									<div class="main__form-input">
+										<input placeholder="Ваш E-mail" required data-required="email" autocomplete="off"
+											type="text" name="form[]" data-error="Ошибка" data-value="" class="input">
+									</div>
+									<div class="main__form-fail">
+										<div class="main__form-text">Ваше сообщение</div>
+										<input id="input-file" placeholder="Прикрепить файл" autocomplete="off" type="file"
+											name="form[]" data-error="Ошибка" data-value="" class="input">
+										<label for="input-file">Прикрепить файл</label>
+									</div>
+									<div class="main__form-button">
+										<button form="form" type="submit" class="form__btn btn button">Отправить</button>
+									</div>
+								</form>
 							</div>
 						</div>
 					</div>
-					<a class="slider__control slider__control_prev" href="#" role="button" data-slide="prev"></a>
-					<a class="slider__control slider__control_next" href="#" role="button" data-slide="next"></a>
 				</div>
-				<ul>
-					<li class="card-preview-slider__item"><span data-href="#card-preview-slide-1-1"></span></li>
-					<li class="card-preview-slider__item"><span data-href="#card-preview-slide-2-1"></span></li>
-					<li class="card-preview-slider__item"><span data-href="#card-preview-slide-3-1"></span></li>
-				</ul>
-				<div class="card-preview-slider__dots">
-					<span class="_active"></span>
-					<span></span>
-					<span></span>
-				</div>
-			</div>-->
-			<div class="card-preview-slider" data-href="https://www.google.com/">
-				<div class="swiper">
-					<!-- Additional required wrapper -->
-					<div class="swiper-wrapper">
-						<!-- Slides -->
-						<a href="" class="swiper-slide _active">
-							<img src="https://unsplash.it/300/200?image=40" />
-						</a>
-						<a href="" class="swiper-slide">
-							<img src="https://unsplash.it/300/200?image=41" />
-						</a>
-						<a href="" class="swiper-slide">
-							<img src="https://unsplash.it/300/200?image=42" />
-						</a>
+			</section>
+			<section class="advantages__section">
+				<div class="advantages__container">
+					<div class="advantages__item">
+						<div class="advantages__title">
+							<p>10</p>
+						</div>
+						<div class="advantages__text">
+							лет на рынке
+						</div>
 					</div>
-					<!-- If we need pagination -->
-					<div class="swiper-pagination"></div>
-					<ul class="card-preview-slider__list">
-						<li class="card-preview-slider__item"></li>
-						<li class="card-preview-slider__item"></li>
-						<li class="card-preview-slider__item"></li>
-					</ul>
+					<div class="advantages__item">
+						<div class="advantages__title">
+							<p>93 000</p>
+						</div>
+						<div class="advantages__text">
+							Реализовано более 93 000 м3 лесоматериалов
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__title">
+							<img src="img/advantages/pig.png">
+						</div>
+						<div class="advantages__text">
+							Лучшая цена в городе
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__title">
+							<img src="img/advantages/material.png">
+						</div>
+						<div class="advantages__text">
+							Материал в наличии
+						</div>
+					</div>
+					<div class="advantages__item">
+						<div class="advantages__title">
+							<img src="img/advantages/car.png">
+						</div>
+						<div class="advantages__text">
+							Доставка в любой регион
+						</div>
+					</div>
 				</div>
-			</div>
+			</section>
+			<section class="products__section">
+				<img class="products__background products__background-1" src="img/category/category_bg_1.png" alt="">
+				<img class="products__background products__background-2" src="img/category/category_bg_2.png" alt="">
+				<img class="products__background products__background-3" src="img/category/category_bg_3.png" alt="">
+				<img class="products__background products__background-4" src="img/category/category_bg_4.png" alt="">
+				<img class="products__background products__background-5" src="img/category/category_bg_5.png" alt="">
+				<img class="products__background products__background-6" src="img/category/category_bg_6.png" alt="">
+				<div class="products__container">
+					<a href="pilomaterial.html" class="products__item ">
+
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_1.png">
+						</div>
+						<div class="products__title">
+							<h2>Пиломатериалы</h2>
+						</div>
+
+					</a>
+					<a href="evrovagonka.html" class="products__item">
+
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_2.png">
+						</div>
+						<div class="products__title">
+							<h2>Евровагонка</h2>
+						</div>
+
+					</a>
+					<a href="evrovagonka.html" class="products__item">
+
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_3.png">
+						</div>
+						<div class="products__title">
+							<h2>Европол</h2>
+						</div>
+
+					</a>
+					<a href="evrovagonka.html" class="products__item">
+
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_4.png">
+						</div>
+						<div class="products__title">
+							<h2>Блок-хаус</h2>
+						</div>
+
+					</a>
+					<a href="evrovagonka.html" class="products__item">
+
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_5.png">
+						</div>
+						<div class="products__title">
+							<h2>Имитация бруса</h2>
+						</div>
+
+					</a>
+					<a href="fanera.html" class="products__item">
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_6.png">
+						</div>
+						<div class="products__title">
+							<h2>Фанера</h2>
+						</div>
+					</a>
+					<a href="#" data-popup="#popup__tuya" class="products__item">
+						<div class="products__image -ibg_contain">
+							<img src="img/category/category_7.png">
+						</div>
+						<div class="products__title">
+							<h2>Туя западная</h2>
+							<p>шарообразная</p>
+						</div>
+					</a>
+				</div>
+			</section>
+			<section class="slider__section">
+				<div class="slider__title">
+					<h3>Галерея</h3>
+				</div>
+				<div class="slider__container">
+					<div class="slider__body-swiper slider__swiper" data-gallery>
+						<div class="slider__item -ibg ">
+							<img src="img/slider/slider_1.png" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_2.png" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_3.png" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_4.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_5.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_6.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_7.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_8.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_9.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_10.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_11.jpg" alt="Брус" data-gallery-item>
+						</div>
+						<div class="slider__item -ibg">
+							<img src="img/slider/slider_12.jpg" alt="Брус" data-gallery-item>
+						</div>
+					</div>
+					<div class="slider-slider__bullets bullets">
+
+					</div>
+				</div>
+			</section>
+			<section class="cooperation__section">
+				<div class="cooperation__container">
+					<div class="cooperation__title">
+						Приглашаем к сотрудничеству
+					</div>
+					<div class="cooperation__subtitle">
+						Наша организация рассмотрит предложения по закупке круглых лесоматериалов:
+					</div>
+					<div class="cooperation__body">
+						<ul class="cooperation__list">
+							<li>пиловочник d 18 см и более</li>
+							<li>баланс от 10 до 17 см</li>
+							<li>пиловочник сухостой d 18 см и более</li>
+							<li>а также готовы рассмотреть предложения по пиломатериалу</li>
+						</ul>
+						<p>Возможен самовывоз. Форма оплата любая</p>
+					</div>
+				</div>
+			</section>
 		</main>
 		@@include('html/_footer.htm',{})
 	</div>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/8.0.7/swiper-bundle.min.js"
-		integrity="sha512-WlN87oHzYKO5YOmINf1+pSkbt4gm+lOro4fiSTCjII4ykJe/ycHKIaa9b2l9OMkbqEA4NxwTXAGFjSXgqEh19w=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-	<script src="https://cdnjs.cloudflare.com/ajax/libs/hammer.js/2.0.8/hammer.min.js"
-		integrity="sha512-UXumZrZNiOwnTcZSHLOfcTs0aos2MzBWHXOHOuB0J/R44QB0dwY5JgfbvljXcklVf65Gc4El6RjZ+lnwd2az2g=="
-		crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
 	@@include('html/_popup.htm',{})
 	@@include('html/_js.htm',{})
 </body>

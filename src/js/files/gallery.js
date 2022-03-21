@@ -18,7 +18,7 @@ import lgRotate from 'lightgallery/plugins/rotate/lg-rotate.es5.js';
 //! Если подключить данные стили в этом файле то не будет работать mixin rem() который превращает px
 //! в rem так что осторожнее.
 //! файлы стилей сейчас подключены в scss/base.scss
-//import '@scss/libs/gallery/lightgallery.scss';
+import '@scss/libs/gallery/lightgallery.scss';
 // Стили дополнений
 //import '@scss/libs/gallery/lg-thumbnail.scss';
 // import '@scss/libs/gallery/lg-video.scss';
@@ -33,7 +33,7 @@ import lgRotate from 'lightgallery/plugins/rotate/lg-rotate.es5.js';
 // import '@scss/libs/gallery/lg-relative-caption.scss';
 
 // Все стили
-// import '@scss/libs/gallery/lightgallery-bundle.scss';
+//import '@scss/libs/gallery/lightgallery-bundle.scss';
 
 // Запуск
 const galleries = document.querySelectorAll('[data-gallery]');

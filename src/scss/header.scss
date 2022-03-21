@@ -1,9 +1,195 @@
 //====================================================================================================
+.header {
+	&__container {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		@include adaptiveValue("padding-top", 25, 15, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 25, 15, 1, $containerWidth, $minWidth);
+	}
+
+	&__logo {
+		display: flex;
+		align-items: center;
+		h1 {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 30, 25, 1, $containerWidth, $minWidth);
+			line-height: 1.2;
+			font-weight: 400;
+			color: $mainColor;
+			@include adaptiveValue("margin-left", 15, 8, 1, $containerWidth, $minWidth);
+		}
+	}
+
+	&__center {
+		a {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 24, 20, 1, $containerWidth, $minWidth);
+			line-height: 1.2;
+			font-weight: 300;
+			color: $mainColor;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					color: #f0a116;
+				}
+			}
+		}
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__right {
+		display: flex;
+		@media (max-width: $mobile) {
+			display: none;
+		}
+	}
+
+	&__right-left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		@include adaptiveValue("margin-right", 20, 10, 1, $containerWidth, $minWidth);
+	}
+
+	&__phone-item {
+		position: relative;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 24, 20, 1, $containerWidth, $minWidth);
+		line-height: 1.2;
+		font-weight: 400;
+		color: $mainColor;
+		padding-left: 30px;
+		@include adaptiveValue("padding-right", 10, 5, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("margin-bottom", 10, 5, 1, $containerWidth, $minWidth);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #f0a116;
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			bottom: 15%;
+			background: url("../img/icons/phone.png");
+			background-repeat: no-repeat;
+			@media (max-width: $mobile) {
+				bottom: 5%;
+			}
+		}
+	}
+	&__mail-item {
+		position: relative;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 18, 15, 1, $containerWidth, $minWidth);
+		line-height: 2.2;
+		font-weight: 400;
+		color: $mainColor;
+		padding-left: 30px;
+		@include adaptiveValue("padding-right", 10, 5, 1, $containerWidth, $minWidth);
+		&::before {
+			content: "";
+			position: absolute;
+			width: 16px;
+			height: 13px;
+			left: 0;
+			bottom: 35%;
+			background: url("../img/icons/mail.png");
+			background-repeat: no-repeat;
+			@media (max-width: $mobile) {
+				bottom: 15%;
+			}
+		}
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #f0a116;
+			}
+		}
+	}
+	&__right-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		align-items: flex-start;
+		@include adaptiveValue("margin-left", 20, 10, 1, $containerWidth, $minWidth);
+	}
+
+	&__menu {
+		display: none;
+		@media (max-width: $mobile) {
+			display: block;
+		}
+	}
+
+	&__button {
+		font-family: $fontFamily;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1, $containerWidth, $minWidth);
+		line-height: 1.2;
+		font-weight: 700;
+		color: $mainColor;
+		@include adaptiveValue("padding-right", 40, 30, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-left", 40, 30, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-top", 15, 13, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 15, 13, 1, $containerWidth, $minWidth);
+		background-color: #f0a116;
+		transition: all 0.3s ease 0s;
+		position: relative;
+		text-transform: uppercase;
+		&::before {
+			content: "";
+			border: 2px solid #f0a116;
+			width: 100%;
+			height: 100%;
+			top: 0;
+			right: 0;
+			position: absolute;
+			transition: all 0.3s ease 0s;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				transform: translate(-5px, 5px);
+				&::before {
+					content: "";
+					border: 2px solid #f0a116;
+					width: 100%;
+					height: 100%;
+					top: -5px;
+					right: -5px;
+					position: absolute;
+				}
+			}
+		}
+	}
+}
+
+.menu {
+	&__icon {
+	}
+
+	&__body {
+	}
+
+	&__list {
+	}
+
+	&__link {
+	}
+}
+.icon-menu {
+}
 
 //====================================================================================================
 
 //Burger
-/*
+
 .icon-menu {
 	display: none;
 	@media (max-width: $mobile) {
@@ -49,4 +235,44 @@
 		}
 	}
 }
-*/
+.menu__body {
+	display: none;
+}
+@media (max-width: $mobile) {
+	.menu__body {
+		opacity: 0;
+		display: block;
+		visibility: hidden;
+		transform: translateX(1000px);
+		transition: all 0.5s ease 0s;
+		position: fixed;
+	}
+	.menu-open {
+		.menu__body {
+			opacity: 1;
+			visibility: visible;
+			transform: translateX(0px);
+			width: 100%;
+			height: 100%;
+			background-color: white;
+			left: 0;
+			top: 0;
+			z-index: 2;
+		}
+		.menu__list {
+			display: flex;
+			flex-direction: column;
+			justify-content: flex-start;
+			@include adaptiveValue("margin-top", 50, 30, 1, 767, $minWidth);
+			align-items: center;
+			li {
+				&:not(:last-child) {
+					@include adaptiveValue("margin-bottom", 30, 20, 1, 767, $minWidth);
+				}
+				a {
+					font-size: 16px !important;
+				}
+			}
+		}
+	}
+}

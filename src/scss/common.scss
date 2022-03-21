@@ -1,3 +1,42 @@
 // Заголовки, общие БЄМ блоки и проче...
-
+.button {
+	font-family: $fontFamily;
+	display: inline-block;
+	@include adaptiveValue("font-size", 16, 15, 1, $containerWidth, $minWidth);
+	line-height: 1.2;
+	font-weight: 700;
+	color: $mainColor;
+	@include adaptiveValue("padding-right", 40, 35, 1, $containerWidth, $minWidth);
+	@include adaptiveValue("padding-left", 40, 35, 1, $containerWidth, $minWidth);
+	@include adaptiveValue("padding-top", 15, 14, 1, $containerWidth, $minWidth);
+	@include adaptiveValue("padding-bottom", 15, 14, 1, $containerWidth, $minWidth);
+	background-color: #f0a116;
+	transition: all 0.3s ease 0s;
+	position: relative;
+	text-transform: uppercase;
+	&::before {
+		content: "";
+		border: 2px solid #f0a116;
+		width: 100%;
+		height: 100%;
+		top: 0;
+		right: 0;
+		position: absolute;
+		transition: all 0.3s ease 0s;
+	}
+	@media (any-hover: hover) {
+		&:hover {
+			transform: translate(-5px, 5px);
+			&::before {
+				content: "";
+				border: 2px solid #f0a116;
+				width: 100%;
+				height: 100%;
+				top: -5px;
+				right: -5px;
+				position: absolute;
+			}
+		}
+	}
+}
 //========================================================================================================================================================

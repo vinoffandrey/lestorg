@@ -9,5 +9,5 @@ if (phones.length > 0) {
 			clearIncomplete: true,
 			clearMaskOnLostFocus: true,
 		}).mask(item);
-	})
+	});
 }

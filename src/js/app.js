@@ -19,7 +19,7 @@ import "../scss/style.scss";
 // Плагины ============================================================================================================================================================================================================================================================================================================
 
 /* Динамический адаптив */
-//import "./libs/dynamic_adapt.js";
+import "./libs/dynamic_adapt.js";
 
 /* Форматирование чисел */
 // import './libs/wNumb.min.js';
@@ -35,7 +35,7 @@ flsFunctions.isWebp();
 /* Добавление loaded для HTML после полной загрузки страницы */
 // flsFunctions.addLoadedClass();
 /* Модуль для работы с меню (Бургер) */
-//flsFunctions.menuInit();
+flsFunctions.menuInit();
 /* Учет плавающей панели на мобильных устройствах при 100vh */
 // flsFunctions.fullVHfix();
 
@@ -65,7 +65,7 @@ flsFunctions.isWebp();
 Документация по работе в шаблоне:
 Сниппет (HTML): pl
 */
-// flsFunctions.initPopups();
+flsFunctions.initPopups();
 
 
 /*
@@ -79,10 +79,10 @@ flsFunctions.isWebp();
 import * as flsForms from "./files/forms/forms.js";
 
 /* Работа с полями формы: добавление классов, работа с placeholder. */
-// flsForms.formFieldsInit();
+flsForms.formFieldsInit();
 
 /* Oтправка формы со встроенной валидацией полей. false - отключит валидацию */
-// flsForms.formSubmit(true);
+flsForms.formSubmit(true);
 
 /* (В работе) Работа с масками. */
 // flsForms.formMasks();
@@ -124,7 +124,8 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://swiperjs.com/
 Сниппет(HTML): swiper
 */
-//import "./files/sliders.js";
+import "./files/sliders.js";
+
 
 // Модули работы с прокруткой страницы ========================================================================================================================================================================================================================================================
 
@@ -142,7 +143,7 @@ import * as flsForms from "./files/forms/forms.js";
 Документация плагина: https://github.com/verlok/vanilla-lazyload
 Сниппет(HTML):
 */
- import './files/scroll/lazyload.js';
+import './files/scroll/lazyload.js';
 
 // Функции работы скроллом ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 import * as flsScroll from "./files/scroll/scroll.js";
@@ -167,7 +168,7 @@ import * as flsScroll from "./files/scroll/scroll.js";
 Документация плагина: https://www.lightgalleryjs.com/docs/
 Сниппет(HTML):
 */
-// import "./files/gallery.js";
+import "./files/gallery.js";
 
 // Прочее ========================================================================================================================================================================================================================================================
 /* Подключаем файлы со своим кодом */

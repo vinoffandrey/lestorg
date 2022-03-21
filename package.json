@@ -70,6 +70,7 @@
 		"webpack-stream": "latest"
 	},
 	"dependencies": {
+		"inputmask": "^5.0.7",
 		"simplebar": "latest"
 	}
 }

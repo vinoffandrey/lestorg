@@ -1,3 +1,191 @@
 //====================================================================================================
+.footer {
+	background-color: #271901;
+	&__container {
+		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
+		display: flex;
+		justify-content: space-between;
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__left {
+		flex: 0 1 550px;
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			order: 2;
+		}
+		p {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 16, 15, 1, $containerWidth, $minWidth);
+			line-height: 1.2;
+			font-weight: 300;
+			color: white;
+			@include adaptiveValue("margin-bottom", 16, 9, 1, $containerWidth, $minWidth);
+		}
+	}
+
+	&__right {
+		display: flex;
+		flex: 0 1 550px;
+		justify-content: flex-end;
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			order: 1;
+			justify-content: flex-start;
+			margin-bottom: 20px;
+		}
+		@media (max-width: $mobileSmall) {
+			flex-wrap: wrap;
+		}
+	}
+}
+.footer {
+	&__right-left {
+		display: flex;
+		flex-direction: column;
+		align-items: flex-end;
+		@include adaptiveValue("margin-right", 20, 15, 1, $containerWidth, $minWidth);
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 100%;
+			align-items: center;
+			margin-right: 0;
+		}
+	}
+
+	&__phone-item {
+		position: relative;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 24, 20, 1, $containerWidth, $minWidth);
+		line-height: 1.2;
+		font-weight: 400;
+		color: white;
+		padding-left: 30px;
+		@include adaptiveValue("padding-right", 10, 5, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("margin-bottom", 20, 17, 1, $containerWidth, $minWidth);
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #f0a116;
+			}
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			bottom: 15%;
+			background: url("../img/icons/phone.png");
+			background-repeat: no-repeat;
+		}
+		@media (max-width: $mobileSmall) {
+			order: 2;
+		}
+	}
+
+	&__mail-item {
+		position: relative;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 18, 15, 1, $containerWidth, $minWidth);
+		line-height: 2.2;
+		font-weight: 400;
+		color: white;
+		padding-left: 30px;
+		@include adaptiveValue("padding-right", 10, 5, 1, $containerWidth, $minWidth);
+		&::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			left: 0;
+			bottom: 15%;
+			background: url("../img/icons/mail.png");
+			background-repeat: no-repeat;
+		}
+		transition: all 0.3s ease 0s;
+		@media (any-hover: hover) {
+			&:hover {
+				color: #f0a116;
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			order: 1;
+			@include adaptiveValue("margin-bottom", 20, 17, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("font-size", 24, 20, 1, $containerWidth, $minWidth);
+			line-height: 1.2;
+			&::before {
+				bottom: -10%;
+			}
+		}
+	}
+
+	&__right-right {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: flex-start;
+		@include adaptiveValue("margin-left", 20, 15, 1, $containerWidth, $minWidth);
+		@media (max-width: $mobileSmall) {
+			flex: 1 1 100%;
+			align-items: center;
+			margin-left: 0;
+		}
+	}
+
+	&__button {
+		font-family: $fontFamily;
+		display: inline-block;
+		@include adaptiveValue("font-size", 16, 14, 1, $containerWidth, $minWidth);
+		line-height: 1.2;
+		font-weight: 700;
+		color: white;
+		@include adaptiveValue("padding-right", 40, 30, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-left", 40, 30, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-top", 15, 10, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 15, 10, 1, $containerWidth, $minWidth);
+		background-color: #271901;
+		transition: all 0.3s ease 0s;
+		position: relative;
+		text-transform: uppercase;
+		border: 1px solid white;
+		&::before {
+			content: "";
+			border: 1px solid white;
+			width: calc(100% + 2px);
+			height: calc(100% + 2px);
+			top: -8px;
+			right: -8px;
+			position: absolute;
+			transition: all 0.3s ease 0s;
+			z-index: 0;
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid #f0a116;
+				color: #f0a116;
+				&::before {
+					opacity: 0;
+					top: 0;
+					right: 0;
+					border: 1px solid #f0a116;
+				}
+			}
+		}
+		@media (max-width: $mobileSmall) {
+			order: 3;
+			@include adaptiveValue("padding-top", 15, 12, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-bottom", 15, 12, 1, $containerWidth, $minWidth);
+		}
+	}
+}
+
+.button {
+}
 
 //====================================================================================================

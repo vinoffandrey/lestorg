@@ -79,3 +79,606 @@
 		}
 	}
 }
+
+// Main__section
+//=======================================================================================================
+.main {
+	&__section {
+		@include adaptiveValue("padding-top", 30, 20, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 70, 55, 1, $containerWidth, $minWidth);
+	}
+
+	&__container {
+	}
+
+	&__title {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		h1 {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 126, 90, 1, $containerWidth, $minWidth);
+			line-height: 1.2;
+			font-weight: 700;
+			color: $mainColor;
+			text-transform: uppercase;
+			@include adaptiveValue("margin-right", 20, 10, 1, $containerWidth, $minWidth);
+			@media (max-width: $mobile) {
+				flex: 1 1 100%;
+			}
+		}
+		span {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 42, 30, 1, $containerWidth, $minWidth);
+			line-height: 0.9;
+			font-weight: 700;
+			letter-spacing: 0.04em;
+			color: $mainColor;
+			@media (max-width: $mobile) {
+				flex: 1 1 100%;
+			}
+		}
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__body {
+		display: flex;
+		justify-content: space-between;
+		@include adaptiveValue("margin-top", 40, 30, 1, $containerWidth, $minWidth);
+		@media (max-width: $mobile) {
+			flex-wrap: wrap;
+		}
+	}
+
+	&__body-left {
+		flex: 0 1 600px;
+		position: relative;
+		margin-bottom: -2%;
+		margin-left: 0;
+		margin-right: 0;
+		&::before {
+			content: "";
+			@include adaptiveValue("width", 380, 280, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("height", 380, 280, 1, $containerWidth, $minWidth);
+			position: absolute;
+			top: 0;
+			left: 0;
+			background-color: #f0f0f0;
+		}
+		@media (max-width: $tablet) {
+			flex: 0 1 350px;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+			height: 250px;
+			margin-bottom: 5%;
+		}
+	}
+
+	&__body-swiper {
+	}
+
+	&__swiper {
+	}
+
+	&__body-right {
+		flex: 0 1 360px;
+		position: relative;
+		&::after {
+			content: "";
+			position: absolute;
+			width: 147px;
+			height: 65px;
+			left: -55%;
+			bottom: 40%;
+			background: url("../img/main/arrow.png");
+			background-repeat: no-repeat;
+			background-size: contain;
+			@media (max-width: $tablet) {
+				width: 100px;
+				left: -35%;
+				height: 35px;
+			}
+			@media (max-width: $mobile) {
+				display: none;
+			}
+		}
+		@media (max-width: $tablet) {
+			flex: 0 0 300px;
+		}
+		@media (max-width: $mobile) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__form-body {
+		@include adaptiveValue("padding-left", 15, 10, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-right", 15, 10, 1, $containerWidth, $minWidth);
+		form {
+			@include adaptiveValue("margin-top", 30, 20, 1, $containerWidth, $minWidth);
+		}
+	}
+
+	&__form-title {
+		text-align: center;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 24, 21, 1, $containerWidth, $minWidth);
+		line-height: 30px;
+		font-weight: 700;
+		color: $mainColor;
+	}
+
+	&__form-input {
+		&:not(:last-child) {
+			@include adaptiveValue("margin-bottom", 15, 14, 1, $containerWidth, $minWidth);
+		}
+		input {
+			background-color: #f0f0f0;
+			@include adaptiveValue("padding-left", 15, 12, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-right", 15, 12, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-top", 8, 7, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-bottom", 8, 7, 1, $containerWidth, $minWidth);
+			line-height: 1.8;
+			width: 100%;
+		}
+	}
+
+	&__form-fail {
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		input {
+			display: none;
+		}
+		label {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 16, 15, 1, $containerWidth, $minWidth);
+			font-weight: 300;
+			color: $mainColor;
+			border: 2px solid #f0a116;
+			color: #f0a116;
+			@include adaptiveValue("padding-left", 15, 12, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-right", 35, 32, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-top", 8, 7, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-bottom", 8, 7, 1, $containerWidth, $minWidth);
+			cursor: pointer;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: scale(1.05);
+				}
+			}
+			position: relative;
+			&::before {
+				content: "";
+				position: absolute;
+				width: 20px;
+				height: 20px;
+				right: 5px;
+				bottom: 8%;
+				background: url("../img/main/fail.png");
+				background-repeat: no-repeat;
+				@media (max-width: $mobile) {
+					bottom: -3%;
+				}
+			}
+		}
+	}
+
+	&__form-text {
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 16, 15, 1, $containerWidth, $minWidth);
+		font-weight: 300;
+		color: $mainColor;
+		position: relative;
+		@include adaptiveValue("padding-right", 35, 30, 1, $containerWidth, $minWidth);
+		&::before {
+			content: "";
+			position: absolute;
+			width: 20px;
+			height: 20px;
+			right: 5px;
+			bottom: -20%;
+			background: url("../img/main/right-arrow.png");
+			background-repeat: no-repeat;
+			background-size: 20px;
+			@media (max-width: $mobile) {
+				right: -5px;
+			}
+		}
+	}
+
+	&__form-button {
+		@include adaptiveValue("margin-top", 25, 20, 1, $containerWidth, $minWidth);
+		button {
+			width: 100%;
+		}
+	}
+}
+.swiper {
+	&__item {
+		img {
+			pointer-events: none;
+			max-width: 100%;
+			height: auto;
+		}
+	}
+}
+.main-slider {
+	&__bullets {
+		position: absolute;
+		right: 0;
+		bottom: 50px !important;
+		display: flex;
+		justify-content: flex-end;
+		z-index: 1;
+		span {
+			border-radius: 0;
+			background-color: white;
+			border: 2px solid #f0a116;
+			@include adaptiveValue("width", 15, 12, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("height", 15, 12, 1, $containerWidth, $minWidth);
+			opacity: 1;
+			&.swiper-pagination-bullet-active {
+				background-color: #f0a116;
+			}
+		}
+		@media (max-width: $mobile) {
+			bottom: 95% !important;
+			justify-content: flex-start;
+		}
+	}
+}
+.bullets {
+	span {
+		border-radius: 0;
+		background-color: white;
+		border: 2px solid #f0a116;
+		@include adaptiveValue("width", 15, 12, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("height", 15, 12, 1, $containerWidth, $minWidth);
+		opacity: 1;
+		&.swiper-pagination-bullet-active {
+			background-color: #f0a116;
+		}
+	}
+}
+.yellow {
+	text-transform: uppercase;
+	padding: 5px;
+	background-color: #ffd647;
+}
+.small {
+	@include adaptiveValue("font-size", 20, 18, 1, $containerWidth, $minWidth);
+}
+.input {
+}
+.form {
+	&__btn {
+	}
+}
+.btn {
+}
+
+// Advantages__section
+//=======================================================================================================
+
+.advantages {
+	&__section {
+		background: url("../img/advantages/advantages_bg.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
+	}
+
+	&__container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	&__item {
+		flex: 0 1 33%;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		@include adaptiveValue("margin-bottom", 40, 35, 1, $containerWidth, $minWidth);
+		@media (max-width: 600px) {
+			flex: 0 1 50%;
+		}
+		@media (max-width: 400px) {
+			flex: 1 1 100%;
+		}
+	}
+
+	&__title {
+		flex: 1 1 auto;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		@include adaptiveValue("margin-bottom", 15, 10, 1, $containerWidth, $minWidth);
+		p {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 46, 38, 1, $containerWidth, $minWidth);
+			font-weight: 400;
+			text-transform: uppercase;
+			color: $mainColor;
+		}
+	}
+
+	&__text {
+		flex: 0 1 auto;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 20, 18, 1, $containerWidth, $minWidth);
+		font-weight: 400;
+		color: $mainColor;
+	}
+}
+
+// Products__section
+//=======================================================================================================
+
+.products {
+	&__section {
+		position: relative;
+		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
+	}
+
+	&__background {
+		position: absolute;
+		pointer-events: none;
+		@media (max-width: 1500px) {
+			display: none;
+		}
+	}
+
+	&__background-1 {
+		@include adaptiveValue("left", 70, 0, 1, 1400, 2000);
+		@include adaptiveValue("top", 80, 55, 1, 1400, 2000);
+	}
+
+	&__background-2 {
+		left: -5%;
+		top: 40%;
+	}
+
+	&__background-3 {
+		@include adaptiveValue("left", 90, 0, 1, 1400, 2000);
+		top: 87%;
+	}
+
+	&__background-4 {
+		@include adaptiveValue("right", 90, 0, 1, 1400, 2000);
+		top: 85%;
+	}
+
+	&__background-5 {
+		@include adaptiveValue("right", 90, 0, 1, 1400, 2000);
+		top: 40%;
+	}
+
+	&__background-6 {
+		@include adaptiveValue("right", 70, 0, 1, 1400, 2000);
+		@include adaptiveValue("top", 80, 55, 1, 1400, 2000);
+	}
+
+	&__container {
+		display: grid;
+		grid-template: 1fr / repeat(auto-fill, minmax(200px, 270px));
+		grid-template-rows: minmax(270px, 270px);
+		grid-gap: 20px;
+		grid-auto-rows: 270px;
+		grid-auto-flow: row;
+		justify-content: center;
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		border: 1px solid #c6c6c6;
+		cursor: pointer;
+		@include adaptiveValue("padding", 20, 15, 1, $containerWidth, $minWidth);
+		transition: all 0.3s ease 0s;
+		position: relative;
+		&:before {
+			transition: all 0.3s ease 0s;
+			position: absolute;
+			content: "";
+			width: calc(100% - 6px);
+			height: calc(100% - 6px);
+			border: 3px solid #f0a116;
+			top: 3px;
+			left: 3px;
+			opacity: 0;
+		}
+		@media (any-hover: hover) {
+			&:hover {
+				border: 1px solid #f0a116;
+				&:before {
+					opacity: 1;
+					position: absolute;
+					content: "";
+					width: calc(100% - 6px);
+					height: calc(100% - 6px);
+					border: 3px solid #f0a116;
+					top: 3px;
+					left: 3px;
+				}
+			}
+		}
+	}
+
+	&__image {
+		flex: 1 1 100%;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		max-width: 100%;
+		width: 100%;
+	}
+
+	&__title {
+		flex: 0 1 auto;
+		text-align: center;
+		h2 {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 24, 22, 1, $containerWidth, $minWidth);
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $mainColor;
+		}
+	}
+}
+
+// Slider__section
+//=======================================================================================================
+
+.slider {
+	&__section {
+		background-color: #f0f0f0;
+		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
+	}
+
+	&__container {
+	}
+
+	&__title {
+		text-align: center;
+		h3 {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 36, 32, 1, $containerWidth, $minWidth);
+			font-weight: 700;
+			text-transform: uppercase;
+			color: $mainColor;
+		}
+	}
+
+	&__body-swiper {
+		height: 275px;
+		@include adaptiveValue("margin-top", 70, 55, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("margin-bottom", 70, 50, 1, $containerWidth, $minWidth);
+	}
+
+	&__swiper {
+	}
+
+	&__item {
+		position: relative;
+		z-index: 1;
+		border: none;
+		height: 250px;
+		&:before {
+			content: "";
+			position: absolute;
+			width: 100%;
+			height: 100%;
+			border: 5px solid #dedede;
+			top: -10px;
+			right: -10px;
+			z-index: -1;
+		}
+		img {
+			cursor: pointer;
+			border: none;
+			max-width: 100%;
+			height: 250px;
+			transition: all 0.3s ease 0s;
+			@media (any-hover: hover) {
+				&:hover {
+					transform: translate(10px, -10px);
+				}
+			}
+		}
+	}
+}
+.-ibg {
+	&_contain {
+	}
+}
+.slider-slider {
+	&__bullets {
+		display: flex;
+		justify-content: center;
+		span {
+			background-color: #f0f0f0;
+		}
+	}
+}
+.bullets {
+}
+
+// Cooperation__section
+//=======================================================================================================
+
+.cooperation {
+	&__section {
+		@include adaptiveValue("padding-top", 70, 55, 1, $containerWidth, $minWidth);
+		@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
+		background: url("../img/cooperation/man.png");
+		background-position: right bottom;
+		background-size: cover;
+		@media (max-width: 950px) {
+			background: none;
+		}
+	}
+
+	&__container {
+	}
+
+	&__title {
+		text-align: center;
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 36, 32, 1, $containerWidth, $minWidth);
+		font-weight: 700;
+		text-transform: uppercase;
+		color: $mainColor;
+		@include adaptiveValue("margin-bottom", 50, 40, 1, $containerWidth, $minWidth);
+	}
+
+	&__subtitle {
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 24, 22, 1, $containerWidth, $minWidth);
+		font-weight: 400;
+		text-transform: uppercase;
+		color: $mainColor;
+	}
+
+	&__body {
+		@include adaptiveValue("margin-top", 20, 15, 1, $containerWidth, $minWidth);
+		p {
+			@include adaptiveValue("margin-top", 10, 8, 1, $containerWidth, $minWidth);
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 20, 18, 1, $containerWidth, $minWidth);
+			font-weight: 300;
+			@include adaptiveValue("line-height", 30, 25, 1, $containerWidth, $minWidth);
+			color: $mainColor;
+		}
+	}
+
+	&__list {
+		li {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 20, 18, 1, $containerWidth, $minWidth);
+			font-weight: 300;
+			@include adaptiveValue("line-height", 30, 25, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("margin-bottom", 10, 8, 1, $containerWidth, $minWidth);
+			color: $mainColor;
+			position: relative;
+			padding-left: 20px;
+			&:before {
+				content: "✔";
+				position: absolute;
+				top: 2px;
+				left: 0;
+				width: 20px;
+				height: 20px;
+				color: #f0a116;
+			}
+		}
+	}
+}
