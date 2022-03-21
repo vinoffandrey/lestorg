@@ -21,7 +21,7 @@
                     (t.default = void 0);
                   var n,
                     s = (n = i(5581)) && n.__esModule ? n : { default: n },
-                    o = {
+                    a = {
                       _maxTestPos: 500,
                       placeholder: "_",
                       optionalmarker: ["[", "]"],
@@ -120,7 +120,7 @@
                       validationEventTimeOut: 3e3,
                       substitutes: {},
                     };
-                  t.default = o;
+                  t.default = a;
                 },
                 7392: function (e, t) {
                   Object.defineProperty(t, "__esModule", { value: !0 }),
@@ -154,24 +154,24 @@
                               : n.detachEvent && n.detachEvent("on" + e, s),
                             "global" === t)
                           )
-                            for (var o in i[e])
-                              i[e][o].splice(i[e][o].indexOf(s), 1);
+                            for (var a in i[e])
+                              i[e][a].splice(i[e][a].indexOf(s), 1);
                           else i[e][t].splice(i[e][t].indexOf(s), 1);
                       }
-                      function o(e, n) {
+                      function a(e, n) {
                         var s,
-                          o,
-                          a = [];
+                          a,
+                          o = [];
                         if (e.length > 0)
                           if (void 0 === t)
-                            for (s = 0, o = i[e][n].length; s < o; s++)
-                              a.push({
+                            for (s = 0, a = i[e][n].length; s < a; s++)
+                              o.push({
                                 ev: e,
                                 namespace: n && n.length > 0 ? n : "global",
                                 handler: i[e][n][s],
                               });
                           else
-                            a.push({
+                            o.push({
                               ev: e,
                               namespace: n && n.length > 0 ? n : "global",
                               handler: t,
@@ -181,22 +181,22 @@
                             for (var l in i[r])
                               if (l === n)
                                 if (void 0 === t)
-                                  for (s = 0, o = i[r][l].length; s < o; s++)
-                                    a.push({
+                                  for (s = 0, a = i[r][l].length; s < a; s++)
+                                    o.push({
                                       ev: r,
                                       namespace: l,
                                       handler: i[r][l][s],
                                     });
                                 else
-                                  a.push({ ev: r, namespace: l, handler: t });
-                        return a;
+                                  o.push({ ev: r, namespace: l, handler: t });
+                        return o;
                       }
                       if (c(this[0]) && e) {
                         (i = this[0].eventRegistry), (n = this[0]);
-                        for (var a = e.split(" "), r = 0; r < a.length; r++)
+                        for (var o = e.split(" "), r = 0; r < o.length; r++)
                           for (
-                            var l = a[r].split("."),
-                              d = o(l[0], l[1]),
+                            var l = o[r].split("."),
+                              d = a(l[0], l[1]),
                               u = 0,
                               p = d.length;
                             u < p;
@@ -219,12 +219,12 @@
                         for (
                           var n = this[0].eventRegistry,
                             s = this[0],
-                            o = e.split(" "),
-                            a = 0;
-                          a < o.length;
-                          a++
+                            a = e.split(" "),
+                            o = 0;
+                          o < a.length;
+                          o++
                         ) {
-                          var r = o[a].split(".");
+                          var r = a[o].split(".");
                           i(r[0], r[1] || "global");
                         }
                       return this;
@@ -235,11 +235,11 @@
                           var t = this[0].eventRegistry,
                             i = this[0],
                             n = "string" == typeof e ? e.split(" ") : [e.type],
-                            o = 0;
-                          o < n.length;
-                          o++
+                            a = 0;
+                          a < n.length;
+                          a++
                         ) {
-                          var r = n[o].split("."),
+                          var r = n[a].split("."),
                             l = r[0],
                             d = r[1] || "global";
                           if (void 0 !== document && "global" === d) {
@@ -279,7 +279,7 @@
                             if (
                               ((arguments[0] = arguments[0].type
                                 ? arguments[0]
-                                : a.default.Event(arguments[0])),
+                                : o.default.Event(arguments[0])),
                               (arguments[0].detail = arguments.slice(1)),
                               "global" === d)
                             )
@@ -294,8 +294,8 @@
                     });
                   var n,
                     s = l(i(600)),
-                    o = l(i(9380)),
-                    a = l(i(4963)),
+                    a = l(i(9380)),
+                    o = l(i(4963)),
                     r = l(i(8741));
                   function l(e) {
                     return e && e.__esModule ? e : { default: e };
@@ -304,8 +304,8 @@
                     return e instanceof Element;
                   }
                   (t.Event = n),
-                    "function" == typeof o.default.CustomEvent
-                      ? (t.Event = n = o.default.CustomEvent)
+                    "function" == typeof a.default.CustomEvent
+                      ? (t.Event = n = a.default.CustomEvent)
                       : r.default &&
                         ((t.Event = n =
                           function (e, t) {
@@ -325,7 +325,7 @@
                               i
                             );
                           }),
-                        (n.prototype = o.default.Event.prototype));
+                        (n.prototype = a.default.Event.prototype));
                 },
                 600: function (e, t) {
                   function i(e) {
@@ -352,8 +352,8 @@
                       var t,
                         n,
                         s,
-                        o,
                         a,
+                        o,
                         r,
                         l = arguments[0] || {},
                         c = 1,
@@ -371,14 +371,14 @@
                         if (null != (t = arguments[c]))
                           for (n in t)
                             (s = l[n]),
-                              l !== (o = t[n]) &&
+                              l !== (a = t[n]) &&
                                 (u &&
-                                o &&
+                                a &&
                                 ("[object Object]" ===
-                                  Object.prototype.toString.call(o) ||
-                                  (a = Array.isArray(o)))
-                                  ? (a
-                                      ? ((a = !1),
+                                  Object.prototype.toString.call(a) ||
+                                  (o = Array.isArray(a)))
+                                  ? (o
+                                      ? ((o = !1),
                                         (r = s && Array.isArray(s) ? s : []))
                                       : (r =
                                           s &&
@@ -386,8 +386,8 @@
                                             Object.prototype.toString.call(s)
                                             ? s
                                             : {}),
-                                    (l[n] = e(u, r, o)))
-                                  : void 0 !== o && (l[n] = o));
+                                    (l[n] = e(u, r, a)))
+                                  : void 0 !== a && (l[n] = a));
                       return l;
                     });
                 },
@@ -396,8 +396,8 @@
                     (t.default = void 0);
                   var n = r(i(600)),
                     s = r(i(9380)),
-                    o = r(i(253)),
-                    a = i(3776);
+                    a = r(i(253)),
+                    o = i(3776);
                   function r(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
@@ -421,10 +421,10 @@
                         )
                       : new c(e);
                   }
-                  (c.prototype = { on: a.on, off: a.off, trigger: a.trigger }),
+                  (c.prototype = { on: o.on, off: o.off, trigger: o.trigger }),
                     (c.extend = n.default),
-                    (c.data = o.default),
-                    (c.Event = a.Event);
+                    (c.data = a.default),
+                    (c.Event = o.Event);
                   var d = c;
                   t.default = d;
                 },
@@ -433,18 +433,18 @@
                     (t.ua = t.mobile = t.iphone = t.iemobile = t.ie = void 0);
                   var n,
                     s = (n = i(9380)) && n.__esModule ? n : { default: n },
-                    o =
+                    a =
                       (s.default.navigator && s.default.navigator.userAgent) ||
                       "",
-                    a = o.indexOf("MSIE ") > 0 || o.indexOf("Trident/") > 0,
+                    o = a.indexOf("MSIE ") > 0 || a.indexOf("Trident/") > 0,
                     r = "ontouchstart" in s.default,
-                    l = /iemobile/i.test(o),
-                    c = /iphone/i.test(o) && !l;
+                    l = /iemobile/i.test(a),
+                    c = /iphone/i.test(a) && !l;
                   (t.iphone = c),
                     (t.iemobile = l),
                     (t.mobile = r),
-                    (t.ie = a),
-                    (t.ua = o);
+                    (t.ie = o),
+                    (t.ua = a);
                 },
                 7184: function (e, t) {
                   Object.defineProperty(t, "__esModule", { value: !0 }),
@@ -479,8 +479,8 @@
                     (t.EventHandlers = void 0);
                   var n,
                     s = i(8711),
-                    o = (n = i(5581)) && n.__esModule ? n : { default: n },
-                    a = i(9845),
+                    a = (n = i(5581)) && n.__esModule ? n : { default: n },
+                    o = i(9845),
                     r = i(7215),
                     l = i(7760),
                     c = i(4713);
@@ -534,8 +534,8 @@
                         "Invalid attempt to iterate non-iterable instance.\nIn order to be iterable, non-array objects must have a [Symbol.iterator]() method."
                       );
                     }
-                    var o,
-                      a = !0,
+                    var a,
+                      o = !0,
                       r = !1;
                     return {
                       s: function () {
@@ -543,16 +543,16 @@
                       },
                       n: function () {
                         var e = i.next();
-                        return (a = e.done), e;
+                        return (o = e.done), e;
                       },
                       e: function (e) {
-                        (r = !0), (o = e);
+                        (r = !0), (a = e);
                       },
                       f: function () {
                         try {
-                          a || null == i.return || i.return();
+                          o || null == i.return || i.return();
                         } finally {
-                          if (r) throw o;
+                          if (r) throw a;
                         }
                       },
                     };
@@ -581,10 +581,10 @@
                         );
                       if (void 0 !== g) return g;
                       if (
-                        h === o.default.BACKSPACE ||
-                        h === o.default.DELETE ||
-                        (a.iphone && h === o.default.BACKSPACE_SAFARI) ||
-                        (e.ctrlKey && h === o.default.X && !("oncut" in u))
+                        h === a.default.BACKSPACE ||
+                        h === a.default.DELETE ||
+                        (o.iphone && h === a.default.BACKSPACE_SAFARI) ||
+                        (e.ctrlKey && h === a.default.X && !("oncut" in u))
                       )
                         e.preventDefault(),
                           r.handleRemove.call(t, u, h, f),
@@ -597,8 +597,8 @@
                               s.getBuffer.call(t).join("")
                           );
                       else if (
-                        h === o.default.END ||
-                        h === o.default.PAGE_DOWN
+                        h === a.default.END ||
+                        h === a.default.PAGE_DOWN
                       ) {
                         e.preventDefault();
                         var m = s.seekNext.call(
@@ -607,20 +607,20 @@
                         );
                         s.caret.call(t, u, e.shiftKey ? f.begin : m, m, !0);
                       } else
-                        (h === o.default.HOME && !e.shiftKey) ||
-                        h === o.default.PAGE_UP
+                        (h === a.default.HOME && !e.shiftKey) ||
+                        h === a.default.PAGE_UP
                           ? (e.preventDefault(),
                             s.caret.call(t, u, 0, e.shiftKey ? f.begin : 0, !0))
                           : i.undoOnEscape &&
-                            h === o.default.ESCAPE &&
+                            h === a.default.ESCAPE &&
                             !0 !== e.altKey
                           ? ((0, l.checkVal)(u, !0, !1, t.undoValue.split("")),
                             p.trigger("click"))
-                          : h !== o.default.INSERT ||
+                          : h !== a.default.INSERT ||
                             e.shiftKey ||
                             e.ctrlKey ||
                             void 0 !== t.userOptions.insertMode
-                          ? !0 === i.tabThrough && h === o.default.TAB
+                          ? !0 === i.tabThrough && h === a.default.TAB
                             ? !0 === e.shiftKey
                               ? ((f.end = s.seekPrevious.call(t, f.end, !0)),
                                 !0 ===
@@ -640,12 +640,12 @@
                             : e.shiftKey ||
                               (i.insertModeVisual &&
                                 !1 === i.insertMode &&
-                                (h === o.default.RIGHT
+                                (h === a.default.RIGHT
                                   ? setTimeout(function () {
                                       var e = s.caret.call(t, u);
                                       s.caret.call(t, u, e.begin);
                                     }, 0)
-                                  : h === o.default.LEFT &&
+                                  : h === a.default.LEFT &&
                                     setTimeout(function () {
                                       var e = s.translatePosition.call(
                                         t,
@@ -673,7 +673,7 @@
                             s.caret.call(t, u, f.begin, f.begin));
                       t.ignorable = i.ignorables.includes(h);
                     },
-                    keypressEvent: function (e, t, i, n, a) {
+                    keypressEvent: function (e, t, i, n, o) {
                       var c = this.inputmask || this,
                         d = c.opts,
                         u = c.dependencyLib,
@@ -686,7 +686,7 @@
                         (e.ctrlKey || e.metaKey || c.ignorable)
                       )
                         return (
-                          g === o.default.ENTER &&
+                          g === a.default.ENTER &&
                             c.undoValue !== c._valueGet(!0) &&
                             ((c.undoValue = c._valueGet(!0)),
                             setTimeout(function () {
@@ -701,7 +701,7 @@
                           "" === d.radixPoint ||
                           (g = d.radixPoint.charCodeAt(0));
                         var m,
-                          v = t ? { begin: a, end: a } : s.caret.call(c, h),
+                          v = t ? { begin: o, end: o } : s.caret.call(c, h),
                           y = String.fromCharCode(g);
                         (y = d.substitutes[y] || y), (p.writeOutBuffer = !0);
                         var b = r.isValid.call(
@@ -745,46 +745,46 @@
                     keyupEvent: function (e) {
                       var t = this.inputmask;
                       !t.isComposing ||
-                        (e.keyCode !== o.default.KEY_229 &&
-                          e.keyCode !== o.default.ENTER) ||
+                        (e.keyCode !== a.default.KEY_229 &&
+                          e.keyCode !== a.default.ENTER) ||
                         t.$el.trigger("input");
                     },
                     pasteEvent: function (e) {
                       var t,
                         i = this.inputmask,
                         n = i.opts,
-                        o = i._valueGet(!0),
-                        a = s.caret.call(i, this);
+                        a = i._valueGet(!0),
+                        o = s.caret.call(i, this);
                       i.isRTL &&
-                        ((t = a.end),
-                        (a.end = s.translatePosition.call(i, a.begin)),
-                        (a.begin = s.translatePosition.call(i, t)));
-                      var r = o.substr(0, a.begin),
-                        c = o.substr(a.end, o.length);
+                        ((t = o.end),
+                        (o.end = s.translatePosition.call(i, o.begin)),
+                        (o.begin = s.translatePosition.call(i, t)));
+                      var r = a.substr(0, o.begin),
+                        c = a.substr(o.end, a.length);
                       if (
                         (r ==
                           (i.isRTL
                             ? s.getBufferTemplate.call(i).slice().reverse()
                             : s.getBufferTemplate.call(i)
                           )
-                            .slice(0, a.begin)
+                            .slice(0, o.begin)
                             .join("") && (r = ""),
                         c ==
                           (i.isRTL
                             ? s.getBufferTemplate.call(i).slice().reverse()
                             : s.getBufferTemplate.call(i)
                           )
-                            .slice(a.end)
+                            .slice(o.end)
                             .join("") && (c = ""),
                         window.clipboardData && window.clipboardData.getData)
                       )
-                        o = r + window.clipboardData.getData("Text") + c;
+                        a = r + window.clipboardData.getData("Text") + c;
                       else {
                         if (!e.clipboardData || !e.clipboardData.getData)
                           return !0;
-                        o = r + e.clipboardData.getData("text/plain") + c;
+                        a = r + e.clipboardData.getData("text/plain") + c;
                       }
-                      var u = o;
+                      var u = a;
                       if (i.isRTL) {
                         u = u.split("");
                         var p,
@@ -804,7 +804,7 @@
                       if ("function" == typeof n.onBeforePaste) {
                         if (!1 === (u = n.onBeforePaste.call(i, u, n)))
                           return !1;
-                        u || (u = o);
+                        u || (u = a);
                       }
                       (0, l.checkVal)(this, !0, !1, u.toString().split(""), e),
                         e.preventDefault();
@@ -823,24 +823,24 @@
                         h = s.caret.call(t, r, void 0, void 0, !0);
                       if (u !== d) {
                         d = (function (e, i, n) {
-                          if (a.iemobile) {
-                            var o = i.replace(s.getBuffer.call(t).join(""), "");
-                            if (1 === o.length) {
+                          if (o.iemobile) {
+                            var a = i.replace(s.getBuffer.call(t).join(""), "");
+                            if (1 === a.length) {
                               var r = i.split("");
-                              r.splice(n.begin, 0, o), (i = r.join(""));
+                              r.splice(n.begin, 0, a), (i = r.join(""));
                             }
                           }
                           return i;
                         })(0, d, h);
-                        var f = (function (e, n, o) {
+                        var f = (function (e, n, a) {
                           for (
-                            var a,
+                            var o,
                               r,
                               l,
-                              d = e.substr(0, o.begin).split(""),
-                              u = e.substr(o.begin).split(""),
-                              p = n.substr(0, o.begin).split(""),
-                              h = n.substr(o.begin).split(""),
+                              d = e.substr(0, a.begin).split(""),
+                              u = e.substr(a.begin).split(""),
+                              p = n.substr(0, a.begin).split(""),
+                              h = n.substr(a.begin).split(""),
                               f = d.length >= p.length ? d.length : p.length,
                               g = u.length >= h.length ? u.length : h.length,
                               m = "",
@@ -855,7 +855,7 @@
                           for (; h.length < g; ) h.unshift(y);
                           var b = d.concat(u),
                             w = p.concat(h);
-                          for (r = 0, a = b.length; r < a; r++)
+                          for (r = 0, o = b.length; r < o; r++)
                             switch (
                               ((l = c.getPlaceholder.call(
                                 t,
@@ -865,13 +865,13 @@
                             ) {
                               case "insertText":
                                 w[r - 1] === b[r] &&
-                                  o.begin == b.length - 1 &&
+                                  a.begin == b.length - 1 &&
                                   v.push(b[r]),
-                                  (r = a);
+                                  (r = o);
                                 break;
                               case "insertReplacementText":
                               case "deleteContentBackward":
-                                b[r] === y ? o.end++ : (r = a);
+                                b[r] === y ? a.end++ : (r = o);
                                 break;
                               default:
                                 b[r] !== w[r] &&
@@ -882,8 +882,8 @@
                                     ? w[r + 1] === y && w[r] === b[r + 1]
                                       ? ((m = "insertText"),
                                         v.push(b[r]),
-                                        o.begin--,
-                                        o.end--)
+                                        a.begin--,
+                                        a.end--)
                                       : b[r] !== l &&
                                         b[r] !== y &&
                                         (b[r + 1] === y ||
@@ -891,7 +891,7 @@
                                             w[r + 1] === b[r + 1]))
                                       ? ((m = "insertReplacementText"),
                                         v.push(b[r]),
-                                        o.begin--)
+                                        a.begin--)
                                       : b[r] === y
                                       ? ((m = "deleteContentBackward"),
                                         (s.isMask.call(
@@ -900,14 +900,14 @@
                                           !0
                                         ) ||
                                           w[r] === i.radixPoint) &&
-                                          o.end++)
-                                      : (r = a)
+                                          a.end++)
+                                      : (r = o)
                                     : ((m = "insertText"),
                                       v.push(b[r]),
-                                      o.begin--,
-                                      o.end--));
+                                      a.begin--,
+                                      a.end--));
                             }
-                          return { action: m, data: v, caret: o };
+                          return { action: m, data: v, caret: a };
                         })(d, u, h);
                         switch (
                           ((r.inputmask.shadowRoot || r.ownerDocument)
@@ -930,7 +930,7 @@
                             break;
                           case "deleteContentBackward":
                             var g = new n.Event("keydown");
-                            (g.keyCode = o.default.BACKSPACE),
+                            (g.keyCode = a.default.BACKSPACE),
                               p.keydownEvent.call(r, g);
                             break;
                           default:
@@ -961,9 +961,9 @@
                       var t = this.inputmask,
                         i = t.opts,
                         n = this,
-                        o = n.inputmask._valueGet();
+                        a = n.inputmask._valueGet();
                       i.showMaskOnFocus &&
-                        o !== s.getBuffer.call(t).join("") &&
+                        a !== s.getBuffer.call(t).join("") &&
                         (0, l.writeBuffer)(
                           n,
                           s.getBuffer.call(t),
@@ -999,29 +999,29 @@
                         (n.inputmask.shadowRoot || n.ownerDocument)
                           .activeElement === n
                       ) {
-                        var o = s.determineNewCaretPosition.call(
+                        var a = s.determineNewCaretPosition.call(
                           i,
                           s.caret.call(i, n),
                           t
                         );
-                        void 0 !== o && s.caret.call(i, n, o);
+                        void 0 !== a && s.caret.call(i, n, a);
                       }
                     },
                     cutEvent: function (e) {
                       var t = this.inputmask,
                         i = t.maskset,
                         n = this,
-                        a = s.caret.call(t, n),
+                        o = s.caret.call(t, n),
                         c = t.isRTL
-                          ? s.getBuffer.call(t).slice(a.end, a.begin)
-                          : s.getBuffer.call(t).slice(a.begin, a.end),
+                          ? s.getBuffer.call(t).slice(o.end, o.begin)
+                          : s.getBuffer.call(t).slice(o.begin, o.end),
                         d = t.isRTL ? c.reverse().join("") : c.join("");
                       window.navigator.clipboard
                         ? window.navigator.clipboard.writeText(d)
                         : window.clipboardData &&
                           window.clipboardData.getData &&
                           window.clipboardData.setData("Text", d),
-                        r.handleRemove.call(t, n, o.default.DELETE, a),
+                        r.handleRemove.call(t, n, a.default.DELETE, o),
                         (0, l.writeBuffer)(
                           n,
                           s.getBuffer.call(t),
@@ -1034,18 +1034,18 @@
                       var t = this.inputmask,
                         i = t.opts,
                         n = (0, t.dependencyLib)(this),
-                        o = this;
-                      if (o.inputmask) {
+                        a = this;
+                      if (a.inputmask) {
                         (0, l.HandleNativePlaceholder)(
-                          o,
+                          a,
                           t.originalPlaceholder
                         );
-                        var a = o.inputmask._valueGet(),
+                        var o = a.inputmask._valueGet(),
                           c = s.getBuffer.call(t).slice();
-                        "" !== a &&
+                        "" !== o &&
                           (i.clearMaskOnLostFocus &&
                             (-1 === s.getLastValidPosition.call(t) &&
-                            a === s.getBufferTemplate.call(t).join("")
+                            o === s.getBufferTemplate.call(t).join("")
                               ? (c = [])
                               : l.clearOptionalTail.call(t, c)),
                           !1 === r.isComplete.call(t, c) &&
@@ -1057,7 +1057,7 @@
                               (c = i.clearMaskOnLostFocus
                                 ? []
                                 : s.getBufferTemplate.call(t).slice()))),
-                          (0, l.writeBuffer)(o, c, void 0, e)),
+                          (0, l.writeBuffer)(a, c, void 0, e)),
                           t.undoValue !== t._valueGet(!0) &&
                             ((t.undoValue = t._valueGet(!0)),
                             n.trigger("change"));
@@ -1118,8 +1118,8 @@
                     (t.EventRuler = void 0);
                   var n = r(i(2394)),
                     s = r(i(5581)),
-                    o = i(8711),
-                    a = i(7760);
+                    a = i(8711),
+                    o = i(7760);
                   function r(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
@@ -1185,14 +1185,14 @@
                                   return d.validationEvent
                                     ? ((d.validationEvent = !1),
                                       e.blur(),
-                                      (0, a.HandleNativePlaceholder)(
+                                      (0, o.HandleNativePlaceholder)(
                                         e,
                                         (d.isRTL
-                                          ? o.getBufferTemplate
+                                          ? a.getBufferTemplate
                                               .call(d)
                                               .slice()
                                               .reverse()
-                                          : o.getBufferTemplate.call(d)
+                                          : a.getBufferTemplate.call(d)
                                         ).join("")
                                       ),
                                       setTimeout(function () {
@@ -1229,11 +1229,11 @@
                         for (var s in (t &&
                           ((n = [])[t] = e.inputmask.events[t]),
                         n)) {
-                          for (var o = n[s]; o.length > 0; ) {
-                            var a = o.pop();
+                          for (var a = n[s]; a.length > 0; ) {
+                            var o = a.pop();
                             ["submit", "reset"].includes(s)
-                              ? null !== e.form && i(e.form).off(s, a)
-                              : i(e).off(s, a);
+                              ? null !== e.form && i(e.form).off(s, o)
+                              : i(e).off(s, o);
                           }
                           delete e.inputmask.events[s];
                         }
@@ -1245,8 +1245,8 @@
                 219: function (e, t, i) {
                   var n = p(i(2394)),
                     s = p(i(5581)),
-                    o = p(i(7184)),
-                    a = i(8711),
+                    a = p(i(7184)),
+                    o = i(8711),
                     r = i(4713);
                   function l(e) {
                     return (
@@ -1282,26 +1282,26 @@
                         if (null != i) {
                           var n,
                             s,
-                            o = [],
-                            a = !0,
+                            a = [],
+                            o = !0,
                             r = !1;
                           try {
                             for (
                               i = i.call(e);
-                              !(a = (n = i.next()).done) &&
-                              (o.push(n.value), !t || o.length !== t);
-                              a = !0
+                              !(o = (n = i.next()).done) &&
+                              (a.push(n.value), !t || a.length !== t);
+                              o = !0
                             );
                           } catch (e) {
                             (r = !0), (s = e);
                           } finally {
                             try {
-                              a || null == i.return || i.return();
+                              o || null == i.return || i.return();
                             } finally {
                               if (r) throw s;
                             }
                           }
-                          return o;
+                          return a;
                         }
                       })(e, t) ||
                       (function (e, t) {
@@ -1390,21 +1390,21 @@
                               ) {
                                 var n = new RegExp("\\d+$").exec(i[0]),
                                   s = n ? i[0][0] + "x" : i[0],
-                                  o = void 0;
+                                  a = void 0;
                                 if (void 0 !== e) {
                                   if (n) {
-                                    var a = S(t).lastIndex,
+                                    var o = S(t).lastIndex,
                                       r = P(i.index, t);
-                                    (S(t).lastIndex = a),
-                                      (o = e.slice(
+                                    (S(t).lastIndex = o),
+                                      (a = e.slice(
                                         0,
                                         e.indexOf(r.nextMatch[0])
                                       ));
-                                  } else o = e.slice(0, s.length);
-                                  e = e.slice(o.length);
+                                  } else a = e.slice(0, s.length);
+                                  e = e.slice(a.length);
                                 }
                                 Object.prototype.hasOwnProperty.call(v, s) &&
-                                  this.setValue(this, o, s, v[s][2], v[s][1]);
+                                  this.setValue(this, a, s, v[s][2], v[s][1]);
                               }
                             },
                           },
@@ -1420,21 +1420,21 @@
                                   (e["raw" + n] = t.replace(/\s/g, "_"))),
                                 void 0 !== s)
                               ) {
-                                var o = e[n];
-                                (("day" === n && 29 === parseInt(o)) ||
-                                  ("month" === n && 2 === parseInt(o))) &&
+                                var a = e[n];
+                                (("day" === n && 29 === parseInt(a)) ||
+                                  ("month" === n && 2 === parseInt(a))) &&
                                   (29 !== parseInt(e.day) ||
                                     2 !== parseInt(e.month) ||
                                     ("" !== e.year && void 0 !== e.year) ||
                                     e._date.setFullYear(2012, 1, 29)),
                                   "day" === n &&
-                                    ((m = !0), 0 === parseInt(o) && (o = 1)),
+                                    ((m = !0), 0 === parseInt(a) && (a = 1)),
                                   "month" === n && (m = !0),
                                   "year" === n &&
                                     ((m = !0),
-                                    o.length < 4 && (o = E(o, 4, !0))),
-                                  "" === o || isNaN(o) || s.call(e._date, o),
-                                  "ampm" === n && s.call(e._date, o);
+                                    a.length < 4 && (a = E(a, 4, !0))),
+                                  "" === a || isNaN(a) || s.call(e._date, a),
+                                  "ampm" === n && s.call(e._date, a);
                               }
                             },
                           },
@@ -1731,18 +1731,18 @@
                           { pos: t.pos, c: "0" },
                           { pos: t.pos + 1, c: t.c },
                         ]),
-                        (t.caret = a.seekNext.call(this, t.pos + 1)),
+                        (t.caret = o.seekNext.call(this, t.pos + 1)),
                         t
                       );
                     return !1;
                   }
                   function C(e, t, i, n) {
                     var s,
-                      a,
+                      o,
                       r = "";
                     for (S(i).lastIndex = 0; (s = S(i).exec(e)); )
                       if (void 0 === t)
-                        if ((a = x(s))) r += "(" + a[0] + ")";
+                        if ((o = x(s))) r += "(" + o[0] + ")";
                         else
                           switch (s[0]) {
                             case "[":
@@ -1752,14 +1752,14 @@
                               r += ")?";
                               break;
                             default:
-                              r += (0, o.default)(s[0]);
+                              r += (0, a.default)(s[0]);
                           }
                       else
-                        (a = x(s))
-                          ? !0 !== n && a[3]
-                            ? (r += a[3].call(t.date))
-                            : a[2]
-                            ? (r += t["raw" + a[2]])
+                        (o = x(s))
+                          ? !0 !== n && o[3]
+                            ? (r += o[3].call(t.date))
+                            : o[2]
+                            ? (r += t["raw" + o[2]])
                             : (r += s[0])
                           : (r += s[0]);
                     return r;
@@ -1769,7 +1769,7 @@
                       e = i ? e + "0" : "0" + e;
                     return e;
                   }
-                  function _(e, t, i) {
+                  function T(e, t, i) {
                     return "string" == typeof e
                       ? new f(e, t, i)
                       : e &&
@@ -1778,18 +1778,18 @@
                       ? e
                       : void 0;
                   }
-                  function T(e, t) {
+                  function _(e, t) {
                     return C(t.inputFormat, { date: e }, t);
                   }
                   function P(e, t) {
                     var i,
                       n,
                       s = 0,
-                      o = 0;
+                      a = 0;
                     for (S(t).lastIndex = 0; (n = S(t).exec(t.inputFormat)); ) {
-                      var a = new RegExp("\\d+$").exec(n[0]);
+                      var o = new RegExp("\\d+$").exec(n[0]);
                       if (
-                        (s += o = a ? parseInt(a[0]) : n[0].length) >=
+                        (s += a = o ? parseInt(o[0]) : n[0].length) >=
                         e + 1
                       ) {
                         (i = n), (n = S(t).exec(t.inputFormat));
@@ -1797,7 +1797,7 @@
                       }
                     }
                     return {
-                      targetMatchIndex: s - o,
+                      targetMatchIndex: s - a,
                       nextMatch: n,
                       targetMatch: i,
                     };
@@ -1822,8 +1822,8 @@
                               ? e.placeholder
                               : e.inputFormat.replace(/[[\]]/, "")),
                           (e.regex = C(e.inputFormat, void 0, e)),
-                          (e.min = _(e.min, e.inputFormat, e)),
-                          (e.max = _(e.max, e.inputFormat, e)),
+                          (e.min = T(e.min, e.inputFormat, e)),
+                          (e.max = T(e.max, e.inputFormat, e)),
                           null
                         );
                       },
@@ -1879,7 +1879,7 @@
                         ],
                         ordinalSuffix: ["st", "nd", "rd", "th"],
                       },
-                      preValidation: function (e, t, i, n, s, o, a, r) {
+                      preValidation: function (e, t, i, n, s, a, o, r) {
                         if (r) return !0;
                         if (isNaN(i) && e[t] !== i) {
                           var l = P(t, s);
@@ -1907,9 +1907,9 @@
                         }
                         return !0;
                       },
-                      postValidation: function (e, t, i, n, s, o, a, l) {
+                      postValidation: function (e, t, i, n, s, a, o, l) {
                         var c, d;
-                        if (a) return !0;
+                        if (o) return !0;
                         if (
                           !1 === n &&
                           ((((c = P(t + 1, s)).targetMatch &&
@@ -1922,7 +1922,7 @@
                               void 0 !== v[c.targetMatch[0]])) &&
                             (d = v[c.targetMatch[0]][0]),
                           void 0 !== d &&
-                            (void 0 !== o.validPositions[t + 1] &&
+                            (void 0 !== a.validPositions[t + 1] &&
                             new RegExp(d).test(i + "0")
                               ? ((e[t] = i),
                                 (e[t + 1] = "0"),
@@ -1949,9 +1949,9 @@
                           if (
                             (!1 === new RegExp(d).test(p.join("")) &&
                               2 === c.targetMatch[0].length &&
-                              o.validPositions[c.targetMatchIndex] &&
-                              o.validPositions[c.targetMatchIndex + 1] &&
-                              (o.validPositions[c.targetMatchIndex + 1].input =
+                              a.validPositions[c.targetMatchIndex] &&
+                              a.validPositions[c.targetMatchIndex + 1] &&
+                              (a.validPositions[c.targetMatchIndex + 1].input =
                                 "0"),
                             "year" == u[2])
                           )
@@ -1967,10 +1967,10 @@
                               f < e.length;
                               f++
                             )
-                              (e[f] = h[f]), delete o.validPositions[f];
+                              (e[f] = h[f]), delete a.validPositions[f];
                         }
                         var m = n,
-                          y = _(e.join(""), s.inputFormat, s);
+                          y = T(e.join(""), s.inputFormat, s);
                         return (
                           m &&
                             y.date.getTime() == y.date.getTime() &&
@@ -1979,9 +1979,9 @@
                                 if (e.year !== e.rawyear) {
                                   var n = g.toString(),
                                     s = e.rawyear.replace(/[^0-9]/g, ""),
-                                    o = n.slice(0, s.length),
-                                    a = n.slice(s.length);
-                                  if (2 === s.length && s === o) {
+                                    a = n.slice(0, s.length),
+                                    o = n.slice(s.length);
+                                  if (2 === s.length && s === a) {
                                     var r = new Date(g, e.month - 1, e.day);
                                     e.day == r.getDate() &&
                                       (!i.max ||
@@ -1989,8 +1989,8 @@
                                       (e.date.setFullYear(g),
                                       (e.year = n),
                                       (t.insert = [
-                                        { pos: t.pos + 1, c: a[0] },
-                                        { pos: t.pos + 2, c: a[1] },
+                                        { pos: t.pos + 1, c: o[0] },
+                                        { pos: t.pos + 2, c: o[1] },
                                       ]));
                                   }
                                 }
@@ -2003,19 +2003,19 @@
                                 i.min &&
                                 i.min.date.getTime() == i.min.date.getTime()
                               ) {
-                                var o;
+                                var a;
                                 for (
                                   e.reset(), S(i).lastIndex = 0;
-                                  (o = S(i).exec(i.inputFormat));
+                                  (a = S(i).exec(i.inputFormat));
 
                                 ) {
-                                  var a;
-                                  if ((a = x(o)) && a[3]) {
+                                  var o;
+                                  if ((o = x(a)) && o[3]) {
                                     for (
-                                      var r = a[1],
-                                        l = e[a[2]],
-                                        c = i.min[a[2]],
-                                        d = i.max ? i.max[a[2]] : c,
+                                      var r = o[1],
+                                        l = e[o[2]],
+                                        c = i.min[o[2]],
+                                        d = i.max ? i.max[o[2]] : c,
                                         u = [],
                                         p = !1,
                                         h = 0;
@@ -2023,17 +2023,17 @@
                                       h++
                                     )
                                       void 0 !==
-                                        n.validPositions[h + o.index] || p
+                                        n.validPositions[h + a.index] || p
                                         ? ((u[h] = l[h]),
                                           (p = p || l[h] > c[h]))
                                         : ((u[h] = c[h]),
-                                          "year" === a[2] &&
+                                          "year" === o[2] &&
                                             l.length - 1 == h &&
                                             c != d &&
                                             (u = (parseInt(u.join("")) + 1)
                                               .toString()
                                               .split("")),
-                                          "ampm" === a[2] &&
+                                          "ampm" === o[2] &&
                                             c != d &&
                                             i.min.date.getTime() >
                                               e.date.getTime() &&
@@ -2053,7 +2053,7 @@
                                     i.max.date.getTime() >= e.date.getTime()),
                                 t
                               );
-                            })(y, (m = k.call(this, y, m, s)), s, o))),
+                            })(y, (m = k.call(this, y, m, s)), s, a))),
                           void 0 !== t && m && n.pos !== t
                             ? {
                                 buffer: C(s.inputFormat, y, s).split(""),
@@ -2066,12 +2066,12 @@
                       onKeyDown: function (e, t, i, n) {
                         e.ctrlKey &&
                           e.keyCode === s.default.RIGHT &&
-                          (this.inputmask._valueSet(T(new Date(), n)),
+                          (this.inputmask._valueSet(_(new Date(), n)),
                           h(this).trigger("setvalue"));
                       },
                       onUnMask: function (e, t, i) {
                         return t
-                          ? C(i.outputFormat, _(e, i.inputFormat, i), i, !0)
+                          ? C(i.outputFormat, T(e, i.inputFormat, i), i, !0)
                           : t;
                       },
                       casing: function (e, t, i, n) {
@@ -2084,7 +2084,7 @@
                       onBeforeMask: function (e, t) {
                         return (
                           "[object Date]" ===
-                            Object.prototype.toString.call(e) && (e = T(e, t)),
+                            Object.prototype.toString.call(e) && (e = _(e, t)),
                           e
                         );
                       },
@@ -2099,8 +2099,8 @@
                 3851: function (e, t, i) {
                   var n,
                     s = (n = i(2394)) && n.__esModule ? n : { default: n },
-                    o = i(8711),
-                    a = i(4713);
+                    a = i(8711),
+                    o = i(4713);
                   s.default.extendDefinitions({
                     A: { validator: "[A-Za-zА-яЁёÀ-ÿµ]", casing: "upper" },
                     "&": { validator: "[0-9A-Za-zА-яЁёÀ-ÿµ]", casing: "upper" },
@@ -2189,10 +2189,10 @@
                     ssn: {
                       mask: "999-99-9999",
                       postValidation: function (e, t, i, n, s, r, l) {
-                        var c = a.getMaskTemplate.call(
+                        var c = o.getMaskTemplate.call(
                           this,
                           !0,
-                          o.getLastValidPosition.call(this),
+                          a.getLastValidPosition.call(this),
                           !0,
                           !0
                         );
@@ -2206,8 +2206,8 @@
                 207: function (e, t, i) {
                   var n = r(i(2394)),
                     s = r(i(5581)),
-                    o = r(i(7184)),
-                    a = i(8711);
+                    a = r(i(7184)),
+                    o = i(8711);
                   function r(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
@@ -2230,24 +2230,24 @@
                   function d(e, t, i, n) {
                     if (e.length > 0 && t > 0 && (!i.digitsOptional || n)) {
                       var s = e.indexOf(i.radixPoint),
-                        o = !1;
+                        a = !1;
                       i.negationSymbol.back === e[e.length - 1] &&
-                        ((o = !0), e.length--),
+                        ((a = !0), e.length--),
                         -1 === s && (e.push(i.radixPoint), (s = e.length - 1));
-                      for (var a = 1; a <= t; a++)
-                        isFinite(e[s + a]) || (e[s + a] = "0");
+                      for (var o = 1; o <= t; o++)
+                        isFinite(e[s + o]) || (e[s + o] = "0");
                     }
-                    return o && e.push(i.negationSymbol.back), e;
+                    return a && e.push(i.negationSymbol.back), e;
                   }
                   function u(e, t) {
                     var i = 0;
                     if ("+" === e) {
                       for (i in t.validPositions);
-                      i = a.seekNext.call(this, parseInt(i));
+                      i = o.seekNext.call(this, parseInt(i));
                     }
                     for (var n in t.tests)
                       if ((n = parseInt(n)) >= i)
-                        for (var s = 0, o = t.tests[n].length; s < o; s++)
+                        for (var s = 0, a = t.tests[n].length; s < a; s++)
                           if (
                             (void 0 === t.validPositions[n] || "-" === e) &&
                             t.tests[n][s].match.def === e
@@ -2272,19 +2272,19 @@
                     return i;
                   }
                   function h(e, t, i, n, s) {
-                    var o = t.buffer ? t.buffer.indexOf(s.radixPoint) : -1,
-                      a =
-                        (-1 !== o || (n && s.jitMasking)) &&
+                    var a = t.buffer ? t.buffer.indexOf(s.radixPoint) : -1,
+                      o =
+                        (-1 !== a || (n && s.jitMasking)) &&
                         new RegExp(s.definitions[9].validator).test(e);
                     return s._radixDance &&
-                      -1 !== o &&
-                      a &&
-                      null == t.validPositions[o]
+                      -1 !== a &&
+                      o &&
+                      null == t.validPositions[a]
                       ? {
-                          insert: { pos: o === i ? o + 1 : o, c: s.radixPoint },
+                          insert: { pos: a === i ? a + 1 : a, c: s.radixPoint },
                           pos: i,
                         }
-                      : a;
+                      : o;
                   }
                   n.default.extendAliases({
                     numeric: {
@@ -2344,8 +2344,8 @@
                             : (s += "9{+}"),
                           void 0 !== e.digits && 0 !== e.digits)
                         ) {
-                          var a = e.digits.toString().split(",");
-                          isFinite(a[0]) && a[1] && isFinite(a[1])
+                          var o = e.digits.toString().split(",");
+                          isFinite(o[0]) && o[1] && isFinite(o[1])
                             ? (s += i + t + "{" + e.digits + "}")
                             : (isNaN(e.digits) || parseInt(e.digits) > 0) &&
                               (e.digitsOptional || e.jitMasking
@@ -2365,7 +2365,7 @@
                                   .toString()
                                   .replace(
                                     new RegExp(
-                                      (0, o.default)(e.groupSeparator),
+                                      (0, a.default)(e.groupSeparator),
                                       "g"
                                     ),
                                     ""
@@ -2381,7 +2381,7 @@
                                   .toString()
                                   .replace(
                                     new RegExp(
-                                      (0, o.default)(e.groupSeparator),
+                                      (0, a.default)(e.groupSeparator),
                                       "g"
                                     ),
                                     ""
@@ -2452,7 +2452,7 @@
                           },
                         },
                       },
-                      preValidation: function (e, t, i, n, s, o, a, r) {
+                      preValidation: function (e, t, i, n, s, a, o, r) {
                         if (!1 !== s.__financeInput && i === s.radixPoint)
                           return !1;
                         var l = e.indexOf(s.radixPoint),
@@ -2471,13 +2471,13 @@
                                 (e -= 1),
                               e
                             );
-                          })(t, i, l, o, s)),
+                          })(t, i, l, a, s)),
                           "-" === i || i === s.negationSymbol.front)
                         ) {
                           if (!0 !== s.allowMinus) return !1;
                           var d = !1,
-                            h = p("+", o),
-                            f = p("-", o);
+                            h = p("+", a),
+                            f = p("-", a);
                           return (
                             -1 !== h && (d = [h, f]),
                             !1 !== d
@@ -2488,12 +2488,12 @@
                               : {
                                   insert: [
                                     {
-                                      pos: u.call(this, "+", o),
+                                      pos: u.call(this, "+", a),
                                       c: s.negationSymbol.front,
                                       fromIsValid: !0,
                                     },
                                     {
-                                      pos: u.call(this, "-", o),
+                                      pos: u.call(this, "-", a),
                                       c: s.negationSymbol.back,
                                       fromIsValid: void 0,
                                     },
@@ -2519,9 +2519,9 @@
                         if (!1 === s.__financeInput)
                           if (n) {
                             if (s.digitsOptional)
-                              return { rewritePosition: a.end };
+                              return { rewritePosition: o.end };
                             if (!s.digitsOptional) {
-                              if (a.begin > l && a.end <= l)
+                              if (o.begin > l && o.end <= l)
                                 return i === s.radixPoint
                                   ? {
                                       insert: {
@@ -2532,8 +2532,8 @@
                                       rewritePosition: l,
                                     }
                                   : { rewritePosition: l + 1 };
-                              if (a.begin < l)
-                                return { rewritePosition: a.begin - 1 };
+                              if (o.begin < l)
+                                return { rewritePosition: o.begin - 1 };
                             }
                           } else if (
                             !s.showMaskOnHover &&
@@ -2545,9 +2545,9 @@
                             return { rewritePosition: l };
                         return { rewritePosition: t };
                       },
-                      postValidation: function (e, t, i, n, s, o, a) {
+                      postValidation: function (e, t, i, n, s, a, o) {
                         if (!1 === n) return n;
-                        if (a) return !0;
+                        if (o) return !0;
                         if (null !== s.min || null !== s.max) {
                           var r = s.onUnMask(
                             e.slice().reverse().join(""),
@@ -2583,7 +2583,7 @@
                         var n = e.replace(i.prefix, "");
                         return (
                           (n = (n = n.replace(i.suffix, "")).replace(
-                            new RegExp((0, o.default)(i.groupSeparator), "g"),
+                            new RegExp((0, a.default)(i.groupSeparator), "g"),
                             ""
                           )),
                           "" !== i.placeholder.charAt(0) &&
@@ -2595,17 +2595,17 @@
                             ? ("" !== i.radixPoint &&
                                 -1 !== n.indexOf(i.radixPoint) &&
                                 (n = n.replace(
-                                  o.default.call(this, i.radixPoint),
+                                  a.default.call(this, i.radixPoint),
                                   "."
                                 )),
                               (n = (n = n.replace(
                                 new RegExp(
-                                  "^" + (0, o.default)(i.negationSymbol.front)
+                                  "^" + (0, a.default)(i.negationSymbol.front)
                                 ),
                                 "-"
                               )).replace(
                                 new RegExp(
-                                  (0, o.default)(i.negationSymbol.back) + "$"
+                                  (0, a.default)(i.negationSymbol.back) + "$"
                                 ),
                                 ""
                               )),
@@ -2620,12 +2620,12 @@
                         return (
                           (i = (i = (i = (i = (i = i.replace(
                             new RegExp(
-                              "^" + (0, o.default)(t.negationSymbol.front)
+                              "^" + (0, a.default)(t.negationSymbol.front)
                             ),
                             "-"
                           )).replace(
                             new RegExp(
-                              (0, o.default)(t.negationSymbol.back) + "$"
+                              (0, a.default)(t.negationSymbol.back) + "$"
                             ),
                             ""
                           )).replace(t.prefix, "")).replace(
@@ -2633,13 +2633,13 @@
                             ""
                           )).replace(
                             new RegExp(
-                              (0, o.default)(t.groupSeparator) + "([0-9]{3})",
+                              (0, a.default)(t.groupSeparator) + "([0-9]{3})",
                               "g"
                             ),
                             "$1"
                           )),
                           "," === t.radixPoint &&
-                            (i = i.replace((0, o.default)(t.radixPoint), ".")),
+                            (i = i.replace((0, a.default)(t.radixPoint), ".")),
                           isFinite(i)
                         );
                       },
@@ -2653,10 +2653,10 @@
                             "-" === e.charAt(0) ||
                             e.charAt(0) === t.negationSymbol.front,
                           s = e.split(i),
-                          a = s[0].replace(/[^\-0-9]/g, ""),
+                          o = s[0].replace(/[^\-0-9]/g, ""),
                           r = s.length > 1 ? s[1].replace(/[^0-9]/g, "") : "",
                           l = s.length > 1;
-                        e = a + ("" !== r ? i + r : r);
+                        e = o + ("" !== r ? i + r : r);
                         var c = 0;
                         if (
                           "" !== i &&
@@ -2668,7 +2668,7 @@
                           "" !== r || !t.digitsOptional)
                         ) {
                           var u = Math.pow(10, c || 1);
-                          (e = e.replace((0, o.default)(i), ".")),
+                          (e = e.replace((0, a.default)(i), ".")),
                             isNaN(parseFloat(e)) ||
                               (e = (
                                 t.roundingFN(parseFloat(e) * u) / u
@@ -2704,21 +2704,21 @@
                               e.splice(i, 1);
                           return e;
                         }
-                        var a, r;
+                        var o, r;
                         if (
                           n.stripLeadingZeroes &&
                           (r = (function (e, t) {
                             var i = new RegExp(
                                 "(^" +
                                   ("" !== t.negationSymbol.front
-                                    ? (0, o.default)(t.negationSymbol.front) +
+                                    ? (0, a.default)(t.negationSymbol.front) +
                                       "?"
                                     : "") +
-                                  (0, o.default)(t.prefix) +
+                                  (0, a.default)(t.prefix) +
                                   ")(.*)(" +
-                                  (0, o.default)(t.suffix) +
+                                  (0, a.default)(t.suffix) +
                                   ("" != t.negationSymbol.back
-                                    ? (0, o.default)(t.negationSymbol.back) +
+                                    ? (0, a.default)(t.negationSymbol.back) +
                                       "?"
                                     : "") +
                                   "$)"
@@ -2782,51 +2782,51 @@
                                 var f = new RegExp(
                                   "(^" +
                                     ("" != n.negationSymbol.front
-                                      ? (0, o.default)(n.negationSymbol.front) +
+                                      ? (0, a.default)(n.negationSymbol.front) +
                                         "?"
                                       : "") +
-                                    (0, o.default)(n.prefix) +
+                                    (0, a.default)(n.prefix) +
                                     ")(.*)(" +
-                                    (0, o.default)(n.suffix) +
+                                    (0, a.default)(n.suffix) +
                                     ("" != n.negationSymbol.back
-                                      ? (0, o.default)(n.negationSymbol.back) +
+                                      ? (0, a.default)(n.negationSymbol.back) +
                                         "?"
                                       : "") +
                                     "$)"
                                 ).exec(s(t.slice(), !0).reverse().join(""));
                                 0 == (f ? f[2] : "") &&
-                                  (a = { refreshFromBuffer: !0, buffer: [0] });
+                                  (o = { refreshFromBuffer: !0, buffer: [0] });
                               } else
                                 "" !== n.radixPoint &&
                                   t.indexOf(n.radixPoint) === n.suffix.length &&
-                                  (a && a.buffer
-                                    ? a.buffer.splice(0, 1 + n.suffix.length)
+                                  (o && o.buffer
+                                    ? o.buffer.splice(0, 1 + n.suffix.length)
                                     : (t.splice(0, 1 + n.suffix.length),
-                                      (a = {
+                                      (o = {
                                         refreshFromBuffer: !0,
                                         buffer: s(t),
                                       })));
                               if (n.enforceDigitsOnBlur) {
                                 var g =
-                                  ((a = a || {}) && a.buffer) ||
+                                  ((o = o || {}) && o.buffer) ||
                                   t.slice().reverse();
-                                (a.refreshFromBuffer = !0),
-                                  (a.buffer = d(g, n.digits, n, !0).reverse());
+                                (o.refreshFromBuffer = !0),
+                                  (o.buffer = d(g, n.digits, n, !0).reverse());
                               }
                           }
-                        return a;
+                        return o;
                       },
                       onKeyDown: function (e, t, i, n) {
-                        var o,
-                          a,
+                        var a,
+                          o,
                           r = l(this),
                           c = String.fromCharCode(e.keyCode).toLowerCase();
-                        if ((a = n.shortcuts && n.shortcuts[c]) && a.length > 1)
+                        if ((o = n.shortcuts && n.shortcuts[c]) && o.length > 1)
                           return (
                             this.inputmask.__valueSet.call(
                               this,
                               parseFloat(this.inputmask.unmaskedvalue()) *
-                                parseInt(a)
+                                parseInt(o)
                             ),
                             r.trigger("setvalue"),
                             !1
@@ -2869,10 +2869,10 @@
                             ] === n.negationSymbol.front
                           )
                             return (
-                              (o = t.slice().reverse()),
-                              "" !== n.negationSymbol.front && o.shift(),
-                              "" !== n.negationSymbol.back && o.pop(),
-                              r.trigger("setvalue", [o.join(""), i.begin]),
+                              (a = t.slice().reverse()),
+                              "" !== n.negationSymbol.front && a.shift(),
+                              "" !== n.negationSymbol.back && a.pop(),
+                              r.trigger("setvalue", [a.join(""), i.begin]),
                               !1
                             );
                           if (!0 === n._radixDance) {
@@ -2880,10 +2880,10 @@
                             if (n.digitsOptional) {
                               if (0 === u)
                                 return (
-                                  (o = t.slice().reverse()).pop(),
+                                  (a = t.slice().reverse()).pop(),
                                   r.trigger("setvalue", [
-                                    o.join(""),
-                                    i.begin >= o.length ? o.length : i.begin,
+                                    a.join(""),
+                                    i.begin >= a.length ? a.length : i.begin,
                                   ]),
                                   !1
                                 );
@@ -2899,14 +2899,14 @@
                                   (e.keyCode !== s.default.BACKSPACE &&
                                     e.keyCode !== s.default.BACKSPACE_SAFARI) ||
                                   i.begin++,
-                                (o = t.slice().reverse()).splice(
-                                  o.length - i.begin,
+                                (a = t.slice().reverse()).splice(
+                                  a.length - i.begin,
                                   i.begin - i.end + 1
                                 ),
-                                (o = d(o, n.digits, n).join("")),
+                                (a = d(a, n.digits, n).join("")),
                                 r.trigger("setvalue", [
-                                  o,
-                                  i.begin >= o.length ? u + 1 : i.begin,
+                                  a,
+                                  i.begin >= a.length ? u + 1 : i.begin,
                                 ]),
                                 !1
                               );
@@ -2973,14 +2973,14 @@
                           e.inputmask._valueGet() !== t &&
                           (e.placeholder !== t || "" === e.placeholder)
                         ) {
-                          var n = a.getBuffer.call(i).slice(),
+                          var n = o.getBuffer.call(i).slice(),
                             s = e.inputmask._valueGet();
                           if (s !== t) {
-                            var o = a.getLastValidPosition.call(i);
-                            -1 === o &&
-                            s === a.getBufferTemplate.call(i).join("")
+                            var a = o.getLastValidPosition.call(i);
+                            -1 === a &&
+                            s === o.getBufferTemplate.call(i).join("")
                               ? (n = [])
-                              : -1 !== o && u.call(i, n),
+                              : -1 !== a && u.call(i, n),
                               h(e, n);
                           }
                         }
@@ -3004,14 +3004,14 @@
                           d(e, e.inputmask._valueGet(!0));
                       }
                       var s = [],
-                        o = n.validPositions;
-                      for (var r in o)
-                        o[r] &&
-                          o[r].match &&
-                          (1 != o[r].match.static ||
+                        a = n.validPositions;
+                      for (var r in a)
+                        a[r] &&
+                          a[r].match &&
+                          (1 != a[r].match.static ||
                             (Array.isArray(n.metadata) &&
-                              !0 !== o[r].generatedInput)) &&
-                          s.push(o[r].input);
+                              !0 !== a[r].generatedInput)) &&
+                          s.push(a[r].input);
                       var l =
                         0 === s.length
                           ? ""
@@ -3019,8 +3019,8 @@
                       if ("function" == typeof i.onUnMask) {
                         var c = (
                           t.isRTL
-                            ? a.getBuffer.call(t).slice().reverse()
-                            : a.getBuffer.call(t)
+                            ? o.getBuffer.call(t).slice().reverse()
+                            : o.getBuffer.call(t)
                         ).join("");
                         l = i.onUnMask.call(t, c, l, i);
                       }
@@ -3029,8 +3029,8 @@
                     (t.writeBuffer = h);
                   var n,
                     s = (n = i(5581)) && n.__esModule ? n : { default: n },
-                    o = i(4713),
-                    a = i(8711),
+                    a = i(4713),
+                    o = i(8711),
                     r = i(7215),
                     l = i(9845),
                     c = i(6030);
@@ -3044,15 +3044,15 @@
                       (i.undoValue = i._valueGet(!0)),
                       (n.clearMaskOnLostFocus || n.clearIncomplete) &&
                         e.inputmask._valueGet() ===
-                          a.getBufferTemplate.call(i).join("") &&
-                        -1 === a.getLastValidPosition.call(i) &&
+                          o.getBufferTemplate.call(i).join("") &&
+                        -1 === o.getLastValidPosition.call(i) &&
                         e.inputmask._valueSet("");
                   }
                   function u(e) {
                     e.length = 0;
                     for (
                       var t,
-                        i = o.getMaskTemplate.call(this, !0, 0, !0, void 0, !0);
+                        i = a.getMaskTemplate.call(this, !0, 0, !0, void 0, !0);
                       void 0 !== (t = i.shift());
 
                     )
@@ -3070,10 +3070,10 @@
                       v = void 0,
                       y = u.skipOptionalPartCharacter;
                     (u.skipOptionalPartCharacter = ""),
-                      a.resetMaskSet.call(l),
+                      o.resetMaskSet.call(l),
                       (d.tests = {}),
                       (m = u.radixPoint
-                        ? a.determineNewCaretPosition.call(
+                        ? o.determineNewCaretPosition.call(
                             l,
                             { begin: 0, end: 0 },
                             !1,
@@ -3089,12 +3089,12 @@
                         if (void 0 !== e) {
                           var n = new p.Event("_checkval");
                           (n.keyCode = e.toString().charCodeAt(0)), (g += e);
-                          var s = a.getLastValidPosition.call(l, void 0, !0);
+                          var s = o.getLastValidPosition.call(l, void 0, !0);
                           !(function (e, t) {
                             for (
-                              var i = o.getMaskTemplate
+                              var i = a.getMaskTemplate
                                   .call(l, !0, 0)
-                                  .slice(e, a.seekNext.call(l, e, !1, !1))
+                                  .slice(e, o.seekNext.call(l, e, !1, !1))
                                   .join("")
                                   .replace(/'/g, ""),
                                 n = i.indexOf(t);
@@ -3104,22 +3104,22 @@
                               n--;
                             var s =
                               0 === n &&
-                              !a.isMask.call(l, e) &&
-                              (o.getTest.call(l, e).match.nativeDef ===
+                              !o.isMask.call(l, e) &&
+                              (a.getTest.call(l, e).match.nativeDef ===
                                 t.charAt(0) ||
-                                (!0 === o.getTest.call(l, e).match.static &&
-                                  o.getTest.call(l, e).match.nativeDef ===
+                                (!0 === a.getTest.call(l, e).match.static &&
+                                  a.getTest.call(l, e).match.nativeDef ===
                                     "'" + t.charAt(0)) ||
-                                (" " === o.getTest.call(l, e).match.nativeDef &&
-                                  (o.getTest.call(l, e + 1).match.nativeDef ===
+                                (" " === a.getTest.call(l, e).match.nativeDef &&
+                                  (a.getTest.call(l, e + 1).match.nativeDef ===
                                     t.charAt(0) ||
                                     (!0 ===
-                                      o.getTest.call(l, e + 1).match.static &&
-                                      o.getTest.call(l, e + 1).match
+                                      a.getTest.call(l, e + 1).match.static &&
+                                      a.getTest.call(l, e + 1).match
                                         .nativeDef ===
                                         "'" + t.charAt(0)))));
-                            if (!s && n > 0 && !a.isMask.call(l, e, !1, !0)) {
-                              var r = a.seekNext.call(l, e);
+                            if (!s && n > 0 && !o.isMask.call(l, e, !1, !0)) {
+                              var r = o.seekNext.call(l, e);
                               l.caretPos.begin < r &&
                                 (l.caretPos = { begin: r });
                             }
@@ -3152,7 +3152,7 @@
                                 h.call(
                                   l,
                                   void 0,
-                                  a.getBuffer.call(l),
+                                  o.getBuffer.call(l),
                                   v.forwardPosition,
                                   n,
                                   !1
@@ -3163,8 +3163,8 @@
                                 }),
                                 (w = l.caretPos))
                               : void 0 === d.validPositions[t] &&
-                                f[t] === o.getPlaceholder.call(l, t) &&
-                                a.isMask.call(l, t, !0)
+                                f[t] === a.getPlaceholder.call(l, t) &&
+                                o.isMask.call(l, t, !0)
                               ? l.caretPos.begin++
                               : (l.caretPos = w);
                         }
@@ -3173,11 +3173,11 @@
                     ) {
                       var x,
                         S,
-                        k = a.seekNext.call(l, -1, void 0, !1);
+                        k = o.seekNext.call(l, -1, void 0, !1);
                       if (
-                        (!r.isComplete.call(l, a.getBuffer.call(l)) &&
+                        (!r.isComplete.call(l, o.getBuffer.call(l)) &&
                           b.length <= k) ||
-                        (r.isComplete.call(l, a.getBuffer.call(l)) &&
+                        (r.isComplete.call(l, o.getBuffer.call(l)) &&
                           b.length > 0 &&
                           b.length !== k &&
                           0 === b[0])
@@ -3209,17 +3209,17 @@
                       h.call(
                         l,
                         e,
-                        a.getBuffer.call(l),
+                        o.getBuffer.call(l),
                         v ? v.forwardPosition : l.caretPos.begin,
                         s || new p.Event("checkval"),
                         s &&
                           (("input" === s.type &&
-                            l.undoValue !== a.getBuffer.call(l).join("")) ||
+                            l.undoValue !== o.getBuffer.call(l).join("")) ||
                             "paste" === s.type)
                       ),
                       (u.skipOptionalPartCharacter = y);
                   }
-                  function h(e, t, i, n, o) {
+                  function h(e, t, i, n, a) {
                     var l = e ? e.inputmask : this,
                       c = l.opts,
                       d = l.dependencyLib;
@@ -3234,7 +3234,7 @@
                             p.end,
                             u.buffer || t
                           ),
-                            (t = a.getBuffer.call(l, !0));
+                            (t = o.getBuffer.call(l, !0));
                         }
                         void 0 !== i && (i = void 0 !== u.caret ? u.caret : i);
                       }
@@ -3244,7 +3244,7 @@
                       (e.inputmask._valueSet(t.join("")),
                       void 0 === i ||
                         (void 0 !== n && "blur" === n.type) ||
-                        a.caret.call(
+                        o.caret.call(
                           l,
                           e,
                           i,
@@ -3255,14 +3255,14 @@
                             (n.keyCode === s.default.DELETE ||
                               n.keyCode === s.default.BACKSPACE)
                         ),
-                      !0 === o)
+                      !0 === a)
                     ) {
                       var h = d(e),
                         f = e.inputmask._valueGet();
                       (e.inputmask.skipInputEvent = !0),
                         h.trigger("input"),
                         setTimeout(function () {
-                          f === a.getBufferTemplate.call(l).join("")
+                          f === o.getBufferTemplate.call(l).join("")
                             ? h.trigger("cleared")
                             : !0 === r.isComplete.call(l, t) &&
                               h.trigger("complete");
@@ -3277,8 +3277,8 @@
                     i(3194);
                   var n = i(157),
                     s = m(i(4963)),
-                    o = m(i(9380)),
-                    a = i(2391),
+                    a = m(i(9380)),
+                    o = i(2391),
                     r = i(4713),
                     l = i(8711),
                     c = i(7215),
@@ -3309,7 +3309,7 @@
                   function m(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
-                  var v = o.default.document,
+                  var v = a.default.document,
                     y = "_inputmask_opts";
                   function b(e, t, i) {
                     if (f.default) {
@@ -3376,13 +3376,13 @@
                           var r = s.default.extend(!0, {}, t.opts);
                           if (
                             (function (e, t, i, n) {
-                              function a(t, s) {
-                                var a = "" === n ? t : n + "-" + t;
+                              function o(t, s) {
+                                var o = "" === n ? t : n + "-" + t;
                                 null !==
-                                  (s = void 0 !== s ? s : e.getAttribute(a)) &&
+                                  (s = void 0 !== s ? s : e.getAttribute(o)) &&
                                   ("string" == typeof s &&
                                     (0 === t.indexOf("on")
-                                      ? (s = o.default[s])
+                                      ? (s = a.default[s])
                                       : "false" === s
                                       ? (s = !1)
                                       : "true" === s && (s = !0)),
@@ -3406,7 +3406,7 @@
                                       c = l[d];
                                       break;
                                     }
-                                for (r in (a("alias", c),
+                                for (r in (o("alias", c),
                                 i.alias && w(i.alias, i, t),
                                 t)) {
                                   if (l)
@@ -3415,7 +3415,7 @@
                                         c = l[d];
                                         break;
                                       }
-                                  a(r, c);
+                                  o(r, c);
                                 }
                               }
                               return (
@@ -3435,7 +3435,7 @@
                               t.dataAttribute
                             )
                           ) {
-                            var l = (0, a.generateMaskSet)(r, t.noMasksCache);
+                            var l = (0, o.generateMaskSet)(r, t.noMasksCache);
                             void 0 !== l &&
                               (void 0 !== e.inputmask &&
                                 ((e.inputmask.opts.autoUnmask = !0),
@@ -3471,7 +3471,7 @@
                       if (
                         ((this.maskset =
                           this.maskset ||
-                          (0, a.generateMaskSet)(this.opts, this.noMasksCache)),
+                          (0, o.generateMaskSet)(this.opts, this.noMasksCache)),
                         void 0 === this.el || void 0 !== e)
                       ) {
                         var t = (
@@ -3532,7 +3532,7 @@
                       return (
                         (this.maskset =
                           this.maskset ||
-                          (0, a.generateMaskSet)(this.opts, this.noMasksCache)),
+                          (0, o.generateMaskSet)(this.opts, this.noMasksCache)),
                         l.getBufferTemplate.call(this).join("")
                       );
                     },
@@ -3543,7 +3543,7 @@
                       return (
                         (this.maskset =
                           this.maskset ||
-                          (0, a.generateMaskSet)(this.opts, this.noMasksCache)),
+                          (0, o.generateMaskSet)(this.opts, this.noMasksCache)),
                         c.isComplete.call(this, l.getBuffer.call(this))
                       );
                     },
@@ -3551,7 +3551,7 @@
                       if (
                         ((this.maskset =
                           this.maskset ||
-                          (0, a.generateMaskSet)(this.opts, this.noMasksCache)),
+                          (0, o.generateMaskSet)(this.opts, this.noMasksCache)),
                         Array.isArray(this.maskset.metadata))
                       ) {
                         var e = r.getMaskTemplate
@@ -3570,7 +3570,7 @@
                       if (
                         ((this.maskset =
                           this.maskset ||
-                          (0, a.generateMaskSet)(this.opts, this.noMasksCache)),
+                          (0, o.generateMaskSet)(this.opts, this.noMasksCache)),
                         e)
                       ) {
                         var t = (
@@ -3606,7 +3606,7 @@
                     format: function (e, t) {
                       this.maskset =
                         this.maskset ||
-                        (0, a.generateMaskSet)(this.opts, this.noMasksCache);
+                        (0, o.generateMaskSet)(this.opts, this.noMasksCache);
                       var i = (
                         ("function" == typeof this.opts.onBeforeMask &&
                           this.opts.onBeforeMask.call(this, e, this.opts)) ||
@@ -3622,7 +3622,7 @@
                       this.el &&
                         (0, s.default)(this.el).trigger("setvalue", [e]);
                     },
-                    analyseMask: a.analyseMask,
+                    analyseMask: o.analyseMask,
                   }),
                     (b.extendDefaults = function (e) {
                       s.default.extend(!0, b.prototype.defaults, e);
@@ -3659,7 +3659,7 @@
                         });
                     }),
                     (b.dependencyLib = s.default),
-                    (o.default.Inputmask = b);
+                    (a.default.Inputmask = b);
                   var x = b;
                   t.default = x;
                 },
@@ -3684,8 +3684,8 @@
                     );
                   }
                   var s = f(i(9380)),
-                    o = f(i(2394)),
-                    a = f(i(8741));
+                    a = f(i(2394)),
+                    o = f(i(8741));
                   function r(e, t) {
                     for (var i = 0; i < t.length; i++) {
                       var n = t[i];
@@ -3802,7 +3802,7 @@
                   }
                   var g = s.default.document;
                   if (
-                    a.default &&
+                    o.default &&
                     g &&
                     g.head &&
                     g.head.attachShadow &&
@@ -3831,7 +3831,7 @@
                         i,
                         n,
                         s,
-                        a,
+                        o,
                         c =
                           ((t = d),
                           (i = u()),
@@ -3858,10 +3858,10 @@
                         for (var s in ((n.type = "text"), i.appendChild(n), t))
                           Object.prototype.hasOwnProperty.call(t, s) &&
                             n.setAttribute(t[s], e.getAttribute(t[s]));
-                        var a = new o.default();
+                        var o = new a.default();
                         return (
-                          (a.dataAttribute = ""),
-                          a.mask(n),
+                          (o.dataAttribute = ""),
+                          o.mask(n),
                           (n.inputmask.shadowRoot = i),
                           e
                         );
@@ -3869,7 +3869,7 @@
                       return (
                         (n = d),
                         s && r(n.prototype, s),
-                        a && r(n, a),
+                        o && r(n, o),
                         Object.defineProperty(n, "prototype", { writable: !1 }),
                         n
                       );
@@ -3881,7 +3881,7 @@
                   Object.defineProperty(t, "__esModule", { value: !0 }),
                     (t.analyseMask = function (e, t, i) {
                       var n,
-                        a,
+                        o,
                         r,
                         l,
                         c,
@@ -3897,7 +3897,7 @@
                         v = !1;
                       function y(e, n, s) {
                         s = void 0 !== s ? s : e.matches.length;
-                        var a = e.matches[s - 1];
+                        var o = e.matches[s - 1];
                         if (t)
                           0 === n.indexOf("[") ||
                           (h && /\\d|\\s|\\w/i.test(n)) ||
@@ -3907,7 +3907,7 @@
                                 static: !1,
                                 optionality: !1,
                                 newBlockMarker:
-                                  void 0 === a ? "master" : a.def !== n,
+                                  void 0 === o ? "master" : o.def !== n,
                                 casing: null,
                                 def: n,
                                 placeholder: void 0,
@@ -3915,7 +3915,7 @@
                               })
                             : (h && (n = n[n.length - 1]),
                               n.split("").forEach(function (t, n) {
-                                (a = e.matches[s - 1]),
+                                (o = e.matches[s - 1]),
                                   e.matches.splice(s++, 0, {
                                     fn: /[a-z]/i.test(
                                       i.staticDefinitionSymbol || t
@@ -3930,9 +3930,9 @@
                                     static: !0,
                                     optionality: !1,
                                     newBlockMarker:
-                                      void 0 === a
+                                      void 0 === o
                                         ? "master"
-                                        : a.def !== t && !0 !== a.static,
+                                        : o.def !== t && !0 !== o.static,
                                     casing: null,
                                     def: i.staticDefinitionSymbol || t,
                                     placeholder:
@@ -3947,7 +3947,7 @@
                           var r =
                             (i.definitions && i.definitions[n]) ||
                             (i.usePrototypeDefinitions &&
-                              o.default.prototype.definitions[n]);
+                              a.default.prototype.definitions[n]);
                           r && !h
                             ? e.matches.splice(s++, 0, {
                                 fn: r.validator
@@ -3963,9 +3963,9 @@
                                 static: r.static || !1,
                                 optionality: r.optional || !1,
                                 newBlockMarker:
-                                  void 0 === a || r.optional
+                                  void 0 === o || r.optional
                                     ? "master"
-                                    : a.def !== (r.definitionSymbol || n),
+                                    : o.def !== (r.definitionSymbol || n),
                                 casing: r.casing,
                                 def: r.definitionSymbol || n,
                                 placeholder: r.placeholder,
@@ -3984,9 +3984,9 @@
                                 static: !0,
                                 optionality: !1,
                                 newBlockMarker:
-                                  void 0 === a
+                                  void 0 === o
                                     ? "master"
-                                    : a.def !== n && !0 !== a.static,
+                                    : o.def !== n && !0 !== o.static,
                                 casing: null,
                                 def: i.staticDefinitionSymbol || n,
                                 placeholder:
@@ -4000,7 +4000,7 @@
                       }
                       function b() {
                         if (g.length > 0) {
-                          if ((y((l = g[g.length - 1]), a), l.isAlternator)) {
+                          if ((y((l = g[g.length - 1]), o), l.isAlternator)) {
                             c = g.pop();
                             for (var e = 0; e < c.matches.length; e++)
                               c.matches[e].isGroup &&
@@ -4009,7 +4009,7 @@
                               ? (l = g[g.length - 1]).matches.push(c)
                               : f.matches.push(c);
                           }
-                        } else y(f, a);
+                        } else y(f, o);
                       }
                       function w(e) {
                         var t = new s.default(!0);
@@ -4059,14 +4059,14 @@
                         (n = t ? p.exec(e) : u.exec(e));
 
                       ) {
-                        if (((a = n[0]), t)) {
-                          switch (a.charAt(0)) {
+                        if (((o = n[0]), t)) {
+                          switch (o.charAt(0)) {
                             case "?":
-                              a = "{0,1}";
+                              o = "{0,1}";
                               break;
                             case "+":
                             case "*":
-                              a = "{" + a + "}";
+                              o = "{" + o + "}";
                               break;
                             case "|":
                               if (0 === g.length) {
@@ -4077,11 +4077,11 @@
                                   (v = !0);
                               }
                           }
-                          "\\d" === a && (a = "[0-9]");
+                          "\\d" === o && (o = "[0-9]");
                         }
                         if (h) b();
                         else
-                          switch (a.charAt(0)) {
+                          switch (o.charAt(0)) {
                             case "$":
                             case "^":
                               t || b();
@@ -4101,30 +4101,30 @@
                               break;
                             case i.quantifiermarker[0]:
                               var C = new s.default(!1, !1, !0),
-                                E = (a = a.replace(/[{}?]/g, "")).split("|"),
-                                _ = E[0].split(","),
-                                T = isNaN(_[0]) ? _[0] : parseInt(_[0]),
+                                E = (o = o.replace(/[{}?]/g, "")).split("|"),
+                                T = E[0].split(","),
+                                _ = isNaN(T[0]) ? T[0] : parseInt(T[0]),
                                 P =
-                                  1 === _.length
-                                    ? T
-                                    : isNaN(_[1])
-                                    ? _[1]
-                                    : parseInt(_[1]),
-                                I = isNaN(E[1]) ? E[1] : parseInt(E[1]);
-                              ("*" !== T && "+" !== T) ||
-                                (T = "*" === P ? 0 : 1),
-                                (C.quantifier = { min: T, max: P, jit: I });
-                              var O =
+                                  1 === T.length
+                                    ? _
+                                    : isNaN(T[1])
+                                    ? T[1]
+                                    : parseInt(T[1]),
+                                O = isNaN(E[1]) ? E[1] : parseInt(E[1]);
+                              ("*" !== _ && "+" !== _) ||
+                                (_ = "*" === P ? 0 : 1),
+                                (C.quantifier = { min: _, max: P, jit: O });
+                              var I =
                                 g.length > 0
                                   ? g[g.length - 1].matches
                                   : f.matches;
-                              if ((n = O.pop()).isAlternator) {
-                                O.push(n), (O = n.matches);
+                              if ((n = I.pop()).isAlternator) {
+                                I.push(n), (I = n.matches);
                                 var M = new s.default(!0),
-                                  L = O.pop();
-                                O.push(M), (O = M.matches), (n = L);
+                                  L = I.pop();
+                                I.push(M), (I = M.matches), (n = L);
                               }
-                              n.isGroup || (n = w([n])), O.push(n), O.push(C);
+                              n.isGroup || (n = w([n])), I.push(n), I.push(C);
                               break;
                             case i.alternatormarker:
                               if (g.length > 0) {
@@ -4163,11 +4163,11 @@
                           ((function e(n) {
                             n &&
                               n.matches &&
-                              n.matches.forEach(function (s, o) {
-                                var a = n.matches[o + 1];
-                                (void 0 === a ||
-                                  void 0 === a.matches ||
-                                  !1 === a.isQuantifier) &&
+                              n.matches.forEach(function (s, a) {
+                                var o = n.matches[a + 1];
+                                (void 0 === o ||
+                                  void 0 === o.matches ||
+                                  !1 === o.isQuantifier) &&
                                   s &&
                                   s.isGroup &&
                                   ((s.isGroup = !1),
@@ -4195,25 +4195,25 @@
                                   t.matches[s + 1] &&
                                   t.matches[s + 1].isGroup
                                 ) {
-                                  var o = t.matches[n];
+                                  var a = t.matches[n];
                                   t.matches.splice(n, 1),
-                                    t.matches.splice(s + 1, 0, o);
+                                    t.matches.splice(s + 1, 0, a);
                                 }
                                 void 0 !== t.matches[n].matches
                                   ? (t.matches[n] = e(t.matches[n]))
                                   : (t.matches[n] =
-                                      ((a = t.matches[n]) ===
+                                      ((o = t.matches[n]) ===
                                       i.optionalmarker[0]
-                                        ? (a = i.optionalmarker[1])
-                                        : a === i.optionalmarker[1]
-                                        ? (a = i.optionalmarker[0])
-                                        : a === i.groupmarker[0]
-                                        ? (a = i.groupmarker[1])
-                                        : a === i.groupmarker[1] &&
-                                          (a = i.groupmarker[0]),
-                                      a));
+                                        ? (o = i.optionalmarker[1])
+                                        : o === i.optionalmarker[1]
+                                        ? (o = i.optionalmarker[0])
+                                        : o === i.groupmarker[0]
+                                        ? (o = i.groupmarker[1])
+                                        : o === i.groupmarker[1] &&
+                                          (o = i.groupmarker[0]),
+                                      o));
                               }
-                            var a;
+                            var o;
                             return t;
                           })(m[0]),
                         m
@@ -4222,7 +4222,7 @@
                     (t.generateMaskSet = function (e, t) {
                       var i;
                       function s(e, i, s) {
-                        var a,
+                        var o,
                           r,
                           l = !1;
                         if (
@@ -4263,11 +4263,11 @@
                             : e),
                           null !== s.keepStatic &&
                             (r = "ks_" + s.keepStatic + r),
-                          void 0 === o.default.prototype.masksCache[r] ||
+                          void 0 === a.default.prototype.masksCache[r] ||
                           !0 === t
-                            ? ((a = {
+                            ? ((o = {
                                 mask: e,
-                                maskToken: o.default.prototype.analyseMask(
+                                maskToken: a.default.prototype.analyseMask(
                                   e,
                                   l,
                                   s
@@ -4282,18 +4282,18 @@
                                 jitOffset: {},
                               }),
                               !0 !== t &&
-                                ((o.default.prototype.masksCache[r] = a),
-                                (a = n.default.extend(
+                                ((a.default.prototype.masksCache[r] = o),
+                                (o = n.default.extend(
                                   !0,
                                   {},
-                                  o.default.prototype.masksCache[r]
+                                  a.default.prototype.masksCache[r]
                                 ))))
-                            : (a = n.default.extend(
+                            : (o = n.default.extend(
                                 !0,
                                 {},
-                                o.default.prototype.masksCache[r]
+                                a.default.prototype.masksCache[r]
                               )),
-                          a
+                          o
                         );
                       }
                       if (
@@ -4302,18 +4302,18 @@
                       ) {
                         if (e.mask.length > 1) {
                           null === e.keepStatic && (e.keepStatic = !0);
-                          var a = e.groupmarker[0];
+                          var o = e.groupmarker[0];
                           return (
                             (e.isRTL ? e.mask.reverse() : e.mask).forEach(
                               function (t) {
-                                a.length > 1 && (a += e.alternatormarker),
+                                o.length > 1 && (o += e.alternatormarker),
                                   void 0 !== t.mask &&
                                   "function" != typeof t.mask
-                                    ? (a += t.mask)
-                                    : (a += t);
+                                    ? (o += t.mask)
+                                    : (o += t);
                               }
                             ),
-                            s((a += e.groupmarker[1]), e.mask, e)
+                            s((o += e.groupmarker[1]), e.mask, e)
                           );
                         }
                         e.mask = e.mask.pop();
@@ -4329,10 +4329,10 @@
                         i
                       );
                     });
-                  var n = a(i(4963)),
-                    s = a(i(9695)),
-                    o = a(i(2394));
-                  function a(e) {
+                  var n = o(i(4963)),
+                    s = o(i(9695)),
+                    a = o(i(2394));
+                  function o(e) {
                     return e && e.__esModule ? e : { default: e };
                   }
                 },
@@ -4368,7 +4368,7 @@
                                   return this.inputmask
                                     ? this.inputmask.opts.autoUnmask
                                       ? this.inputmask.unmaskedvalue()
-                                      : -1 !== o.getLastValidPosition.call(e) ||
+                                      : -1 !== a.getLastValidPosition.call(e) ||
                                         !0 !== i.nullable
                                       ? (
                                           this.inputmask.shadowRoot ||
@@ -4376,15 +4376,15 @@
                                         ).activeElement === this &&
                                         i.clearMaskOnLostFocus
                                         ? (e.isRTL
-                                            ? a.clearOptionalTail
+                                            ? o.clearOptionalTail
                                                 .call(
                                                   e,
-                                                  o.getBuffer.call(e).slice()
+                                                  a.getBuffer.call(e).slice()
                                                 )
                                                 .reverse()
-                                            : a.clearOptionalTail.call(
+                                            : o.clearOptionalTail.call(
                                                 e,
-                                                o.getBuffer.call(e).slice()
+                                                a.getBuffer.call(e).slice()
                                               )
                                           ).join("")
                                         : s.call(this)
@@ -4394,7 +4394,7 @@
                                 function d(e) {
                                   l.call(this, e),
                                     this.inputmask &&
-                                      (0, a.applyInputValue)(this, e);
+                                      (0, o.applyInputValue)(this, e);
                                 }
                                 if (!t.inputmask.__valueGet) {
                                   if (!0 !== i.noValuePatching) {
@@ -4486,7 +4486,7 @@
                                                   return t.inputmask.unmaskedvalue();
                                                 var n = s(t);
                                                 return -1 !==
-                                                  o.getLastValidPosition.call(
+                                                  a.getLastValidPosition.call(
                                                     e,
                                                     void 0,
                                                     void 0,
@@ -4502,7 +4502,7 @@
                                               var i = r(e, t);
                                               return (
                                                 e.inputmask &&
-                                                  (0, a.applyInputValue)(e, t),
+                                                  (0, o.applyInputValue)(e, t),
                                                 i
                                               );
                                             },
@@ -4520,10 +4520,10 @@
                                             );
                                             t !==
                                               (e.isRTL
-                                                ? o.getBuffer.call(e).reverse()
-                                                : o.getBuffer.call(e)
+                                                ? a.getBuffer.call(e).reverse()
+                                                : a.getBuffer.call(e)
                                               ).join("") &&
-                                              (0, a.applyInputValue)(this, t);
+                                              (0, o.applyInputValue)(this, t);
                                           }
                                         );
                                       })(t));
@@ -4631,7 +4631,7 @@
                             "setvalue",
                             d.EventHandlers.setValueEvent
                           ),
-                          o.getBufferTemplate.call(e).join(""),
+                          a.getBufferTemplate.call(e).join(""),
                           (e.undoValue = e._valueGet(!0));
                         var p = (i.inputmask.shadowRoot || i.ownerDocument)
                           .activeElement;
@@ -4640,31 +4640,31 @@
                           !1 === t.clearMaskOnLostFocus ||
                           p === i
                         ) {
-                          (0, a.applyInputValue)(
+                          (0, o.applyInputValue)(
                             i,
                             i.inputmask._valueGet(!0),
                             t
                           );
-                          var h = o.getBuffer.call(e).slice();
+                          var h = a.getBuffer.call(e).slice();
                           !1 === c.isComplete.call(e, h) &&
                             t.clearIncomplete &&
-                            o.resetMaskSet.call(e),
+                            a.resetMaskSet.call(e),
                             t.clearMaskOnLostFocus &&
                               p !== i &&
-                              (-1 === o.getLastValidPosition.call(e)
+                              (-1 === a.getLastValidPosition.call(e)
                                 ? (h = [])
-                                : a.clearOptionalTail.call(e, h)),
+                                : o.clearOptionalTail.call(e, h)),
                             (!1 === t.clearMaskOnLostFocus ||
                               (t.showMaskOnFocus && p === i) ||
                               "" !== i.inputmask._valueGet(!0)) &&
-                              (0, a.writeBuffer)(i, h),
+                              (0, o.writeBuffer)(i, h),
                             p === i &&
-                              o.caret.call(
+                              a.caret.call(
                                 e,
                                 i,
-                                o.seekNext.call(
+                                a.seekNext.call(
                                   e,
-                                  o.getLastValidPosition.call(e)
+                                  a.getLastValidPosition.call(e)
                                 )
                               );
                         }
@@ -4672,8 +4672,8 @@
                     });
                   var n,
                     s = (n = i(5581)) && n.__esModule ? n : { default: n },
-                    o = i(8711),
-                    a = i(7760),
+                    a = i(8711),
+                    o = i(7760),
                     r = i(9716),
                     l = i(9845),
                     c = i(7215),
@@ -4703,12 +4703,12 @@
                         if (0 === n) return !1;
                         for (
                           var s = 0 | t,
-                            o = Math.max(s >= 0 ? s : n - Math.abs(s), 0);
-                          o < n;
+                            a = Math.max(s >= 0 ? s : n - Math.abs(s), 0);
+                          a < n;
 
                         ) {
-                          if (i[o] === e) return !0;
-                          o++;
+                          if (i[a] === e) return !0;
+                          a++;
                         }
                         return !1;
                       },
@@ -4744,46 +4744,46 @@
                 8711: function (e, t, i) {
                   Object.defineProperty(t, "__esModule", { value: !0 }),
                     (t.caret = function (e, t, i, n, s) {
-                      var o,
-                        a = this,
+                      var a,
+                        o = this,
                         r = this.opts;
                       if (void 0 === t)
                         return (
                           "selectionStart" in e && "selectionEnd" in e
                             ? ((t = e.selectionStart), (i = e.selectionEnd))
                             : window.getSelection
-                            ? ((o = window.getSelection().getRangeAt(0))
+                            ? ((a = window.getSelection().getRangeAt(0))
                                 .commonAncestorContainer.parentNode !== e &&
-                                o.commonAncestorContainer !== e) ||
-                              ((t = o.startOffset), (i = o.endOffset))
+                                a.commonAncestorContainer !== e) ||
+                              ((t = a.startOffset), (i = a.endOffset))
                             : document.selection &&
                               document.selection.createRange &&
                               (i =
                                 (t =
                                   0 -
-                                  (o = document.selection.createRange())
+                                  (a = document.selection.createRange())
                                     .duplicate()
                                     .moveStart(
                                       "character",
                                       -e.inputmask._valueGet().length
-                                    )) + o.text.length),
+                                    )) + a.text.length),
                           {
-                            begin: n ? t : c.call(a, t),
-                            end: n ? i : c.call(a, i),
+                            begin: n ? t : c.call(o, t),
+                            end: n ? i : c.call(o, i),
                           }
                         );
                       if (
                         (Array.isArray(t) &&
-                          ((i = a.isRTL ? t[0] : t[1]),
-                          (t = a.isRTL ? t[1] : t[0])),
+                          ((i = o.isRTL ? t[0] : t[1]),
+                          (t = o.isRTL ? t[1] : t[0])),
                         void 0 !== t.begin &&
-                          ((i = a.isRTL ? t.begin : t.end),
-                          (t = a.isRTL ? t.end : t.begin)),
+                          ((i = o.isRTL ? t.begin : t.end),
+                          (t = o.isRTL ? t.end : t.begin)),
                         "number" == typeof t)
                       ) {
-                        (t = n ? t : c.call(a, t)),
+                        (t = n ? t : c.call(o, t)),
                           (i =
-                            "number" == typeof (i = n ? i : c.call(a, i))
+                            "number" == typeof (i = n ? i : c.call(o, i))
                               ? i
                               : t);
                         var l =
@@ -4811,50 +4811,50 @@
                             e.setSelectionRange(t, i);
                           else if (window.getSelection) {
                             if (
-                              ((o = document.createRange()),
+                              ((a = document.createRange()),
                               void 0 === e.firstChild || null === e.firstChild)
                             ) {
                               var d = document.createTextNode("");
                               e.appendChild(d);
                             }
-                            o.setStart(
+                            a.setStart(
                               e.firstChild,
                               t < e.inputmask._valueGet().length
                                 ? t
                                 : e.inputmask._valueGet().length
                             ),
-                              o.setEnd(
+                              a.setEnd(
                                 e.firstChild,
                                 i < e.inputmask._valueGet().length
                                   ? i
                                   : e.inputmask._valueGet().length
                               ),
-                              o.collapse(!0);
+                              a.collapse(!0);
                             var u = window.getSelection();
-                            u.removeAllRanges(), u.addRange(o);
+                            u.removeAllRanges(), u.addRange(a);
                           } else
                             e.createTextRange &&
-                              ((o = e.createTextRange()).collapse(!0),
-                              o.moveEnd("character", i),
-                              o.moveStart("character", t),
-                              o.select());
+                              ((a = e.createTextRange()).collapse(!0),
+                              a.moveEnd("character", i),
+                              a.moveStart("character", t),
+                              a.select());
                       }
                     }),
                     (t.determineLastRequiredPosition = function (e) {
                       var t,
                         i,
-                        o = this,
+                        a = this,
                         r = this.maskset,
                         l = this.dependencyLib,
-                        c = n.getMaskTemplate.call(o, !0, a.call(o), !0, !0),
+                        c = n.getMaskTemplate.call(a, !0, o.call(a), !0, !0),
                         d = c.length,
-                        u = a.call(o),
+                        u = o.call(a),
                         p = {},
                         h = r.validPositions[u],
                         f = void 0 !== h ? h.locator.slice() : void 0;
                       for (t = u + 1; t < c.length; t++)
                         (f = (i = n.getTestTemplate.call(
-                          o,
+                          a,
                           t,
                           f,
                           t - 1
@@ -4876,14 +4876,14 @@
                               (!0 === i.match.static &&
                                 i.locator[h.alternation] &&
                                 s.checkAlternationMatch.call(
-                                  o,
+                                  a,
                                   i.locator[h.alternation]
                                     .toString()
                                     .split(","),
                                   g.toString().split(",")
                                 ) &&
-                                "" !== n.getTests.call(o, t)[0].def)))) &&
-                        c[t] === n.getPlaceholder.call(o, t, i.match);
+                                "" !== n.getTests.call(a, t)[0].def)))) &&
+                        c[t] === n.getPlaceholder.call(a, t, i.match);
                         t--
                       )
                         d--;
@@ -4901,10 +4901,10 @@
                           case "none":
                             break;
                           case "select":
-                            e = { begin: 0, end: o.call(s).length };
+                            e = { begin: 0, end: a.call(s).length };
                             break;
                           case "ignore":
-                            e.end = e.begin = l.call(s, a.call(s));
+                            e.end = e.begin = l.call(s, o.call(s));
                             break;
                           case "radixFocus":
                             if (
@@ -4916,14 +4916,14 @@
                                     t[e].input === n.getPlaceholder.call(s, e)
                                   ) {
                                     if (e < l.call(s, -1)) return !0;
-                                    var i = o.call(s).indexOf(d.radixPoint);
+                                    var i = a.call(s).indexOf(d.radixPoint);
                                     if (-1 !== i) {
-                                      for (var a in t)
+                                      for (var o in t)
                                         if (
-                                          t[a] &&
-                                          i < a &&
-                                          t[a].input !==
-                                            n.getPlaceholder.call(s, a)
+                                          t[o] &&
+                                          i < o &&
+                                          t[o].input !==
+                                            n.getPlaceholder.call(s, o)
                                         )
                                           return !1;
                                       return !0;
@@ -4933,7 +4933,7 @@
                                 return !1;
                               })(e.begin)
                             ) {
-                              var u = o.call(s).join("").indexOf(d.radixPoint);
+                              var u = a.call(s).join("").indexOf(d.radixPoint);
                               e.end = e.begin = d.numericInput
                                 ? l.call(s, u)
                                 : u;
@@ -4941,7 +4941,7 @@
                             }
                           default:
                             var p = e.begin,
-                              h = a.call(s, p, !0),
+                              h = o.call(s, p, !0),
                               f = l.call(s, -1 !== h || r.call(s, 0) ? h : -1);
                             if (p <= f)
                               e.end = e.begin = r.call(s, p, !1, !0)
@@ -4958,7 +4958,7 @@
                                 v = n.getPlaceholder.call(s, f, m.match);
                               if (
                                 ("" !== v &&
-                                  o.call(s)[f] !== v &&
+                                  a.call(s)[f] !== v &&
                                   !0 !== m.match.optionalQuantifier &&
                                   !0 !== m.match.newBlockMarker) ||
                                 (!r.call(s, f, d.keepStatic, !0) &&
@@ -4973,7 +4973,7 @@
                         return e;
                       }
                     }),
-                    (t.getBuffer = o),
+                    (t.getBuffer = a),
                     (t.getBufferTemplate = function () {
                       var e = this.maskset;
                       return (
@@ -4984,7 +4984,7 @@
                         e._buffer
                       );
                     }),
-                    (t.getLastValidPosition = a),
+                    (t.getLastValidPosition = o),
                     (t.isMask = r),
                     (t.resetMaskSet = function (e) {
                       var t = this.maskset;
@@ -5011,50 +5011,50 @@
                     (t.translatePosition = c);
                   var n = i(4713),
                     s = i(7215);
-                  function o(e) {
+                  function a(e) {
                     var t = this.maskset;
                     return (
                       (void 0 !== t.buffer && !0 !== e) ||
                         ((t.buffer = n.getMaskTemplate.call(
                           this,
                           !0,
-                          a.call(this),
+                          o.call(this),
                           !0
                         )),
                         void 0 === t._buffer && (t._buffer = t.buffer.slice())),
                       t.buffer
                     );
                   }
-                  function a(e, t, i) {
+                  function o(e, t, i) {
                     var n = this.maskset,
                       s = -1,
-                      o = -1,
-                      a = i || n.validPositions;
-                    for (var r in (void 0 === e && (e = -1), a)) {
+                      a = -1,
+                      o = i || n.validPositions;
+                    for (var r in (void 0 === e && (e = -1), o)) {
                       var l = parseInt(r);
-                      a[l] &&
-                        (t || !0 !== a[l].generatedInput) &&
-                        (l <= e && (s = l), l >= e && (o = l));
+                      o[l] &&
+                        (t || !0 !== o[l].generatedInput) &&
+                        (l <= e && (s = l), l >= e && (a = l));
                     }
                     return -1 === s || s == e
-                      ? o
-                      : -1 == o || e - s < o - e
+                      ? a
+                      : -1 == a || e - s < a - e
                       ? s
-                      : o;
+                      : a;
                   }
                   function r(e, t, i) {
                     var s = this,
-                      o = this.maskset,
-                      a = n.getTestTemplate.call(s, e).match;
+                      a = this.maskset,
+                      o = n.getTestTemplate.call(s, e).match;
                     if (
-                      ("" === a.def && (a = n.getTest.call(s, e).match),
-                      !0 !== a.static)
+                      ("" === o.def && (o = n.getTest.call(s, e).match),
+                      !0 !== o.static)
                     )
-                      return a.fn;
+                      return o.fn;
                     if (
                       !0 === i &&
-                      void 0 !== o.validPositions[e] &&
-                      !0 !== o.validPositions[e].generatedInput
+                      void 0 !== a.validPositions[e] &&
+                      !0 !== a.validPositions[e].generatedInput
                     )
                       return !0;
                     if (!0 !== t && e > -1) {
@@ -5079,16 +5079,16 @@
                     var s = this;
                     void 0 === i && (i = !0);
                     for (
-                      var o = e + 1;
-                      "" !== n.getTest.call(s, o).match.def &&
+                      var a = e + 1;
+                      "" !== n.getTest.call(s, a).match.def &&
                       ((!0 === t &&
-                        (!0 !== n.getTest.call(s, o).match.newBlockMarker ||
-                          !r.call(s, o, void 0, !0))) ||
-                        (!0 !== t && !r.call(s, o, void 0, i)));
+                        (!0 !== n.getTest.call(s, a).match.newBlockMarker ||
+                          !r.call(s, a, void 0, !0))) ||
+                        (!0 !== t && !r.call(s, a, void 0, i)));
 
                     )
-                      o++;
-                    return o;
+                      a++;
+                    return a;
                   }
                   function c(e) {
                     var t = this.opts,
@@ -5106,15 +5106,15 @@
                 4713: function (e, t, i) {
                   Object.defineProperty(t, "__esModule", { value: !0 }),
                     (t.determineTestTemplate = c),
-                    (t.getDecisionTaker = a),
+                    (t.getDecisionTaker = o),
                     (t.getMaskTemplate = function (e, t, i, n, s) {
-                      var o = this,
-                        a = this.opts,
+                      var a = this,
+                        o = this.opts,
                         d = this.maskset,
-                        u = a.greedy;
+                        u = o.greedy;
                       s &&
-                        a.greedy &&
-                        ((a.greedy = !1), (o.maskset.tests = {})),
+                        o.greedy &&
+                        ((o.greedy = !1), (a.maskset.tests = {})),
                         (t = t || 0);
                       var h,
                         f,
@@ -5130,9 +5130,9 @@
                             void 0 === d.validPositions[y + 1] &&
                             (!0 === d.validPositions[y].generatedInput ||
                               (d.validPositions[y].input ==
-                                a.skipOptionalPartCharacter &&
+                                o.skipOptionalPartCharacter &&
                                 y > 0))
-                              ? c.call(o, y, p.call(o, y, h, y - 1))
+                              ? c.call(a, y, p.call(a, y, h, y - 1))
                               : d.validPositions[y]).match),
                             (h = g.locator.slice()),
                             v.push(
@@ -5140,29 +5140,29 @@
                                 ? g.input
                                 : !1 === i
                                 ? f.nativeDef
-                                : r.call(o, y, f)
+                                : r.call(a, y, f)
                             );
                         else {
-                          (f = (g = l.call(o, y, h, y - 1)).match),
+                          (f = (g = l.call(a, y, h, y - 1)).match),
                             (h = g.locator.slice());
                           var b =
                             !0 !== n &&
-                            (!1 !== a.jitMasking ? a.jitMasking : f.jit);
+                            (!1 !== o.jitMasking ? o.jitMasking : f.jit);
                           (m =
                             ((m &&
                               f.static &&
-                              f.def !== a.groupSeparator &&
+                              f.def !== o.groupSeparator &&
                               null === f.fn) ||
                               (d.validPositions[y - 1] &&
                                 f.static &&
-                                f.def !== a.groupSeparator &&
+                                f.def !== o.groupSeparator &&
                                 null === f.fn)) &&
                             d.tests[y] &&
                             1 === d.tests[y].length) ||
                           !1 === b ||
                           void 0 === b ||
                           ("number" == typeof b && isFinite(b) && b > y)
-                            ? v.push(!1 === i ? f.nativeDef : r.call(o, y, f))
+                            ? v.push(!1 === i ? f.nativeDef : r.call(a, y, f))
                             : (m = !1);
                         }
                         y++;
@@ -5171,7 +5171,7 @@
                         "" === v[v.length - 1] && v.pop(),
                         (!1 === i && void 0 !== d.maskLength) ||
                           (d.maskLength = y - 1),
-                        (a.greedy = u),
+                        (o.greedy = u),
                         v
                       );
                     }),
@@ -5182,14 +5182,14 @@
                     (t.isSubsetOf = u);
                   var n,
                     s = (n = i(2394)) && n.__esModule ? n : { default: n };
-                  function o(e, t) {
+                  function a(e, t) {
                     var i = (
-                      null != e.alternation ? e.mloc[a(e)] : e.locator
+                      null != e.alternation ? e.mloc[o(e)] : e.locator
                     ).join("");
                     if ("" !== i) for (; i.length < t; ) i += "0";
                     return i;
                   }
-                  function a(e) {
+                  function o(e) {
                     var t = e.locator[e.alternation];
                     return (
                       "string" == typeof t &&
@@ -5210,30 +5210,30 @@
                         : t.placeholder;
                     if (!0 === t.static) {
                       if (e > -1 && void 0 === s.validPositions[e]) {
-                        var o,
-                          a = p.call(this, e),
+                        var a,
+                          o = p.call(this, e),
                           r = [];
                         if (
-                          a.length >
-                          1 + ("" === a[a.length - 1].match.def ? 1 : 0)
+                          o.length >
+                          1 + ("" === o[o.length - 1].match.def ? 1 : 0)
                         )
-                          for (var l = 0; l < a.length; l++)
+                          for (var l = 0; l < o.length; l++)
                             if (
-                              "" !== a[l].match.def &&
-                              !0 !== a[l].match.optionality &&
-                              !0 !== a[l].match.optionalQuantifier &&
-                              (!0 === a[l].match.static ||
-                                void 0 === o ||
+                              "" !== o[l].match.def &&
+                              !0 !== o[l].match.optionality &&
+                              !0 !== o[l].match.optionalQuantifier &&
+                              (!0 === o[l].match.static ||
+                                void 0 === a ||
                                 !1 !==
-                                  a[l].match.fn.test(
-                                    o.match.def,
+                                  o[l].match.fn.test(
+                                    a.match.def,
                                     s,
                                     e,
                                     !0,
                                     n
                                   )) &&
-                              (r.push(a[l]),
-                              !0 === a[l].match.static && (o = a[l]),
+                              (r.push(o[l]),
+                              !0 === o[l].match.static && (a = o[l]),
                               r.length > 1 &&
                                 /[0-9a-bA-Z]/.test(r[0].match.def))
                             )
@@ -5270,19 +5270,19 @@
                       })(e, t);
                     e = e > 0 ? e - 1 : 0;
                     var s,
-                      a,
+                      o,
                       r,
-                      l = o(d.call(this, e));
+                      l = a(d.call(this, e));
                     i.greedy &&
                       t.length > 1 &&
                       "" === t[t.length - 1].match.def &&
                       t.pop();
                     for (var c = 0; c < t.length; c++) {
                       var u = t[c];
-                      s = o(u, l.length);
+                      s = a(u, l.length);
                       var p = Math.abs(s - l);
-                      (void 0 === a ||
-                        ("" !== s && p < a) ||
+                      (void 0 === o ||
+                        ("" !== s && p < o) ||
                         (r &&
                           !i.greedy &&
                           r.match.optionality &&
@@ -5295,7 +5295,7 @@
                           !i.greedy &&
                           r.match.optionalQuantifier &&
                           !u.match.optionalQuantifier)) &&
-                        ((a = p), (r = u));
+                        ((o = p), (r = u));
                     }
                     return r;
                   }
@@ -5308,8 +5308,8 @@
                   function u(e, t, i) {
                     function n(e) {
                       for (
-                        var t, i = [], n = -1, s = 0, o = e.length;
-                        s < o;
+                        var t, i = [], n = -1, s = 0, a = e.length;
+                        s < a;
                         s++
                       )
                         if ("-" === e.charAt(s))
@@ -5339,8 +5339,8 @@
                   }
                   function p(e, t, i) {
                     var n,
-                      o,
-                      a = this,
+                      a,
+                      o = this,
                       r = this.dependencyLib,
                       l = this.maskset,
                       d = this.opts,
@@ -5351,8 +5351,8 @@
                       m = [],
                       v = !1,
                       y = t ? t.join("") : "";
-                    function b(t, i, o, a) {
-                      function r(o, a, c) {
+                    function b(t, i, a, o) {
+                      function r(a, o, c) {
                         function h(e, t) {
                           var i = 0 === t.matches.indexOf(e);
                           return (
@@ -5376,12 +5376,12 @@
                           if (
                             ((l.tests[e] || l.validPositions[e]) &&
                               (l.tests[e] || [l.validPositions[e]]).every(
-                                function (e, o) {
+                                function (e, a) {
                                   if (e.mloc[t]) return (n = e), !1;
-                                  var a = void 0 !== i ? i : e.alternation,
+                                  var o = void 0 !== i ? i : e.alternation,
                                     r =
-                                      void 0 !== e.locator[a]
-                                        ? e.locator[a].toString().indexOf(t)
+                                      void 0 !== e.locator[o]
+                                        ? e.locator[o].toString().indexOf(t)
                                         : -1;
                                   return (
                                     (void 0 === s || r < s) &&
@@ -5393,8 +5393,8 @@
                               ),
                             n)
                           ) {
-                            var o = n.locator[n.alternation];
-                            return (n.mloc[t] || n.mloc[o] || n.locator).slice(
+                            var a = n.locator[n.alternation];
+                            return (n.mloc[t] || n.mloc[a] || n.locator).slice(
                               (void 0 !== i ? i : n.alternation) + 1
                             );
                           }
@@ -5417,18 +5417,18 @@
                               }
                           if (n) {
                             e.mloc = e.mloc || {};
-                            var o = e.locator[i];
-                            if (void 0 !== o) {
+                            var a = e.locator[i];
+                            if (void 0 !== a) {
                               if (
-                                ("string" == typeof o && (o = o.split(",")[0]),
-                                void 0 === e.mloc[o] &&
-                                  (e.mloc[o] = e.locator.slice()),
+                                ("string" == typeof a && (a = a.split(",")[0]),
+                                void 0 === e.mloc[a] &&
+                                  (e.mloc[a] = e.locator.slice()),
                                 void 0 !== t)
                               ) {
-                                for (var a in t.mloc)
-                                  "string" == typeof a && (a = a.split(",")[0]),
-                                    void 0 === e.mloc[a] &&
-                                      (e.mloc[a] = t.mloc[a]);
+                                for (var o in t.mloc)
+                                  "string" == typeof o && (o = o.split(",")[0]),
+                                    void 0 === e.mloc[o] &&
+                                      (e.mloc[o] = t.mloc[o]);
                                 e.locator[i] = Object.keys(e.mloc).join(",");
                               }
                               return !0;
@@ -5452,37 +5452,37 @@
                             "Inputmask: There is probably an error in your mask definition or in the code. Create an issue on github with an example of the mask you are using. " +
                             l.mask
                           );
-                        if (f === e && void 0 === o.matches) {
+                        if (f === e && void 0 === a.matches) {
                           if (
                             (m.push({
-                              match: o,
-                              locator: a.reverse(),
+                              match: a,
+                              locator: o.reverse(),
                               cd: y,
                               mloc: {},
                             }),
-                            !o.optionality ||
+                            !a.optionality ||
                               void 0 !== c ||
                               !(
                                 (d.definitions &&
-                                  d.definitions[o.nativeDef] &&
-                                  d.definitions[o.nativeDef].optional) ||
-                                (s.default.prototype.definitions[o.nativeDef] &&
-                                  s.default.prototype.definitions[o.nativeDef]
+                                  d.definitions[a.nativeDef] &&
+                                  d.definitions[a.nativeDef].optional) ||
+                                (s.default.prototype.definitions[a.nativeDef] &&
+                                  s.default.prototype.definitions[a.nativeDef]
                                     .optional)
                               ))
                           )
                             return !0;
                           (v = !0), (f = e);
-                        } else if (void 0 !== o.matches) {
-                          if (o.isGroup && c !== o) {
+                        } else if (void 0 !== a.matches) {
+                          if (a.isGroup && c !== a) {
                             if (
-                              (o = r(t.matches[t.matches.indexOf(o) + 1], a, c))
+                              (a = r(t.matches[t.matches.indexOf(a) + 1], o, c))
                             )
                               return !0;
-                          } else if (o.isOptional) {
-                            var S = o,
+                          } else if (a.isOptional) {
+                            var S = a,
                               k = m.length;
-                            if ((o = b(o, i, a, c))) {
+                            if ((a = b(a, i, o, c))) {
                               if (
                                 (m.forEach(function (e, t) {
                                   t >= k &&
@@ -5496,34 +5496,34 @@
                                 return !0;
                               (v = !0), (f = e);
                             }
-                          } else if (o.isAlternator) {
+                          } else if (a.isAlternator) {
                             var C,
-                              E = o,
-                              _ = [],
-                              T = m.slice(),
-                              P = a.length,
-                              I = !1,
-                              O = i.length > 0 ? i.shift() : -1;
-                            if (-1 === O || "string" == typeof O) {
+                              E = a,
+                              T = [],
+                              _ = m.slice(),
+                              P = o.length,
+                              O = !1,
+                              I = i.length > 0 ? i.shift() : -1;
+                            if (-1 === I || "string" == typeof I) {
                               var M,
                                 L = f,
                                 A = i.slice(),
                                 D = [];
-                              if ("string" == typeof O) D = O.split(",");
+                              if ("string" == typeof I) D = I.split(",");
                               else
                                 for (M = 0; M < E.matches.length; M++)
                                   D.push(M.toString());
                               if (void 0 !== l.excludes[e]) {
                                 for (
                                   var z = D.slice(),
-                                    B = 0,
-                                    $ = l.excludes[e].length;
-                                  B < $;
-                                  B++
+                                    $ = 0,
+                                    B = l.excludes[e].length;
+                                  $ < B;
+                                  $++
                                 ) {
                                   var G =
-                                    l.excludes[e][B].toString().split(":");
-                                  a.length == G[1] &&
+                                    l.excludes[e][$].toString().split(":");
+                                  o.length == G[1] &&
                                     D.splice(D.indexOf(G[0]), 1);
                                 }
                                 0 === D.length &&
@@ -5537,12 +5537,12 @@
                                 (M = parseInt(D[F])),
                                   (m = []),
                                   (i =
-                                    ("string" == typeof O && g(f, M, P)) ||
+                                    ("string" == typeof I && g(f, M, P)) ||
                                     A.slice());
                                 var j = E.matches[M];
-                                if (j && r(j, [M].concat(a), c)) o = !0;
+                                if (j && r(j, [M].concat(o), c)) a = !0;
                                 else if (
-                                  (0 === F && (I = !0),
+                                  (0 === F && (O = !0),
                                   j &&
                                     j.matches &&
                                     j.matches.length >
@@ -5553,13 +5553,13 @@
                                 for (var R = 0; R < C.length; R++) {
                                   var V = C[R],
                                     N = !1;
-                                  (V.match.jit = V.match.jit || I),
+                                  (V.match.jit = V.match.jit || O),
                                     (V.alternation = V.alternation || P),
                                     w(V);
-                                  for (var H = 0; H < _.length; H++) {
-                                    var q = _[H];
+                                  for (var H = 0; H < T.length; H++) {
+                                    var q = T[H];
                                     if (
-                                      "string" != typeof O ||
+                                      "string" != typeof I ||
                                       (void 0 !== V.alternation &&
                                         D.includes(
                                           V.locator[V.alternation].toString()
@@ -5574,7 +5574,7 @@
                                       if (u(V, q, d)) {
                                         w(V, q) &&
                                           ((N = !0),
-                                          _.splice(_.indexOf(q), 0, V));
+                                          T.splice(T.indexOf(q), 0, V));
                                         break;
                                       }
                                       if (u(q, V, d)) {
@@ -5599,33 +5599,33 @@
                                           p.inputmask.userOptions.keepStatic
                                           ? w(V, q) &&
                                             ((N = !0),
-                                            _.splice(_.indexOf(q), 0, V))
+                                            T.splice(T.indexOf(q), 0, V))
                                           : (d.keepStatic = !0);
                                         break;
                                       }
                                     }
                                   }
-                                  N || _.push(V);
+                                  N || T.push(V);
                                 }
                               }
-                              (m = T.concat(_)),
+                              (m = _.concat(T)),
                                 (f = e),
                                 (v = m.length > 0),
-                                (o = _.length > 0),
+                                (a = T.length > 0),
                                 (i = A.slice());
                             } else
-                              o = r(
-                                E.matches[O] || t.matches[O],
-                                [O].concat(a),
+                              a = r(
+                                E.matches[I] || t.matches[I],
+                                [I].concat(o),
                                 c
                               );
-                            if (o) return !0;
+                            if (a) return !0;
                           } else if (
-                            o.isQuantifier &&
-                            c !== t.matches[t.matches.indexOf(o) - 1]
+                            a.isQuantifier &&
+                            c !== t.matches[t.matches.indexOf(a) - 1]
                           )
                             for (
-                              var Y = o, X = i.length > 0 ? i.shift() : 0;
+                              var Y = a, X = i.length > 0 ? i.shift() : 0;
                               X <
                                 (isNaN(Y.quantifier.max)
                                   ? X + 1
@@ -5633,7 +5633,7 @@
                               X++
                             ) {
                               var W = t.matches[t.matches.indexOf(Y) - 1];
-                              if ((o = r(W, [X].concat(a), W))) {
+                              if ((a = r(W, [X].concat(o), W))) {
                                 if (
                                   (((n =
                                     m[m.length - 1].match).optionalQuantifier =
@@ -5654,7 +5654,7 @@
                                 );
                               }
                             }
-                          else if ((o = b(o, i, a, c))) return !0;
+                          else if ((a = b(a, i, o, c))) return !0;
                         } else f++;
                         var U, K;
                       }
@@ -5664,7 +5664,7 @@
                         c++
                       )
                         if (!0 !== t.matches[c].isQuantifier) {
-                          var h = r(t.matches[c], [c].concat(o), a);
+                          var h = r(t.matches[c], [c].concat(a), o);
                           if (h && f === e) return h;
                           if (f > e) break;
                         }
@@ -5690,7 +5690,7 @@
                                 !0 === d.keepStatic
                                   ? 0 ===
                                       (n = c
-                                        .call(a, e, t.slice())
+                                        .call(o, e, t.slice())
                                         .locator.slice()).length &&
                                     (n = t[0].locator.slice())
                                   : t.forEach(function (e) {
@@ -5736,13 +5736,13 @@
                           cd: y,
                         }),
                       void 0 !== t && l.tests[e]
-                        ? (o = r.extend(!0, [], m))
+                        ? (a = r.extend(!0, [], m))
                         : ((l.tests[e] = r.extend(!0, [], m)),
-                          (o = l.tests[e])),
+                          (a = l.tests[e])),
                       m.forEach(function (e) {
                         e.match.optionality = !1;
                       }),
-                      o
+                      a
                     );
                   }
                 },
@@ -5753,19 +5753,19 @@
                       for (
                         var n,
                           s = this.opts.greedy ? t : t.slice(0, 1),
-                          o = !1,
-                          a = void 0 !== i ? i.split(",") : [],
+                          a = !1,
+                          o = void 0 !== i ? i.split(",") : [],
                           r = 0;
-                        r < a.length;
+                        r < o.length;
                         r++
                       )
-                        -1 !== (n = e.indexOf(a[r])) && e.splice(n, 1);
+                        -1 !== (n = e.indexOf(o[r])) && e.splice(n, 1);
                       for (var l = 0; l < e.length; l++)
                         if (s.includes(e[l])) {
-                          o = !0;
+                          a = !0;
                           break;
                         }
-                      return o;
+                      return a;
                     }),
                     (t.handleRemove = function (e, t, i, n, r) {
                       var c = this,
@@ -5773,28 +5773,28 @@
                         u = this.opts;
                       if (
                         (u.numericInput || c.isRTL) &&
-                        (t === o.default.BACKSPACE
-                          ? (t = o.default.DELETE)
-                          : t === o.default.DELETE && (t = o.default.BACKSPACE),
+                        (t === a.default.BACKSPACE
+                          ? (t = a.default.DELETE)
+                          : t === a.default.DELETE && (t = a.default.BACKSPACE),
                         c.isRTL)
                       ) {
                         var p = i.end;
                         (i.end = i.begin), (i.begin = p);
                       }
                       var h,
-                        f = a.getLastValidPosition.call(c, void 0, !0);
+                        f = o.getLastValidPosition.call(c, void 0, !0);
                       if (
-                        (i.end >= a.getBuffer.call(c).length &&
+                        (i.end >= o.getBuffer.call(c).length &&
                           f >= i.end &&
                           (i.end = f + 1),
-                        t === o.default.BACKSPACE
+                        t === a.default.BACKSPACE
                           ? i.end - i.begin < 1 &&
-                            (i.begin = a.seekPrevious.call(c, i.begin))
-                          : t === o.default.DELETE &&
+                            (i.begin = o.seekPrevious.call(c, i.begin))
+                          : t === a.default.DELETE &&
                             i.begin === i.end &&
-                            (i.end = a.isMask.call(c, i.end, !0, !0)
+                            (i.end = o.isMask.call(c, i.end, !0, !0)
                               ? i.end + 1
-                              : a.seekNext.call(c, i.end) + 1),
+                              : o.seekNext.call(c, i.end) + 1),
                         !1 !== (h = m.call(c, i)))
                       ) {
                         if (
@@ -5809,22 +5809,22 @@
                               void 0 !== g.caret
                                 ? g.caret
                                 : g.pos
-                                ? a.seekNext.call(
+                                ? o.seekNext.call(
                                     c,
                                     g.pos.begin ? g.pos.begin : g.pos
                                   )
-                                : a.getLastValidPosition.call(c, -1, !0);
-                            (t !== o.default.DELETE || i.begin > v) && i.begin;
+                                : o.getLastValidPosition.call(c, -1, !0);
+                            (t !== a.default.DELETE || i.begin > v) && i.begin;
                           }
                         }
                         !0 !== n &&
                           ((d.p =
-                            t === o.default.DELETE ? i.begin + h : i.begin),
-                          (d.p = a.determineNewCaretPosition.call(
+                            t === a.default.DELETE ? i.begin + h : i.begin),
+                          (d.p = o.determineNewCaretPosition.call(
                             c,
                             { begin: d.p, end: d.p },
                             !1,
-                            !1 === u.insertMode && t === o.default.BACKSPACE
+                            !1 === u.insertMode && t === a.default.BACKSPACE
                               ? "none"
                               : void 0
                           ).begin));
@@ -5837,10 +5837,10 @@
                     (t.revalidateMask = m);
                   var n,
                     s = i(4713),
-                    o = (n = i(5581)) && n.__esModule ? n : { default: n },
-                    a = i(8711),
+                    a = (n = i(5581)) && n.__esModule ? n : { default: n },
+                    o = i(8711),
                     r = i(6030);
-                  function l(e, t, i, n, o, r) {
+                  function l(e, t, i, n, a, r) {
                     var c,
                       d,
                       u,
@@ -5857,22 +5857,22 @@
                       k = this.opts,
                       C = x.maskset,
                       E = S.extend(!0, {}, C.validPositions),
-                      _ = S.extend(!0, {}, C.tests),
-                      T = !1,
+                      T = S.extend(!0, {}, C.tests),
+                      _ = !1,
                       P = !1,
-                      I = void 0 !== o ? o : a.getLastValidPosition.call(x);
+                      O = void 0 !== a ? a : o.getLastValidPosition.call(x);
                     if (
                       (r &&
                         ((b = r.begin),
                         (w = r.end),
                         r.begin > r.end && ((b = r.end), (w = r.begin))),
-                      -1 === I && void 0 === o)
+                      -1 === O && void 0 === a)
                     )
                       (c = 0), (d = (h = s.getTest.call(x, c)).alternation);
                     else
-                      for (; I >= 0; I--)
+                      for (; O >= 0; O--)
                         if (
-                          (u = C.validPositions[I]) &&
+                          (u = C.validPositions[O]) &&
                           void 0 !== u.alternation
                         ) {
                           if (
@@ -5881,7 +5881,7 @@
                               u.locator[u.alternation]
                           )
                             break;
-                          (c = I),
+                          (c = O),
                             (d = C.validPositions[c].alternation),
                             (h = u);
                         }
@@ -5892,50 +5892,50 @@
                           C.excludes[m].push(
                             (0, s.getDecisionTaker)(h) + ":" + h.alternation
                           );
-                      var O = [],
+                      var I = [],
                         M = -1;
                       for (
                         f = m;
-                        f < a.getLastValidPosition.call(x, void 0, !0) + 1;
+                        f < o.getLastValidPosition.call(x, void 0, !0) + 1;
                         f++
                       )
                         -1 === M &&
                           e <= f &&
                           void 0 !== t &&
-                          (O.push(t), (M = O.length - 1)),
+                          (I.push(t), (M = I.length - 1)),
                           (g = C.validPositions[f]) &&
                             !0 !== g.generatedInput &&
                             (void 0 === r || f < b || f >= w) &&
-                            O.push(g.input),
+                            I.push(g.input),
                           delete C.validPositions[f];
                       for (
                         -1 === M &&
                         void 0 !== t &&
-                        (O.push(t), (M = O.length - 1));
+                        (I.push(t), (M = I.length - 1));
                         void 0 !== C.excludes[m] && C.excludes[m].length < 10;
 
                       ) {
                         for (
                           C.tests = {},
-                            a.resetMaskSet.call(x, !0),
-                            T = !0,
+                            o.resetMaskSet.call(x, !0),
+                            _ = !0,
                             f = 0;
-                          f < O.length &&
+                          f < I.length &&
                           ((v =
-                            T.caret ||
-                            a.getLastValidPosition.call(x, void 0, !0) + 1),
-                          (y = O[f]),
-                          (T = p.call(x, v, y, !1, n, !0)));
+                            _.caret ||
+                            o.getLastValidPosition.call(x, void 0, !0) + 1),
+                          (y = I[f]),
+                          (_ = p.call(x, v, y, !1, n, !0)));
                           f++
                         )
-                          f === M && (P = T),
-                            1 == e && T && (P = { caretPos: f });
-                        if (T) break;
+                          f === M && (P = _),
+                            1 == e && _ && (P = { caretPos: f });
+                        if (_) break;
                         if (
-                          (a.resetMaskSet.call(x),
+                          (o.resetMaskSet.call(x),
                           (h = s.getTest.call(x, m)),
                           (C.validPositions = S.extend(!0, {}, E)),
-                          (C.tests = S.extend(!0, {}, _)),
+                          (C.tests = S.extend(!0, {}, T)),
                           !C.excludes[m])
                         ) {
                           P = l.call(x, e, t, i, n, m - 1, r);
@@ -5950,7 +5950,7 @@
                         }
                         for (
                           C.excludes[m].push(L + ":" + h.alternation), f = m;
-                          f < a.getLastValidPosition.call(x, void 0, !0) + 1;
+                          f < o.getLastValidPosition.call(x, void 0, !0) + 1;
                           f++
                         )
                           delete C.validPositions[f];
@@ -5971,11 +5971,11 @@
                         e = e.toLowerCase();
                         break;
                       case "title":
-                        var a = s.validPositions[i - 1];
+                        var o = s.validPositions[i - 1];
                         e =
                           0 === i ||
-                          (a &&
-                            a.input === String.fromCharCode(o.default.SPACE))
+                          (o &&
+                            o.input === String.fromCharCode(a.default.SPACE))
                             ? e.toUpperCase()
                             : e.toLowerCase();
                         break;
@@ -5995,16 +5995,16 @@
                     if ("function" == typeof i.isComplete)
                       return i.isComplete(e, i);
                     if ("*" !== i.repeat) {
-                      var o = !1,
-                        r = a.determineLastRequiredPosition.call(t, !0),
-                        l = a.seekPrevious.call(t, r.l);
+                      var a = !1,
+                        r = o.determineLastRequiredPosition.call(t, !0),
+                        l = o.seekPrevious.call(t, r.l);
                       if (
                         void 0 === r.def ||
                         r.def.newBlockMarker ||
                         r.def.optionality ||
                         r.def.optionalQuantifier
                       ) {
-                        o = !0;
+                        a = !0;
                         for (var c = 0; c <= l; c++) {
                           var d = s.getTestTemplate.call(t, c).match;
                           if (
@@ -6015,12 +6015,12 @@
                             (!0 === d.static &&
                               e[c] !== s.getPlaceholder.call(t, c, d))
                           ) {
-                            o = !1;
+                            a = !1;
                             break;
                           }
                         }
                       }
-                      return o;
+                      return a;
                     }
                   }
                   function u(e) {
@@ -6029,7 +6029,7 @@
                       ? e.begin - e.end > t
                       : e.end - e.begin > t;
                   }
-                  function p(e, t, i, n, o, r, h) {
+                  function p(e, t, i, n, a, r, h) {
                     var v = this,
                       y = this.dependencyLib,
                       b = this.opts,
@@ -6077,22 +6077,22 @@
                       }
                       return e;
                     }
-                    function k(t, i, o) {
+                    function k(t, i, a) {
                       var r = !1;
                       return (
                         s.getTests.call(v, t).every(function (l, d) {
                           var p = l.match;
                           if (
-                            (a.getBuffer.call(v, !0),
+                            (o.getBuffer.call(v, !0),
                             !1 !==
                               (r =
                                 (!p.jit ||
                                   void 0 !==
                                     w.validPositions[
-                                      a.seekPrevious.call(v, t)
+                                      o.seekPrevious.call(v, t)
                                     ]) &&
                                 (null != p.fn
-                                  ? p.fn.test(i, w, t, o, b, u.call(v, e))
+                                  ? p.fn.test(i, w, t, a, b, u.call(v, e))
                                   : (i === p.def ||
                                       i === b.skipOptionalPartCharacter) &&
                                     "" !== p.def && {
@@ -6142,12 +6142,12 @@
                     if (
                       !1 === b.keepStatic &&
                       void 0 !== w.excludes[x] &&
-                      !0 !== o &&
+                      !0 !== a &&
                       !0 !== n
                     )
-                      for (var _ = x; _ < (v.isRTL ? e.begin : e.end); _++)
-                        void 0 !== w.excludes[_] &&
-                          ((w.excludes[_] = void 0), delete w.tests[_]);
+                      for (var T = x; T < (v.isRTL ? e.begin : e.end); T++)
+                        void 0 !== w.excludes[T] &&
+                          ((w.excludes[T] = void 0), delete w.tests[T]);
                     if (
                       ("function" == typeof b.preValidation &&
                         !0 !== n &&
@@ -6155,14 +6155,14 @@
                         (C = S(
                           (C = b.preValidation.call(
                             v,
-                            a.getBuffer.call(v),
+                            o.getBuffer.call(v),
                             x,
                             t,
                             u.call(v, e),
                             b,
                             w,
                             e,
-                            i || o
+                            i || a
                           ))
                         )),
                       !0 === C)
@@ -6171,24 +6171,24 @@
                         ((C = k(x, t, i)),
                         (!i || !0 === n) && !1 === C && !0 !== r)
                       ) {
-                        var T = w.validPositions[x];
+                        var _ = w.validPositions[x];
                         if (
-                          !T ||
-                          !0 !== T.match.static ||
-                          (T.match.def !== t &&
+                          !_ ||
+                          !0 !== _.match.static ||
+                          (_.match.def !== t &&
                             t !== b.skipOptionalPartCharacter)
                         ) {
                           if (
                             b.insertMode ||
                             void 0 ===
-                              w.validPositions[a.seekNext.call(v, x)] ||
+                              w.validPositions[o.seekNext.call(v, x)] ||
                             e.end > x
                           ) {
                             var P = !1;
                             if (
                               (w.jitOffset[x] &&
                                 void 0 ===
-                                  w.validPositions[a.seekNext.call(v, x)] &&
+                                  w.validPositions[o.seekNext.call(v, x)] &&
                                 !1 !==
                                   (C = p.call(
                                     v,
@@ -6197,41 +6197,41 @@
                                     !0,
                                     !0
                                   )) &&
-                                (!0 !== o && (C.caret = x), (P = !0)),
+                                (!0 !== a && (C.caret = x), (P = !0)),
                               e.end > x && (w.validPositions[x] = void 0),
                               !P &&
-                                !a.isMask.call(v, x, b.keepStatic && 0 === x))
+                                !o.isMask.call(v, x, b.keepStatic && 0 === x))
                             )
                               for (
-                                var I = x + 1,
-                                  O = a.seekNext.call(v, x, !1, 0 !== x);
-                                I <= O;
-                                I++
+                                var O = x + 1,
+                                  I = o.seekNext.call(v, x, !1, 0 !== x);
+                                O <= I;
+                                O++
                               )
-                                if (!1 !== (C = k(I, t, i))) {
+                                if (!1 !== (C = k(O, t, i))) {
                                   (C =
                                     g.call(
                                       v,
                                       x,
-                                      void 0 !== C.pos ? C.pos : I
+                                      void 0 !== C.pos ? C.pos : O
                                     ) || C),
-                                    (x = I);
+                                    (x = O);
                                   break;
                                 }
                           }
-                        } else C = { caret: a.seekNext.call(v, x) };
+                        } else C = { caret: o.seekNext.call(v, x) };
                       }
                       !1 !== C ||
                       !b.keepStatic ||
-                      (!d.call(v, a.getBuffer.call(v)) && 0 !== x) ||
+                      (!d.call(v, o.getBuffer.call(v)) && 0 !== x) ||
                       i ||
-                      !0 === o
+                      !0 === a
                         ? u.call(v, e) &&
                           w.tests[x] &&
                           w.tests[x].length > 1 &&
                           b.keepStatic &&
                           !i &&
-                          !0 !== o &&
+                          !0 !== a &&
                           (C = l.call(v, !0))
                         : (C = l.call(v, x, t, i, n, void 0, e)),
                         !0 === C && (C = { pos: x });
@@ -6243,7 +6243,7 @@
                     ) {
                       var M = b.postValidation.call(
                         v,
-                        a.getBuffer.call(v, !0),
+                        o.getBuffer.call(v, !0),
                         void 0 !== e.begin ? (v.isRTL ? e.end : e.begin) : e,
                         t,
                         C,
@@ -6256,15 +6256,15 @@
                     }
                     C && void 0 === C.pos && (C.pos = x),
                       !1 === C || !0 === r
-                        ? (a.resetMaskSet.call(v, !0),
+                        ? (o.resetMaskSet.call(v, !0),
                           (w.validPositions = y.extend(!0, {}, E)))
                         : g.call(v, void 0, x, !0);
                     var L = S(C);
                     return (
                       void 0 !== v.maxLength &&
-                        a.getBuffer.call(v).length > v.maxLength &&
+                        o.getBuffer.call(v).length > v.maxLength &&
                         !n &&
-                        (a.resetMaskSet.call(v, !0),
+                        (o.resetMaskSet.call(v, !0),
                         (w.validPositions = y.extend(!0, {}, E)),
                         (L = !1)),
                       L
@@ -6273,53 +6273,53 @@
                   function h(e, t, i) {
                     for (
                       var n = this.maskset,
-                        o = !1,
-                        a = s.getTests.call(this, e),
+                        a = !1,
+                        o = s.getTests.call(this, e),
                         r = 0;
-                      r < a.length;
+                      r < o.length;
                       r++
                     ) {
                       if (
-                        a[r].match &&
-                        ((a[r].match.nativeDef ===
+                        o[r].match &&
+                        ((o[r].match.nativeDef ===
                           t.match[i.shiftPositions ? "def" : "nativeDef"] &&
                           (!i.shiftPositions || !t.match.static)) ||
-                          a[r].match.nativeDef === t.match.nativeDef ||
+                          o[r].match.nativeDef === t.match.nativeDef ||
                           (i.regex &&
-                            !a[r].match.static &&
-                            a[r].match.fn.test(t.input)))
+                            !o[r].match.static &&
+                            o[r].match.fn.test(t.input)))
                       ) {
-                        o = !0;
+                        a = !0;
                         break;
                       }
-                      if (a[r].match && a[r].match.def === t.match.nativeDef) {
-                        o = void 0;
+                      if (o[r].match && o[r].match.def === t.match.nativeDef) {
+                        a = void 0;
                         break;
                       }
                     }
                     return (
-                      !1 === o &&
+                      !1 === a &&
                         void 0 !== n.jitOffset[e] &&
-                        (o = h.call(this, e + n.jitOffset[e], t, i)),
-                      o
+                        (a = h.call(this, e + n.jitOffset[e], t, i)),
+                      a
                     );
                   }
                   function f(e, t, i) {
                     var n,
                       s,
-                      o = this,
+                      a = this,
                       l = this.maskset,
                       c = this.opts,
                       d = this.dependencyLib,
                       u = c.skipOptionalPartCharacter,
-                      p = o.isRTL ? i.slice().reverse() : i;
+                      p = a.isRTL ? i.slice().reverse() : i;
                     if (((c.skipOptionalPartCharacter = ""), !0 === e))
-                      a.resetMaskSet.call(o),
+                      o.resetMaskSet.call(a),
                         (l.tests = {}),
                         (e = 0),
                         (t = i.length),
-                        (s = a.determineNewCaretPosition.call(
-                          o,
+                        (s = o.determineNewCaretPosition.call(
+                          a,
                           { begin: 0, end: 0 },
                           !1
                         ).begin);
@@ -6330,9 +6330,9 @@
                     var h = new d.Event("keypress");
                     for (n = e; n < t; n++) {
                       (h.keyCode = p[n].toString().charCodeAt(0)),
-                        (o.ignorable = !1);
+                        (a.ignorable = !1);
                       var f = r.EventHandlers.keypressEvent.call(
-                        o,
+                        a,
                         h,
                         !0,
                         !1,
@@ -6345,17 +6345,17 @@
                   }
                   function g(e, t, i) {
                     var n = this,
-                      o = this.maskset,
+                      a = this.maskset,
                       r = this.dependencyLib;
                     if (void 0 === e)
-                      for (e = t - 1; e > 0 && !o.validPositions[e]; e--);
+                      for (e = t - 1; e > 0 && !a.validPositions[e]; e--);
                     for (var l = e; l < t; l++)
                       if (
-                        void 0 === o.validPositions[l] &&
-                        !a.isMask.call(n, l, !1) &&
+                        void 0 === a.validPositions[l] &&
+                        !o.isMask.call(n, l, !1) &&
                         (0 == l
                           ? s.getTest.call(n, l)
-                          : o.validPositions[l - 1])
+                          : a.validPositions[l - 1])
                       ) {
                         var c = s.getTests.call(n, l).slice();
                         "" === c[c.length - 1].match.def && c.pop();
@@ -6365,7 +6365,7 @@
                           u &&
                           (!0 !== u.match.jit ||
                             ("master" === u.match.newBlockMarker &&
-                              (d = o.validPositions[l + 1]) &&
+                              (d = a.validPositions[l + 1]) &&
                               !0 === d.match.optionalQuantifier)) &&
                           (((u = r.extend({}, u, {
                             input:
@@ -6375,16 +6375,16 @@
                           m.call(n, l, u, !0),
                           !0 !== i)
                         ) {
-                          var h = o.validPositions[t].input;
+                          var h = a.validPositions[t].input;
                           return (
-                            (o.validPositions[t] = void 0),
+                            (a.validPositions[t] = void 0),
                             p.call(n, t, h, !0, !0)
                           );
                         }
                       }
                   }
                   function m(e, t, i, n) {
-                    var o = this,
+                    var a = this,
                       r = this.maskset,
                       l = this.opts,
                       c = this.dependencyLib;
@@ -6402,13 +6402,13 @@
                                 !0 === t[e - 1].match.static &&
                                 t[e - 1]
                               : t[e - 1],
-                          o =
+                          a =
                             i.end > e + 1
                               ? t[e + 1] &&
                                 !0 === t[e + 1].match.static &&
                                 t[e + 1]
                               : t[e + 1];
-                        return s && o;
+                        return s && a;
                       }
                       return !1;
                     }
@@ -6429,7 +6429,7 @@
                     ) {
                       var v,
                         y = c.extend(!0, {}, r.validPositions),
-                        b = a.getLastValidPosition.call(o, void 0, !0);
+                        b = o.getLastValidPosition.call(a, void 0, !0);
                       for (r.p = f, v = b; v >= f; v--)
                         delete r.validPositions[v],
                           void 0 === t && delete r.tests[v + 1];
@@ -6451,14 +6451,14 @@
                           !0 !== w.generatedInput &&
                           (v >= g || (v >= f && d(v, y, { begin: f, end: g })))
                         ) {
-                          for (; "" !== s.getTest.call(o, k).match.def; ) {
+                          for (; "" !== s.getTest.call(a, k).match.def; ) {
                             if (
-                              !1 !== (x = h.call(o, k, w, l)) ||
+                              !1 !== (x = h.call(a, k, w, l)) ||
                               "+" === w.match.def
                             ) {
-                              "+" === w.match.def && a.getBuffer.call(o, !0);
+                              "+" === w.match.def && o.getBuffer.call(a, !0);
                               var C = p.call(
-                                o,
+                                a,
                                 k,
                                 w.input,
                                 "+" !== w.match.def,
@@ -6478,11 +6478,11 @@
                                 u++;
                               break;
                             }
-                            if ((!m && a.getBuffer.call(o), k > r.maskLength))
+                            if ((!m && o.getBuffer.call(a), k > r.maskLength))
                               break;
                             k++;
                           }
-                          "" == s.getTest.call(o, k).match.def && (m = !1),
+                          "" == s.getTest.call(a, k).match.def && (m = !1),
                             (k = S);
                         }
                         if (!m) break;
@@ -6490,14 +6490,14 @@
                       if (!m)
                         return (
                           (r.validPositions = c.extend(!0, {}, y)),
-                          a.resetMaskSet.call(o, !0),
+                          o.resetMaskSet.call(a, !0),
                           !1
                         );
                     } else
                       t &&
-                        s.getTest.call(o, n).match.cd === t.match.cd &&
+                        s.getTest.call(a, n).match.cd === t.match.cd &&
                         (r.validPositions[n] = c.extend(!0, {}, t));
-                    return a.resetMaskSet.call(o, !0), u;
+                    return o.resetMaskSet.call(a, !0), u;
                   }
                 },
                 5581: function (e) {
@@ -6510,8 +6510,8 @@
             function i(n) {
               var s = t[n];
               if (void 0 !== s) return s.exports;
-              var o = (t[n] = { exports: {} });
-              return e[n](o, o.exports, i), o.exports;
+              var a = (t[n] = { exports: {} });
+              return e[n](a, a.exports, i), a.exports;
             }
             var n = {};
             return (
@@ -6558,8 +6558,8 @@
                 /(gle|ing|ro)bot|crawl|spider/i.test(navigator.userAgent)),
             n = t && "IntersectionObserver" in window,
             s = t && "classList" in document.createElement("p"),
-            o = t && window.devicePixelRatio > 1,
-            a = {
+            a = t && window.devicePixelRatio > 1,
+            o = {
               elements_selector: ".lazy",
               container: i || t ? document : null,
               threshold: 300,
@@ -6592,7 +6592,7 @@
               use_native: !1,
             },
             r = function (t) {
-              return e({}, a, t);
+              return e({}, o, t);
             },
             l = function (e, t) {
               var i,
@@ -6638,18 +6638,18 @@
             E = function (e) {
               return C(e, null);
             },
-            _ = function (e) {
+            T = function (e) {
               return null === k(e);
             },
-            T = function (e) {
+            _ = function (e) {
               return k(e) === b;
             },
             P = [g, m, v, y],
-            I = function (e, t, i, n) {
+            O = function (e, t, i, n) {
               e &&
                 (void 0 === n ? (void 0 === i ? e(t) : e(t, i)) : e(t, i, n));
             },
-            O = function (e, t) {
+            I = function (e, t) {
               s
                 ? e.classList.add(t)
                 : (e.className += (e.className ? " " : "") + t);
@@ -6677,17 +6677,17 @@
             z = function (e, t) {
               e && (e.toLoadCount = t);
             },
-            B = function (e) {
+            $ = function (e) {
               for (var t, i = [], n = 0; (t = e.children[n]); n += 1)
                 "SOURCE" === t.tagName && i.push(t);
               return i;
             },
-            $ = function (e, t) {
+            B = function (e, t) {
               var i = e.parentNode;
-              i && "PICTURE" === i.tagName && B(i).forEach(t);
+              i && "PICTURE" === i.tagName && $(i).forEach(t);
             },
             G = function (e, t) {
-              B(e).forEach(t);
+              $(e).forEach(t);
             },
             F = [c],
             j = [c, p],
@@ -6722,9 +6722,9 @@
               }
             },
             W = function (e, t, i) {
-              O(e, t.class_loading),
+              I(e, t.class_loading),
                 C(e, g),
-                i && (D(i, 1), I(t.callback_loading, e, i));
+                i && (D(i, 1), O(t.callback_loading, e, i));
             },
             U = function (e, t, i) {
               i && e.setAttribute(t, i);
@@ -6736,7 +6736,7 @@
             },
             Z = {
               IMG: function (e, t) {
-                $(e, function (e) {
+                B(e, function (e) {
                   Y(e, R), K(e, t);
                 }),
                   Y(e, R),
@@ -6767,7 +6767,7 @@
                 (function (e) {
                   return e.toLoadCount > 0;
                 })(t) ||
-                I(e.callback_finish, t);
+                O(e.callback_finish, t);
             },
             ee = function (e, t, i) {
               e.addEventListener(t, i), (e.llEvLisnrs[t] = i);
@@ -6799,7 +6799,7 @@
                 M(e, t.class_loading),
                 t.unobserve_completed && A(e, i);
             },
-            oe = function (e, t, i) {
+            ae = function (e, t, i) {
               var n = L(e) || e;
               ie(n) ||
                 (function (e, t, i) {
@@ -6810,57 +6810,57 @@
                   n,
                   function (s) {
                     !(function (e, t, i, n) {
-                      var s = T(t);
+                      var s = _(t);
                       se(t, i, n),
-                        O(t, i.class_loaded),
+                        I(t, i.class_loaded),
                         C(t, m),
-                        I(i.callback_loaded, t, n),
+                        O(i.callback_loaded, t, n),
                         s || J(i, n);
                     })(0, e, t, i),
                       ne(n);
                   },
                   function (s) {
                     !(function (e, t, i, n) {
-                      var s = T(t);
+                      var s = _(t);
                       se(t, i, n),
-                        O(t, i.class_error),
+                        I(t, i.class_error),
                         C(t, y),
-                        I(i.callback_error, t, n),
+                        O(i.callback_error, t, n),
                         s || J(i, n);
                     })(0, e, t, i),
                       ne(n);
                   }
                 );
             },
-            ae = function (e, t, i) {
+            oe = function (e, t, i) {
               !(function (e) {
                 e.llTempImage = document.createElement("IMG");
               })(e),
-                oe(e, t, i),
+                ae(e, t, i),
                 (function (e) {
                   N(e) || (e[h] = { backgroundImage: e.style.backgroundImage });
                 })(e),
                 (function (e, t, i) {
                   var n = S(e, t.data_bg),
                     s = S(e, t.data_bg_hidpi),
-                    a = o && s ? s : n;
-                  a &&
-                    ((e.style.backgroundImage = 'url("'.concat(a, '")')),
-                    L(e).setAttribute(c, a),
+                    o = a && s ? s : n;
+                  o &&
+                    ((e.style.backgroundImage = 'url("'.concat(o, '")')),
+                    L(e).setAttribute(c, o),
                     W(e, t, i));
                 })(e, t, i),
                 (function (e, t, i) {
                   var n = S(e, t.data_bg_multi),
                     s = S(e, t.data_bg_multi_hidpi),
-                    a = o && s ? s : n;
-                  a &&
-                    ((e.style.backgroundImage = a),
+                    o = a && s ? s : n;
+                  o &&
+                    ((e.style.backgroundImage = o),
                     (function (e, t, i) {
-                      O(e, t.class_applied),
+                      I(e, t.class_applied),
                         C(e, v),
                         i &&
                           (t.unobserve_completed && A(e, t),
-                          I(t.callback_applied, e, i));
+                          O(t.callback_applied, e, i));
                     })(e, t, i));
                 })(e, t, i);
             },
@@ -6868,9 +6868,9 @@
               !(function (e) {
                 return Q.indexOf(e.tagName) > -1;
               })(e)
-                ? ae(e, t, i)
+                ? oe(e, t, i)
                 : (function (e, t, i) {
-                    oe(e, t, i),
+                    ae(e, t, i),
                       (function (e, t, i) {
                         var n = Z[e.tagName];
                         n && (n(e, t), W(e, t, i));
@@ -6881,7 +6881,7 @@
               e.removeAttribute(c), e.removeAttribute(d), e.removeAttribute(u);
             },
             ce = function (e) {
-              $(e, function (e) {
+              B(e, function (e) {
                 X(e, R);
               }),
                 X(e, R);
@@ -6915,8 +6915,8 @@
                     })(e);
               })(e),
                 (function (e, t) {
-                  _(e) ||
-                    T(e) ||
+                  T(e) ||
+                    _(e) ||
                     (M(e, t.class_entered),
                     M(e, t.class_exited),
                     M(e, t.class_applied),
@@ -6941,17 +6941,17 @@
                         return P.indexOf(k(e)) >= 0;
                       })(e);
                       C(e, "entered"),
-                        O(e, i.class_entered),
+                        I(e, i.class_entered),
                         M(e, i.class_exited),
                         (function (e, t, i) {
                           t.unobserve_entered && A(e, i);
                         })(e, i, n),
-                        I(i.callback_enter, e, t, n),
+                        O(i.callback_enter, e, t, n),
                         s || re(e, i, n);
                     })(e.target, e, t, i)
                   : (function (e, t, i, n) {
-                      _(e) ||
-                        (O(e, i.class_exited),
+                      T(e) ||
+                        (I(e, i.class_exited),
                         (function (e, t, i, n) {
                           i.cancel_on_exit &&
                             (function (e) {
@@ -6960,7 +6960,7 @@
                             "IMG" === e.tagName &&
                             (ne(e),
                             (function (e) {
-                              $(e, function (e) {
+                              B(e, function (e) {
                                 le(e);
                               }),
                                 le(e);
@@ -6969,9 +6969,9 @@
                             M(e, i.class_loading),
                             D(n, -1),
                             E(e),
-                            I(i.callback_cancel, e, t, n));
+                            O(i.callback_cancel, e, t, n));
                         })(e, t, i, n),
-                        I(i.callback_exit, e, t, n));
+                        O(i.callback_exit, e, t, n));
                     })(e.target, e, t, i);
               });
             },
@@ -6988,7 +6988,7 @@
             },
             ye = function (e, t) {
               return (function (e) {
-                return ge(e).filter(_);
+                return ge(e).filter(T);
               })(e || me(t));
             },
             be = function (e, i) {
@@ -7029,17 +7029,17 @@
               update: function (e) {
                 var t,
                   s,
-                  o = this._settings,
-                  a = ye(e, o);
-                z(this, a.length),
+                  a = this._settings,
+                  o = ye(e, a);
+                z(this, o.length),
                   !i && n
-                    ? he(o)
+                    ? he(a)
                       ? (function (e, t, i) {
                           e.forEach(function (e) {
                             -1 !== pe.indexOf(e.tagName) &&
                               (function (e, t, i) {
                                 e.setAttribute("loading", "lazy"),
-                                  oe(e, t, i),
+                                  ae(e, t, i),
                                   (function (e, t) {
                                     var i = Z[e.tagName];
                                     i && i(e, t);
@@ -7048,8 +7048,8 @@
                               })(e, t, i);
                           }),
                             z(i, 0);
-                        })(a, o, this)
-                      : ((s = a),
+                        })(o, a, this)
+                      : ((s = o),
                         (function (e) {
                           e.disconnect();
                         })((t = this._observer)),
@@ -7058,7 +7058,7 @@
                             e.observe(t);
                           });
                         })(t, s))
-                    : this.loadAll(a);
+                    : this.loadAll(o);
               },
               destroy: function () {
                 this._observer && this._observer.disconnect(),
@@ -7106,8 +7106,8 @@
   function i(n) {
     var s = t[n];
     if (void 0 !== s) return s.exports;
-    var o = (t[n] = { exports: {} });
-    return e[n].call(o.exports, o, o.exports, i), o.exports;
+    var a = (t[n] = { exports: {} });
+    return e[n].call(a.exports, a, a.exports, i), a.exports;
   }
   (() => {
     "use strict";
@@ -7156,14 +7156,14 @@
         const i = this.mediaQueries[t],
           n = String.prototype.split.call(i, ","),
           s = window.matchMedia(n[0]),
-          o = n[1],
-          a = Array.prototype.filter.call(this.оbjects, function (e) {
-            return e.breakpoint === o;
+          a = n[1],
+          o = Array.prototype.filter.call(this.оbjects, function (e) {
+            return e.breakpoint === a;
           });
         s.addListener(function () {
-          e.mediaHandler(s, a);
+          e.mediaHandler(s, o);
         }),
-          this.mediaHandler(s, a);
+          this.mediaHandler(s, o);
       }
     }),
       (e.prototype.mediaHandler = function (e, t) {
@@ -7392,7 +7392,7 @@
               this.options.classes.popupActive
             ),
             document.body.classList.add(this.options.classes.bodyActive),
-            this._reopen ? (this._reopen = !1) : a(),
+            this._reopen ? (this._reopen = !1) : o(),
             this.targetOpen.element.setAttribute("aria-hidden", "false"),
             (this.previousOpen.selector = this.targetOpen.selector),
             (this.previousOpen.element = this.targetOpen.element),
@@ -7416,7 +7416,7 @@
           "" !== e.trim() &&
           (this.previousOpen.selector = e),
           this.isOpen &&
-            o &&
+            a &&
             (this.options.on.beforeClose(this),
             this.targetOpen.element.hasAttribute(
               this.options.youtubeAttribute
@@ -7433,7 +7433,7 @@
             this.previousOpen.element.setAttribute("aria-hidden", "true"),
             this._reopen ||
               (document.body.classList.remove(this.options.classes.bodyActive),
-              a(),
+              o(),
               (this.isOpen = !1)),
             this._removeHash(),
             this._selectorOpen &&
@@ -7515,13 +7515,13 @@
     function s() {
       if (location.hash) return location.hash.replace("#", "");
     }
-    let o = !0,
-      a = (e = 500) => {
+    let a = !0,
+      o = (e = 500) => {
         document.documentElement.classList.contains("lock") ? r(e) : l(e);
       },
       r = (e = 500) => {
         let t = document.querySelector("body");
-        if (o) {
+        if (a) {
           let i = document.querySelectorAll("[data-lp]");
           setTimeout(() => {
             for (let e = 0; e < i.length; e++) {
@@ -7530,15 +7530,15 @@
             (t.style.paddingRight = "0px"),
               document.documentElement.classList.remove("lock");
           }, e),
-            (o = !1),
+            (a = !1),
             setTimeout(function () {
-              o = !0;
+              a = !0;
             }, e);
         }
       },
       l = (e = 500) => {
         let t = document.querySelector("body");
-        if (o) {
+        if (a) {
           let i = document.querySelectorAll("[data-lp]");
           for (let e = 0; e < i.length; e++) {
             i[e].style.paddingRight =
@@ -7551,9 +7551,9 @@
             document.querySelector(".wrapper").offsetWidth +
             "px"),
             document.documentElement.classList.add("lock"),
-            (o = !1),
+            (a = !1),
             setTimeout(function () {
-              o = !0;
+              a = !0;
             }, e);
         }
       };
@@ -7565,14 +7565,14 @@
     let d = (e, t = !1, i = 500, n = 0) => {
       const s = document.querySelector(e);
       if (s) {
-        let o = "",
-          a = 0;
+        let a = "",
+          o = 0;
         t &&
-          ((o = "header.header"), (a = document.querySelector(o).offsetHeight));
+          ((a = "header.header"), (o = document.querySelector(a).offsetHeight));
         let l = {
           speedAsDuration: !0,
           speed: i,
-          header: o,
+          header: a,
           offset: n,
           easing: "easeOutQuad",
         };
@@ -7584,7 +7584,7 @@
           new SmoothScroll().animateScroll(s, "", l);
         else {
           let e = s.getBoundingClientRect().top + scrollY;
-          window.scrollTo({ top: a ? e - a : e, behavior: "smooth" });
+          window.scrollTo({ top: o ? e - o : e, behavior: "smooth" });
         }
         c(`[gotoBlock]: Юхуу...едем к ${e}`);
       } else c(`[gotoBlock]: Ой ой..Такого блока нет на странице: ${e}`);
@@ -7829,7 +7829,7 @@
     }
     C.fn = x.prototype;
     const E = "resize scroll".split(" ");
-    function _(e) {
+    function T(e) {
       return function (...t) {
         if (void 0 === t[0]) {
           for (let t = 0; t < this.length; t += 1)
@@ -7840,29 +7840,29 @@
         return this.on(e, ...t);
       };
     }
-    _("click"),
-      _("blur"),
-      _("focus"),
-      _("focusin"),
-      _("focusout"),
-      _("keyup"),
-      _("keydown"),
-      _("keypress"),
-      _("submit"),
-      _("change"),
-      _("mousedown"),
-      _("mousemove"),
-      _("mouseup"),
-      _("mouseenter"),
-      _("mouseleave"),
-      _("mouseout"),
-      _("mouseover"),
-      _("touchstart"),
-      _("touchend"),
-      _("touchmove"),
-      _("resize"),
-      _("scroll");
-    const T = {
+    T("click"),
+      T("blur"),
+      T("focus"),
+      T("focusin"),
+      T("focusout"),
+      T("keyup"),
+      T("keydown"),
+      T("keypress"),
+      T("submit"),
+      T("change"),
+      T("mousedown"),
+      T("mousemove"),
+      T("mouseup"),
+      T("mouseenter"),
+      T("mouseleave"),
+      T("mouseout"),
+      T("mouseover"),
+      T("touchstart"),
+      T("touchend"),
+      T("touchmove"),
+      T("resize"),
+      T("scroll");
+    const _ = {
       addClass: function (...e) {
         const t = S(e.map((e) => e.split(" ")));
         return (
@@ -7922,7 +7922,7 @@
       },
       on: function (...e) {
         let [t, i, n, s] = e;
-        function o(e) {
+        function a(e) {
           const t = e.target;
           if (!t) return;
           const s = e.target.dom7EventData || [];
@@ -7933,7 +7933,7 @@
               C(e[t]).is(i) && n.apply(e[t], s);
           }
         }
-        function a(e) {
+        function o(e) {
           const t = (e && e.target && e.target.dom7EventData) || [];
           t.indexOf(e) < 0 && t.unshift(e), n.apply(this, t);
         }
@@ -7948,16 +7948,16 @@
               const e = r[l];
               t.dom7LiveListeners || (t.dom7LiveListeners = {}),
                 t.dom7LiveListeners[e] || (t.dom7LiveListeners[e] = []),
-                t.dom7LiveListeners[e].push({ listener: n, proxyListener: o }),
-                t.addEventListener(e, o, s);
+                t.dom7LiveListeners[e].push({ listener: n, proxyListener: a }),
+                t.addEventListener(e, a, s);
             }
           else
             for (l = 0; l < r.length; l += 1) {
               const e = r[l];
               t.dom7Listeners || (t.dom7Listeners = {}),
                 t.dom7Listeners[e] || (t.dom7Listeners[e] = []),
-                t.dom7Listeners[e].push({ listener: n, proxyListener: a }),
-                t.addEventListener(e, a, s);
+                t.dom7Listeners[e].push({ listener: n, proxyListener: o }),
+                t.addEventListener(e, o, s);
             }
         }
         return this;
@@ -7966,30 +7966,30 @@
         let [t, i, n, s] = e;
         "function" == typeof e[1] && (([t, n, s] = e), (i = void 0)),
           s || (s = !1);
-        const o = t.split(" ");
-        for (let e = 0; e < o.length; e += 1) {
-          const t = o[e];
+        const a = t.split(" ");
+        for (let e = 0; e < a.length; e += 1) {
+          const t = a[e];
           for (let e = 0; e < this.length; e += 1) {
-            const o = this[e];
-            let a;
+            const a = this[e];
+            let o;
             if (
-              (!i && o.dom7Listeners
-                ? (a = o.dom7Listeners[t])
-                : i && o.dom7LiveListeners && (a = o.dom7LiveListeners[t]),
-              a && a.length)
+              (!i && a.dom7Listeners
+                ? (o = a.dom7Listeners[t])
+                : i && a.dom7LiveListeners && (o = a.dom7LiveListeners[t]),
+              o && o.length)
             )
-              for (let e = a.length - 1; e >= 0; e -= 1) {
-                const i = a[e];
+              for (let e = o.length - 1; e >= 0; e -= 1) {
+                const i = o[e];
                 (n && i.listener === n) ||
                 (n &&
                   i.listener &&
                   i.listener.dom7proxy &&
                   i.listener.dom7proxy === n)
-                  ? (o.removeEventListener(t, i.proxyListener, s),
-                    a.splice(e, 1))
+                  ? (a.removeEventListener(t, i.proxyListener, s),
+                    o.splice(e, 1))
                   : n ||
-                    (o.removeEventListener(t, i.proxyListener, s),
-                    a.splice(e, 1));
+                    (a.removeEventListener(t, i.proxyListener, s),
+                    o.splice(e, 1));
               }
           }
         }
@@ -8000,11 +8000,11 @@
           i = e[0].split(" "),
           n = e[1];
         for (let s = 0; s < i.length; s += 1) {
-          const o = i[s];
+          const a = i[s];
           for (let i = 0; i < this.length; i += 1) {
             const s = this[i];
             if (t.CustomEvent) {
-              const i = new t.CustomEvent(o, {
+              const i = new t.CustomEvent(a, {
                 detail: n,
                 bubbles: !0,
                 cancelable: !0,
@@ -8067,11 +8067,11 @@
             i = this[0],
             n = i.getBoundingClientRect(),
             s = t.body,
-            o = i.clientTop || s.clientTop || 0,
-            a = i.clientLeft || s.clientLeft || 0,
+            a = i.clientTop || s.clientTop || 0,
+            o = i.clientLeft || s.clientLeft || 0,
             r = i === e ? e.scrollY : i.scrollTop,
             l = i === e ? e.scrollX : i.scrollLeft;
-          return { top: n.top + r - o, left: n.left + l - a };
+          return { top: n.top + r - a, left: n.left + l - o };
         }
         return null;
       },
@@ -8115,20 +8115,20 @@
         const t = w(),
           i = y(),
           n = this[0];
-        let s, o;
+        let s, a;
         if (!n || void 0 === e) return !1;
         if ("string" == typeof e) {
           if (n.matches) return n.matches(e);
           if (n.webkitMatchesSelector) return n.webkitMatchesSelector(e);
           if (n.msMatchesSelector) return n.msMatchesSelector(e);
-          for (s = C(e), o = 0; o < s.length; o += 1) if (s[o] === n) return !0;
+          for (s = C(e), a = 0; a < s.length; a += 1) if (s[a] === n) return !0;
           return !1;
         }
         if (e === i) return n === i;
         if (e === t) return n === t;
         if (e.nodeType || e instanceof x) {
-          for (s = e.nodeType ? [e] : e, o = 0; o < s.length; o += 1)
-            if (s[o] === n) return !0;
+          for (s = e.nodeType ? [e] : e, a = 0; a < s.length; a += 1)
+            if (s[a] === n) return !0;
           return !1;
         }
         return !1;
@@ -8274,21 +8274,21 @@
         return this;
       },
     };
-    Object.keys(T).forEach((e) => {
-      Object.defineProperty(C.fn, e, { value: T[e], writable: !0 });
+    Object.keys(_).forEach((e) => {
+      Object.defineProperty(C.fn, e, { value: _[e], writable: !0 });
     });
     const P = C;
-    function I(e, t) {
+    function O(e, t) {
       return void 0 === t && (t = 0), setTimeout(e, t);
     }
-    function O() {
+    function I() {
       return Date.now();
     }
     function M(e, t) {
       void 0 === t && (t = "x");
       const i = w();
-      let n, s, o;
-      const a = (function (e) {
+      let n, s, a;
+      const o = (function (e) {
         const t = w();
         let i;
         return (
@@ -8300,32 +8300,32 @@
       })(e);
       return (
         i.WebKitCSSMatrix
-          ? ((s = a.transform || a.webkitTransform),
+          ? ((s = o.transform || o.webkitTransform),
             s.split(",").length > 6 &&
               (s = s
                 .split(", ")
                 .map((e) => e.replace(",", "."))
                 .join(", ")),
-            (o = new i.WebKitCSSMatrix("none" === s ? "" : s)))
-          : ((o =
-              a.MozTransform ||
-              a.OTransform ||
-              a.MsTransform ||
-              a.msTransform ||
-              a.transform ||
-              a
+            (a = new i.WebKitCSSMatrix("none" === s ? "" : s)))
+          : ((a =
+              o.MozTransform ||
+              o.OTransform ||
+              o.MsTransform ||
+              o.msTransform ||
+              o.transform ||
+              o
                 .getPropertyValue("transform")
                 .replace("translate(", "matrix(1, 0, 0, 1,")),
-            (n = o.toString().split(","))),
+            (n = a.toString().split(","))),
         "x" === t &&
           (s = i.WebKitCSSMatrix
-            ? o.m41
+            ? a.m41
             : 16 === n.length
             ? parseFloat(n[12])
             : parseFloat(n[4])),
         "y" === t &&
           (s = i.WebKitCSSMatrix
-            ? o.m42
+            ? a.m42
             : 16 === n.length
             ? parseFloat(n[13])
             : parseFloat(n[5])),
@@ -8354,9 +8354,9 @@
           const i = Object.keys(Object(n)).filter((e) => t.indexOf(e) < 0);
           for (let t = 0, s = i.length; t < s; t += 1) {
             const s = i[t],
-              o = Object.getOwnPropertyDescriptor(n, s);
-            void 0 !== o &&
-              o.enumerable &&
+              a = Object.getOwnPropertyDescriptor(n, s);
+            void 0 !== a &&
+              a.enumerable &&
               (L(e[s]) && L(n[s])
                 ? n[s].__swiper__
                   ? (e[s] = n[s])
@@ -8372,22 +8372,22 @@
     function z(e, t, i) {
       e.style.setProperty(t, i);
     }
-    function B(e) {
+    function $(e) {
       let { swiper: t, targetPosition: i, side: n } = e;
       const s = w(),
-        o = -t.translate;
-      let a,
+        a = -t.translate;
+      let o,
         r = null;
       const l = t.params.speed;
       (t.wrapperEl.style.scrollSnapType = "none"),
         s.cancelAnimationFrame(t.cssModeFrameID);
-      const c = i > o ? "next" : "prev",
+      const c = i > a ? "next" : "prev",
         d = (e, t) => ("next" === c && e >= t) || ("prev" === c && e <= t),
         u = () => {
-          (a = new Date().getTime()), null === r && (r = a);
-          const e = Math.max(Math.min((a - r) / l, 1), 0),
+          (o = new Date().getTime()), null === r && (r = o);
+          const e = Math.max(Math.min((o - r) / l, 1), 0),
             c = 0.5 - Math.cos(e * Math.PI) / 2;
-          let p = o + c * (i - o);
+          let p = a + c * (i - a);
           if ((d(p, i) && (p = i), t.wrapperEl.scrollTo({ [n]: p }), d(p, i)))
             return (
               (t.wrapperEl.style.overflow = "hidden"),
@@ -8402,11 +8402,11 @@
         };
       u();
     }
-    let $, G, F;
+    let B, G, F;
     function j() {
       return (
-        $ ||
-          ($ = (function () {
+        B ||
+          (B = (function () {
             const e = w(),
               t = y();
             return {
@@ -8432,7 +8432,7 @@
               gestures: "ongesturestart" in e,
             };
           })()),
-        $
+        B
       );
     }
     function R(e) {
@@ -8444,14 +8444,14 @@
             const i = j(),
               n = w(),
               s = n.navigator.platform,
-              o = t || n.navigator.userAgent,
-              a = { ios: !1, android: !1 },
+              a = t || n.navigator.userAgent,
+              o = { ios: !1, android: !1 },
               r = n.screen.width,
               l = n.screen.height,
-              c = o.match(/(Android);?[\s\/]+([\d.]+)?/);
-            let d = o.match(/(iPad).*OS\s([\d_]+)/);
-            const u = o.match(/(iPod)(.*OS\s([\d_]+))?/),
-              p = !d && o.match(/(iPhone\sOS|iOS)\s([\d_]+)/),
+              c = a.match(/(Android);?[\s\/]+([\d.]+)?/);
+            let d = a.match(/(iPad).*OS\s([\d_]+)/);
+            const u = a.match(/(iPod)(.*OS\s([\d_]+))?/),
+              p = !d && a.match(/(iPhone\sOS|iOS)\s([\d_]+)/),
               h = "Win32" === s;
             let f = "MacIntel" === s;
             return (
@@ -8472,12 +8472,12 @@
                   "810x1080",
                   "1080x810",
                 ].indexOf(`${r}x${l}`) >= 0 &&
-                ((d = o.match(/(Version)\/([\d.]+)/)),
+                ((d = a.match(/(Version)\/([\d.]+)/)),
                 d || (d = [0, 1, "13_0_0"]),
                 (f = !1)),
-              c && !h && ((a.os = "android"), (a.android = !0)),
-              (d || p || u) && ((a.os = "ios"), (a.ios = !0)),
-              a
+              c && !h && ((o.os = "android"), (o.android = !0)),
+              (d || p || u) && ((o.os = "ios"), (o.ios = !0)),
+              o
             );
           })(e)),
         G
@@ -8523,9 +8523,9 @@
         if ("function" != typeof t) return n;
         function s() {
           n.off(e, s), s.__emitterProxy && delete s.__emitterProxy;
-          for (var i = arguments.length, o = new Array(i), a = 0; a < i; a++)
-            o[a] = arguments[a];
-          t.apply(n, o);
+          for (var i = arguments.length, a = new Array(i), o = 0; o < i; o++)
+            a[o] = arguments[o];
+          t.apply(n, a);
         }
         return (s.__emitterProxy = t), n.on(e, s, i);
       },
@@ -8562,11 +8562,11 @@
         const e = this;
         if (!e.eventsListeners) return e;
         let t, i, n;
-        for (var s = arguments.length, o = new Array(s), a = 0; a < s; a++)
-          o[a] = arguments[a];
-        "string" == typeof o[0] || Array.isArray(o[0])
-          ? ((t = o[0]), (i = o.slice(1, o.length)), (n = e))
-          : ((t = o[0].events), (i = o[0].data), (n = o[0].context || e)),
+        for (var s = arguments.length, a = new Array(s), o = 0; o < s; o++)
+          a[o] = arguments[o];
+        "string" == typeof a[0] || Array.isArray(a[0])
+          ? ((t = a[0]), (i = a.slice(1, a.length)), (n = e))
+          : ((t = a[0].events), (i = a[0].data), (n = a[0].context || e)),
           i.unshift(n);
         return (
           (Array.isArray(t) ? t : t.split(" ")).forEach((t) => {
@@ -8636,7 +8636,7 @@
           return parseFloat(e.getPropertyValue(t(i)) || 0);
         }
         const n = e.params,
-          { $wrapperEl: s, size: o, rtlTranslate: a, wrongRTL: r } = e,
+          { $wrapperEl: s, size: a, rtlTranslate: o, wrongRTL: r } = e,
           l = e.virtual && n.virtual.enabled,
           c = l ? e.virtual.slides.length : e.slides.length,
           d = s.children(`.${e.params.slideClass}`),
@@ -8654,12 +8654,12 @@
           w = -g,
           x = 0,
           S = 0;
-        if (void 0 === o) return;
+        if (void 0 === a) return;
         "string" == typeof b &&
           b.indexOf("%") >= 0 &&
-          (b = (parseFloat(b.replace("%", "")) / 100) * o),
+          (b = (parseFloat(b.replace("%", "")) / 100) * a),
           (e.virtualSize = -b),
-          a
+          o
             ? d.css({ marginLeft: "", marginBottom: "", marginTop: "" })
             : d.css({ marginRight: "", marginBottom: "", marginTop: "" }),
           n.centeredSlides &&
@@ -8677,47 +8677,47 @@
           ).length > 0;
         for (let s = 0; s < u; s += 1) {
           C = 0;
-          const a = d.eq(s);
+          const o = d.eq(s);
           if (
-            (k && e.grid.updateSlide(s, a, u, t), "none" !== a.css("display"))
+            (k && e.grid.updateSlide(s, o, u, t), "none" !== o.css("display"))
           ) {
             if ("auto" === n.slidesPerView) {
               E && (d[s].style[t("width")] = "");
-              const o = getComputedStyle(a[0]),
-                r = a[0].style.transform,
-                l = a[0].style.webkitTransform;
+              const a = getComputedStyle(o[0]),
+                r = o[0].style.transform,
+                l = o[0].style.webkitTransform;
               if (
-                (r && (a[0].style.transform = "none"),
-                l && (a[0].style.webkitTransform = "none"),
+                (r && (o[0].style.transform = "none"),
+                l && (o[0].style.webkitTransform = "none"),
                 n.roundLengths)
               )
-                C = e.isHorizontal() ? a.outerWidth(!0) : a.outerHeight(!0);
+                C = e.isHorizontal() ? o.outerWidth(!0) : o.outerHeight(!0);
               else {
-                const e = i(o, "width"),
-                  t = i(o, "padding-left"),
-                  n = i(o, "padding-right"),
-                  s = i(o, "margin-left"),
-                  r = i(o, "margin-right"),
-                  l = o.getPropertyValue("box-sizing");
+                const e = i(a, "width"),
+                  t = i(a, "padding-left"),
+                  n = i(a, "padding-right"),
+                  s = i(a, "margin-left"),
+                  r = i(a, "margin-right"),
+                  l = a.getPropertyValue("box-sizing");
                 if (l && "border-box" === l) C = e + s + r;
                 else {
-                  const { clientWidth: i, offsetWidth: o } = a[0];
-                  C = e + t + n + s + r + (o - i);
+                  const { clientWidth: i, offsetWidth: a } = o[0];
+                  C = e + t + n + s + r + (a - i);
                 }
               }
-              r && (a[0].style.transform = r),
-                l && (a[0].style.webkitTransform = l),
+              r && (o[0].style.transform = r),
+                l && (o[0].style.webkitTransform = l),
                 n.roundLengths && (C = Math.floor(C));
             } else
-              (C = (o - (n.slidesPerView - 1) * b) / n.slidesPerView),
+              (C = (a - (n.slidesPerView - 1) * b) / n.slidesPerView),
                 n.roundLengths && (C = Math.floor(C)),
                 d[s] && (d[s].style[t("width")] = `${C}px`);
             d[s] && (d[s].swiperSlideSize = C),
               f.push(C),
               n.centeredSlides
                 ? ((w = w + C / 2 + x / 2 + b),
-                  0 === x && 0 !== s && (w = w - o / 2 - b),
-                  0 === s && (w = w - o / 2 - b),
+                  0 === x && 0 !== s && (w = w - a / 2 - b),
+                  0 === s && (w = w - a / 2 - b),
                   Math.abs(w) < 0.001 && (w = 0),
                   n.roundLengths && (w = Math.floor(w)),
                   S % n.slidesPerGroup == 0 && p.push(w),
@@ -8734,8 +8734,8 @@
           }
         }
         if (
-          ((e.virtualSize = Math.max(e.virtualSize, o) + m),
-          a &&
+          ((e.virtualSize = Math.max(e.virtualSize, a) + m),
+          o &&
             r &&
             ("slide" === n.effect || "coverflow" === n.effect) &&
             s.css({ width: `${e.virtualSize + n.spaceBetween}px` }),
@@ -8748,14 +8748,14 @@
           for (let i = 0; i < p.length; i += 1) {
             let s = p[i];
             n.roundLengths && (s = Math.floor(s)),
-              p[i] <= e.virtualSize - o && t.push(s);
+              p[i] <= e.virtualSize - a && t.push(s);
           }
           (p = t),
-            Math.floor(e.virtualSize - o) - Math.floor(p[p.length - 1]) > 1 &&
-              p.push(e.virtualSize - o);
+            Math.floor(e.virtualSize - a) - Math.floor(p[p.length - 1]) > 1 &&
+              p.push(e.virtualSize - a);
         }
         if ((0 === p.length && (p = [0]), 0 !== n.spaceBetween)) {
-          const i = e.isHorizontal() && a ? "marginLeft" : t("marginRight");
+          const i = e.isHorizontal() && o ? "marginLeft" : t("marginRight");
           d.filter((e, t) => !n.cssMode || t !== d.length - 1).css({
             [i]: `${b}px`,
           });
@@ -8766,7 +8766,7 @@
             e += t + (n.spaceBetween ? n.spaceBetween : 0);
           }),
             (e -= n.spaceBetween);
-          const t = e - o;
+          const t = e - a;
           p = p.map((e) => (e < 0 ? -g : e > t ? t + m : e));
         }
         if (n.centerInsufficientSlides) {
@@ -8776,9 +8776,9 @@
               e += t + (n.spaceBetween ? n.spaceBetween : 0);
             }),
             (e -= n.spaceBetween),
-            e < o)
+            e < a)
           ) {
-            const t = (o - e) / 2;
+            const t = (a - e) / 2;
             p.forEach((e, i) => {
               p[i] = e - t;
             }),
@@ -8828,11 +8828,11 @@
           i = [],
           n = t.virtual && t.params.virtual.enabled;
         let s,
-          o = 0;
+          a = 0;
         "number" == typeof e
           ? t.setTransition(e)
           : !0 === e && t.setTransition(t.params.speed);
-        const a = (e) =>
+        const o = (e) =>
           n
             ? t.slides.filter(
                 (t) =>
@@ -8848,15 +8848,15 @@
             for (s = 0; s < Math.ceil(t.params.slidesPerView); s += 1) {
               const e = t.activeIndex + s;
               if (e > t.slides.length && !n) break;
-              i.push(a(e));
+              i.push(o(e));
             }
-        else i.push(a(t.activeIndex));
+        else i.push(o(t.activeIndex));
         for (s = 0; s < i.length; s += 1)
           if (void 0 !== i[s]) {
             const e = i[s].offsetHeight;
-            o = e > o ? e : o;
+            a = e > a ? e : a;
           }
-        (o || 0 === o) && t.$wrapperEl.css("height", `${o}px`);
+        (a || 0 === a) && t.$wrapperEl.css("height", `${a}px`);
       },
       updateSlidesOffset: function () {
         const e = this,
@@ -8870,11 +8870,11 @@
         void 0 === e && (e = (this && this.translate) || 0);
         const t = this,
           i = t.params,
-          { slides: n, rtlTranslate: s, snapGrid: o } = t;
+          { slides: n, rtlTranslate: s, snapGrid: a } = t;
         if (0 === n.length) return;
         void 0 === n[0].swiperSlideOffset && t.updateSlidesOffset();
-        let a = -e;
-        s && (a = e),
+        let o = -e;
+        s && (o = e),
           n.removeClass(i.slideVisibleClass),
           (t.visibleSlidesIndexes = []),
           (t.visibleSlides = []);
@@ -8883,12 +8883,12 @@
           let l = r.swiperSlideOffset;
           i.cssMode && i.centeredSlides && (l -= n[0].swiperSlideOffset);
           const c =
-              (a + (i.centeredSlides ? t.minTranslate() : 0) - l) /
+              (o + (i.centeredSlides ? t.minTranslate() : 0) - l) /
               (r.swiperSlideSize + i.spaceBetween),
             d =
-              (a - o[0] + (i.centeredSlides ? t.minTranslate() : 0) - l) /
+              (o - a[0] + (i.centeredSlides ? t.minTranslate() : 0) - l) /
               (r.swiperSlideSize + i.spaceBetween),
-            u = -(a - l),
+            u = -(o - l),
             p = u + t.slidesSizesGrid[e];
           ((u >= 0 && u < t.size - 1) ||
             (p > 1 && p <= t.size) ||
@@ -8909,18 +8909,18 @@
         }
         const i = t.params,
           n = t.maxTranslate() - t.minTranslate();
-        let { progress: s, isBeginning: o, isEnd: a } = t;
-        const r = o,
-          l = a;
+        let { progress: s, isBeginning: a, isEnd: o } = t;
+        const r = a,
+          l = o;
         0 === n
-          ? ((s = 0), (o = !0), (a = !0))
-          : ((s = (e - t.minTranslate()) / n), (o = s <= 0), (a = s >= 1)),
-          Object.assign(t, { progress: s, isBeginning: o, isEnd: a }),
+          ? ((s = 0), (a = !0), (o = !0))
+          : ((s = (e - t.minTranslate()) / n), (a = s <= 0), (o = s >= 1)),
+          Object.assign(t, { progress: s, isBeginning: a, isEnd: o }),
           (i.watchSlidesProgress || (i.centeredSlides && i.autoHeight)) &&
             t.updateSlidesProgress(e),
-          o && !r && t.emit("reachBeginning toEdge"),
-          a && !l && t.emit("reachEnd toEdge"),
-          ((r && !o) || (l && !a)) && t.emit("fromEdge"),
+          a && !r && t.emit("reachBeginning toEdge"),
+          o && !l && t.emit("reachEnd toEdge"),
+          ((r && !a) || (l && !o)) && t.emit("fromEdge"),
           t.emit("progress", s);
       },
       updateSlidesClasses: function () {
@@ -8930,14 +8930,14 @@
             params: i,
             $wrapperEl: n,
             activeIndex: s,
-            realIndex: o,
+            realIndex: a,
           } = e,
-          a = e.virtual && i.virtual.enabled;
+          o = e.virtual && i.virtual.enabled;
         let r;
         t.removeClass(
           `${i.slideActiveClass} ${i.slideNextClass} ${i.slidePrevClass} ${i.slideDuplicateActiveClass} ${i.slideDuplicateNextClass} ${i.slideDuplicatePrevClass}`
         ),
-          (r = a
+          (r = o
             ? e.$wrapperEl.find(
                 `.${i.slideClass}[data-swiper-slide-index="${s}"]`
               )
@@ -8947,12 +8947,12 @@
             (r.hasClass(i.slideDuplicateClass)
               ? n
                   .children(
-                    `.${i.slideClass}:not(.${i.slideDuplicateClass})[data-swiper-slide-index="${o}"]`
+                    `.${i.slideClass}:not(.${i.slideDuplicateClass})[data-swiper-slide-index="${a}"]`
                   )
                   .addClass(i.slideDuplicateActiveClass)
               : n
                   .children(
-                    `.${i.slideClass}.${i.slideDuplicateClass}[data-swiper-slide-index="${o}"]`
+                    `.${i.slideClass}.${i.slideDuplicateClass}[data-swiper-slide-index="${a}"]`
                   )
                   .addClass(i.slideDuplicateActiveClass));
         let l = r.nextAll(`.${i.slideClass}`).eq(0).addClass(i.slideNextClass);
@@ -9010,8 +9010,8 @@
           {
             slidesGrid: n,
             snapGrid: s,
-            params: o,
-            activeIndex: a,
+            params: a,
+            activeIndex: o,
             realIndex: r,
             snapIndex: l,
           } = t;
@@ -9024,14 +9024,14 @@
                 ? (d = e)
                 : i >= n[e] && i < n[e + 1] && (d = e + 1)
               : i >= n[e] && (d = e);
-          o.normalizeSlideIndex && (d < 0 || void 0 === d) && (d = 0);
+          a.normalizeSlideIndex && (d < 0 || void 0 === d) && (d = 0);
         }
         if (s.indexOf(i) >= 0) c = s.indexOf(i);
         else {
-          const e = Math.min(o.slidesPerGroupSkip, d);
-          c = e + Math.floor((d - e) / o.slidesPerGroup);
+          const e = Math.min(a.slidesPerGroupSkip, d);
+          c = e + Math.floor((d - e) / a.slidesPerGroup);
         }
-        if ((c >= s.length && (c = s.length - 1), d === a))
+        if ((c >= s.length && (c = s.length - 1), d === o))
           return void (
             c !== l && ((t.snapIndex = c), t.emit("snapIndexChange"))
           );
@@ -9042,7 +9042,7 @@
         Object.assign(t, {
           snapIndex: c,
           realIndex: u,
-          previousIndex: a,
+          previousIndex: o,
           activeIndex: d,
         }),
           t.emit("activeIndexChange"),
@@ -9056,14 +9056,14 @@
           i = t.params,
           n = P(e).closest(`.${i.slideClass}`)[0];
         let s,
-          o = !1;
+          a = !1;
         if (n)
           for (let e = 0; e < t.slides.length; e += 1)
             if (t.slides[e] === n) {
-              (o = !0), (s = e);
+              (a = !0), (s = e);
               break;
             }
-        if (!n || !o)
+        if (!n || !a)
           return (t.clickedSlide = void 0), void (t.clickedIndex = void 0);
         (t.clickedSlide = n),
           t.virtual && t.params.virtual.enabled
@@ -9089,16 +9089,16 @@
         } = this;
         if (t.virtualTranslate) return i ? -n : n;
         if (t.cssMode) return n;
-        let o = M(s[0], e);
-        return i && (o = -o), o || 0;
+        let a = M(s[0], e);
+        return i && (a = -a), a || 0;
       },
       setTranslate: function (e, t) {
         const i = this,
           {
             rtlTranslate: n,
             params: s,
-            $wrapperEl: o,
-            wrapperEl: a,
+            $wrapperEl: a,
+            wrapperEl: o,
             progress: r,
           } = i;
         let l,
@@ -9107,10 +9107,10 @@
         i.isHorizontal() ? (c = n ? -e : e) : (d = e),
           s.roundLengths && ((c = Math.floor(c)), (d = Math.floor(d))),
           s.cssMode
-            ? (a[i.isHorizontal() ? "scrollLeft" : "scrollTop"] =
+            ? (o[i.isHorizontal() ? "scrollLeft" : "scrollTop"] =
                 i.isHorizontal() ? -c : -d)
             : s.virtualTranslate ||
-              o.transform(`translate3d(${c}px, ${d}px, 0px)`),
+              a.transform(`translate3d(${c}px, ${d}px, 0px)`),
           (i.previousTranslate = i.translate),
           (i.translate = i.isHorizontal() ? c : d);
         const u = i.maxTranslate() - i.minTranslate();
@@ -9129,23 +9129,23 @@
           void 0 === t && (t = this.params.speed),
           void 0 === i && (i = !0),
           void 0 === n && (n = !0);
-        const o = this,
-          { params: a, wrapperEl: r } = o;
-        if (o.animating && a.preventInteractionOnTransition) return !1;
-        const l = o.minTranslate(),
-          c = o.maxTranslate();
+        const a = this,
+          { params: o, wrapperEl: r } = a;
+        if (a.animating && o.preventInteractionOnTransition) return !1;
+        const l = a.minTranslate(),
+          c = a.maxTranslate();
         let d;
         if (
           ((d = n && e > l ? l : n && e < c ? c : e),
-          o.updateProgress(d),
-          a.cssMode)
+          a.updateProgress(d),
+          o.cssMode)
         ) {
-          const e = o.isHorizontal();
+          const e = a.isHorizontal();
           if (0 === t) r[e ? "scrollLeft" : "scrollTop"] = -d;
           else {
-            if (!o.support.smoothScroll)
+            if (!a.support.smoothScroll)
               return (
-                B({ swiper: o, targetPosition: -d, side: e ? "left" : "top" }),
+                $({ swiper: a, targetPosition: -d, side: e ? "left" : "top" }),
                 !0
               );
             r.scrollTo({ [e ? "left" : "top"]: -d, behavior: "smooth" });
@@ -9154,42 +9154,42 @@
         }
         return (
           0 === t
-            ? (o.setTransition(0),
-              o.setTranslate(d),
+            ? (a.setTransition(0),
+              a.setTranslate(d),
               i &&
-                (o.emit("beforeTransitionStart", t, s),
-                o.emit("transitionEnd")))
-            : (o.setTransition(t),
-              o.setTranslate(d),
+                (a.emit("beforeTransitionStart", t, s),
+                a.emit("transitionEnd")))
+            : (a.setTransition(t),
+              a.setTranslate(d),
               i &&
-                (o.emit("beforeTransitionStart", t, s),
-                o.emit("transitionStart")),
-              o.animating ||
-                ((o.animating = !0),
-                o.onTranslateToWrapperTransitionEnd ||
-                  (o.onTranslateToWrapperTransitionEnd = function (e) {
-                    o &&
-                      !o.destroyed &&
+                (a.emit("beforeTransitionStart", t, s),
+                a.emit("transitionStart")),
+              a.animating ||
+                ((a.animating = !0),
+                a.onTranslateToWrapperTransitionEnd ||
+                  (a.onTranslateToWrapperTransitionEnd = function (e) {
+                    a &&
+                      !a.destroyed &&
                       e.target === this &&
-                      (o.$wrapperEl[0].removeEventListener(
+                      (a.$wrapperEl[0].removeEventListener(
                         "transitionend",
-                        o.onTranslateToWrapperTransitionEnd
+                        a.onTranslateToWrapperTransitionEnd
                       ),
-                      o.$wrapperEl[0].removeEventListener(
+                      a.$wrapperEl[0].removeEventListener(
                         "webkitTransitionEnd",
-                        o.onTranslateToWrapperTransitionEnd
+                        a.onTranslateToWrapperTransitionEnd
                       ),
-                      (o.onTranslateToWrapperTransitionEnd = null),
-                      delete o.onTranslateToWrapperTransitionEnd,
-                      i && o.emit("transitionEnd"));
+                      (a.onTranslateToWrapperTransitionEnd = null),
+                      delete a.onTranslateToWrapperTransitionEnd,
+                      i && a.emit("transitionEnd"));
                   }),
-                o.$wrapperEl[0].addEventListener(
+                a.$wrapperEl[0].addEventListener(
                   "transitionend",
-                  o.onTranslateToWrapperTransitionEnd
+                  a.onTranslateToWrapperTransitionEnd
                 ),
-                o.$wrapperEl[0].addEventListener(
+                a.$wrapperEl[0].addEventListener(
                   "webkitTransitionEnd",
-                  o.onTranslateToWrapperTransitionEnd
+                  a.onTranslateToWrapperTransitionEnd
                 ))),
           !0
         );
@@ -9197,12 +9197,12 @@
     };
     function Y(e) {
       let { swiper: t, runCallbacks: i, direction: n, step: s } = e;
-      const { activeIndex: o, previousIndex: a } = t;
+      const { activeIndex: a, previousIndex: o } = t;
       let r = n;
       if (
-        (r || (r = o > a ? "next" : o < a ? "prev" : "reset"),
+        (r || (r = a > o ? "next" : a < o ? "prev" : "reset"),
         t.emit(`transition${s}`),
-        i && o !== a)
+        i && a !== o)
       ) {
         if ("reset" === r) return void t.emit(`slideResetTransition${s}`);
         t.emit(`slideChangeTransition${s}`),
@@ -9230,9 +9230,9 @@
             );
           e = t;
         }
-        const o = this;
-        let a = e;
-        a < 0 && (a = 0);
+        const a = this;
+        let o = e;
+        o < 0 && (o = 0);
         const {
           params: r,
           snapGrid: l,
@@ -9242,72 +9242,72 @@
           rtlTranslate: p,
           wrapperEl: h,
           enabled: f,
-        } = o;
+        } = a;
         if (
-          (o.animating && r.preventInteractionOnTransition) ||
+          (a.animating && r.preventInteractionOnTransition) ||
           (!f && !n && !s)
         )
           return !1;
-        const g = Math.min(o.params.slidesPerGroupSkip, a);
-        let m = g + Math.floor((a - g) / o.params.slidesPerGroup);
+        const g = Math.min(a.params.slidesPerGroupSkip, o);
+        let m = g + Math.floor((o - g) / a.params.slidesPerGroup);
         m >= l.length && (m = l.length - 1),
           (u || r.initialSlide || 0) === (d || 0) &&
             i &&
-            o.emit("beforeSlideChangeStart");
+            a.emit("beforeSlideChangeStart");
         const v = -l[m];
-        if ((o.updateProgress(v), r.normalizeSlideIndex))
+        if ((a.updateProgress(v), r.normalizeSlideIndex))
           for (let e = 0; e < c.length; e += 1) {
             const t = -Math.floor(100 * v),
               i = Math.floor(100 * c[e]),
               n = Math.floor(100 * c[e + 1]);
             void 0 !== c[e + 1]
               ? t >= i && t < n - (n - i) / 2
-                ? (a = e)
-                : t >= i && t < n && (a = e + 1)
-              : t >= i && (a = e);
+                ? (o = e)
+                : t >= i && t < n && (o = e + 1)
+              : t >= i && (o = e);
           }
-        if (o.initialized && a !== u) {
-          if (!o.allowSlideNext && v < o.translate && v < o.minTranslate())
+        if (a.initialized && o !== u) {
+          if (!a.allowSlideNext && v < a.translate && v < a.minTranslate())
             return !1;
           if (
-            !o.allowSlidePrev &&
-            v > o.translate &&
-            v > o.maxTranslate() &&
-            (u || 0) !== a
+            !a.allowSlidePrev &&
+            v > a.translate &&
+            v > a.maxTranslate() &&
+            (u || 0) !== o
           )
             return !1;
         }
         let y;
         if (
-          ((y = a > u ? "next" : a < u ? "prev" : "reset"),
-          (p && -v === o.translate) || (!p && v === o.translate))
+          ((y = o > u ? "next" : o < u ? "prev" : "reset"),
+          (p && -v === a.translate) || (!p && v === a.translate))
         )
           return (
-            o.updateActiveIndex(a),
-            r.autoHeight && o.updateAutoHeight(),
-            o.updateSlidesClasses(),
-            "slide" !== r.effect && o.setTranslate(v),
-            "reset" !== y && (o.transitionStart(i, y), o.transitionEnd(i, y)),
+            a.updateActiveIndex(o),
+            r.autoHeight && a.updateAutoHeight(),
+            a.updateSlidesClasses(),
+            "slide" !== r.effect && a.setTranslate(v),
+            "reset" !== y && (a.transitionStart(i, y), a.transitionEnd(i, y)),
             !1
           );
         if (r.cssMode) {
-          const e = o.isHorizontal(),
+          const e = a.isHorizontal(),
             i = p ? v : -v;
           if (0 === t) {
-            const t = o.virtual && o.params.virtual.enabled;
+            const t = a.virtual && a.params.virtual.enabled;
             t &&
-              ((o.wrapperEl.style.scrollSnapType = "none"),
-              (o._immediateVirtual = !0)),
+              ((a.wrapperEl.style.scrollSnapType = "none"),
+              (a._immediateVirtual = !0)),
               (h[e ? "scrollLeft" : "scrollTop"] = i),
               t &&
                 requestAnimationFrame(() => {
-                  (o.wrapperEl.style.scrollSnapType = ""),
-                    (o._swiperImmediateVirtual = !1);
+                  (a.wrapperEl.style.scrollSnapType = ""),
+                    (a._swiperImmediateVirtual = !1);
                 });
           } else {
-            if (!o.support.smoothScroll)
+            if (!a.support.smoothScroll)
               return (
-                B({ swiper: o, targetPosition: i, side: e ? "left" : "top" }),
+                $({ swiper: a, targetPosition: i, side: e ? "left" : "top" }),
                 !0
               );
             h.scrollTo({ [e ? "left" : "top"]: i, behavior: "smooth" });
@@ -9315,40 +9315,40 @@
           return !0;
         }
         return (
-          o.setTransition(t),
-          o.setTranslate(v),
-          o.updateActiveIndex(a),
-          o.updateSlidesClasses(),
-          o.emit("beforeTransitionStart", t, n),
-          o.transitionStart(i, y),
+          a.setTransition(t),
+          a.setTranslate(v),
+          a.updateActiveIndex(o),
+          a.updateSlidesClasses(),
+          a.emit("beforeTransitionStart", t, n),
+          a.transitionStart(i, y),
           0 === t
-            ? o.transitionEnd(i, y)
-            : o.animating ||
-              ((o.animating = !0),
-              o.onSlideToWrapperTransitionEnd ||
-                (o.onSlideToWrapperTransitionEnd = function (e) {
-                  o &&
-                    !o.destroyed &&
+            ? a.transitionEnd(i, y)
+            : a.animating ||
+              ((a.animating = !0),
+              a.onSlideToWrapperTransitionEnd ||
+                (a.onSlideToWrapperTransitionEnd = function (e) {
+                  a &&
+                    !a.destroyed &&
                     e.target === this &&
-                    (o.$wrapperEl[0].removeEventListener(
+                    (a.$wrapperEl[0].removeEventListener(
                       "transitionend",
-                      o.onSlideToWrapperTransitionEnd
+                      a.onSlideToWrapperTransitionEnd
                     ),
-                    o.$wrapperEl[0].removeEventListener(
+                    a.$wrapperEl[0].removeEventListener(
                       "webkitTransitionEnd",
-                      o.onSlideToWrapperTransitionEnd
+                      a.onSlideToWrapperTransitionEnd
                     ),
-                    (o.onSlideToWrapperTransitionEnd = null),
-                    delete o.onSlideToWrapperTransitionEnd,
-                    o.transitionEnd(i, y));
+                    (a.onSlideToWrapperTransitionEnd = null),
+                    delete a.onSlideToWrapperTransitionEnd,
+                    a.transitionEnd(i, y));
                 }),
-              o.$wrapperEl[0].addEventListener(
+              a.$wrapperEl[0].addEventListener(
                 "transitionend",
-                o.onSlideToWrapperTransitionEnd
+                a.onSlideToWrapperTransitionEnd
               ),
-              o.$wrapperEl[0].addEventListener(
+              a.$wrapperEl[0].addEventListener(
                 "webkitTransitionEnd",
-                o.onSlideToWrapperTransitionEnd
+                a.onSlideToWrapperTransitionEnd
               )),
           !0
         );
@@ -9358,25 +9358,25 @@
           void 0 === t && (t = this.params.speed),
           void 0 === i && (i = !0);
         const s = this;
-        let o = e;
-        return s.params.loop && (o += s.loopedSlides), s.slideTo(o, t, i, n);
+        let a = e;
+        return s.params.loop && (a += s.loopedSlides), s.slideTo(a, t, i, n);
       },
       slideNext: function (e, t, i) {
         void 0 === e && (e = this.params.speed), void 0 === t && (t = !0);
         const n = this,
-          { animating: s, enabled: o, params: a } = n;
-        if (!o) return n;
-        let r = a.slidesPerGroup;
-        "auto" === a.slidesPerView &&
-          1 === a.slidesPerGroup &&
-          a.slidesPerGroupAuto &&
+          { animating: s, enabled: a, params: o } = n;
+        if (!a) return n;
+        let r = o.slidesPerGroup;
+        "auto" === o.slidesPerView &&
+          1 === o.slidesPerGroup &&
+          o.slidesPerGroupAuto &&
           (r = Math.max(n.slidesPerViewDynamic("current", !0), 1));
-        const l = n.activeIndex < a.slidesPerGroupSkip ? 1 : r;
-        if (a.loop) {
-          if (s && a.loopPreventsSlide) return !1;
+        const l = n.activeIndex < o.slidesPerGroupSkip ? 1 : r;
+        if (o.loop) {
+          if (s && o.loopPreventsSlide) return !1;
           n.loopFix(), (n._clientLeft = n.$wrapperEl[0].clientLeft);
         }
-        return a.rewind && n.isEnd
+        return o.rewind && n.isEnd
           ? n.slideTo(0, e, t, i)
           : n.slideTo(n.activeIndex + l, e, t, i);
       },
@@ -9385,29 +9385,29 @@
         const n = this,
           {
             params: s,
-            animating: o,
-            snapGrid: a,
+            animating: a,
+            snapGrid: o,
             slidesGrid: r,
             rtlTranslate: l,
             enabled: c,
           } = n;
         if (!c) return n;
         if (s.loop) {
-          if (o && s.loopPreventsSlide) return !1;
+          if (a && s.loopPreventsSlide) return !1;
           n.loopFix(), (n._clientLeft = n.$wrapperEl[0].clientLeft);
         }
         function d(e) {
           return e < 0 ? -Math.floor(Math.abs(e)) : Math.floor(e);
         }
         const u = d(l ? n.translate : -n.translate),
-          p = a.map((e) => d(e));
-        let h = a[p.indexOf(u) - 1];
+          p = o.map((e) => d(e));
+        let h = o[p.indexOf(u) - 1];
         if (void 0 === h && s.cssMode) {
           let e;
-          a.forEach((t, i) => {
+          o.forEach((t, i) => {
             u >= t && (e = i);
           }),
-            void 0 !== e && (h = a[e > 0 ? e - 1 : e]);
+            void 0 !== e && (h = o[e > 0 ? e - 1 : e]);
         }
         let f = 0;
         if (
@@ -9441,21 +9441,21 @@
           void 0 === t && (t = !0),
           void 0 === n && (n = 0.5);
         const s = this;
-        let o = s.activeIndex;
-        const a = Math.min(s.params.slidesPerGroupSkip, o),
-          r = a + Math.floor((o - a) / s.params.slidesPerGroup),
+        let a = s.activeIndex;
+        const o = Math.min(s.params.slidesPerGroupSkip, a),
+          r = o + Math.floor((a - o) / s.params.slidesPerGroup),
           l = s.rtlTranslate ? s.translate : -s.translate;
         if (l >= s.snapGrid[r]) {
           const e = s.snapGrid[r];
-          l - e > (s.snapGrid[r + 1] - e) * n && (o += s.params.slidesPerGroup);
+          l - e > (s.snapGrid[r + 1] - e) * n && (a += s.params.slidesPerGroup);
         } else {
           const e = s.snapGrid[r - 1];
-          l - e <= (s.snapGrid[r] - e) * n && (o -= s.params.slidesPerGroup);
+          l - e <= (s.snapGrid[r] - e) * n && (a -= s.params.slidesPerGroup);
         }
         return (
-          (o = Math.max(o, 0)),
-          (o = Math.min(o, s.slidesGrid.length - 1)),
-          s.slideTo(o, e, t, i)
+          (a = Math.max(a, 0)),
+          (a = Math.min(a, s.slidesGrid.length - 1)),
+          s.slideTo(a, e, t, i)
         );
       },
       slideToClickedSlide: function () {
@@ -9466,37 +9466,37 @@
               ? e.slidesPerViewDynamic()
               : t.slidesPerView;
         let s,
-          o = e.clickedIndex;
+          a = e.clickedIndex;
         if (t.loop) {
           if (e.animating) return;
           (s = parseInt(P(e.clickedSlide).attr("data-swiper-slide-index"), 10)),
             t.centeredSlides
-              ? o < e.loopedSlides - n / 2 ||
-                o > e.slides.length - e.loopedSlides + n / 2
+              ? a < e.loopedSlides - n / 2 ||
+                a > e.slides.length - e.loopedSlides + n / 2
                 ? (e.loopFix(),
-                  (o = i
+                  (a = i
                     .children(
                       `.${t.slideClass}[data-swiper-slide-index="${s}"]:not(.${t.slideDuplicateClass})`
                     )
                     .eq(0)
                     .index()),
-                  I(() => {
-                    e.slideTo(o);
+                  O(() => {
+                    e.slideTo(a);
                   }))
-                : e.slideTo(o)
-              : o > e.slides.length - n
+                : e.slideTo(a)
+              : a > e.slides.length - n
               ? (e.loopFix(),
-                (o = i
+                (a = i
                   .children(
                     `.${t.slideClass}[data-swiper-slide-index="${s}"]:not(.${t.slideDuplicateClass})`
                   )
                   .eq(0)
                   .index()),
-                I(() => {
-                  e.slideTo(o);
+                O(() => {
+                  e.slideTo(a);
                 }))
-              : e.slideTo(o);
-        } else e.slideTo(o);
+              : e.slideTo(a);
+        } else e.slideTo(a);
       },
     };
     const W = {
@@ -9506,9 +9506,9 @@
           { params: i, $wrapperEl: n } = e,
           s = n.children().length > 0 ? P(n.children()[0].parentNode) : n;
         s.children(`.${i.slideClass}.${i.slideDuplicateClass}`).remove();
-        let o = s.children(`.${i.slideClass}`);
+        let a = s.children(`.${i.slideClass}`);
         if (i.loopFillGroupWithBlank) {
-          const e = i.slidesPerGroup - (o.length % i.slidesPerGroup);
+          const e = i.slidesPerGroup - (a.length % i.slidesPerGroup);
           if (e !== i.slidesPerGroup) {
             for (let n = 0; n < e; n += 1) {
               const e = P(t.createElement("div")).addClass(
@@ -9516,29 +9516,29 @@
               );
               s.append(e);
             }
-            o = s.children(`.${i.slideClass}`);
+            a = s.children(`.${i.slideClass}`);
           }
         }
         "auto" !== i.slidesPerView ||
           i.loopedSlides ||
-          (i.loopedSlides = o.length),
+          (i.loopedSlides = a.length),
           (e.loopedSlides = Math.ceil(
             parseFloat(i.loopedSlides || i.slidesPerView, 10)
           )),
           (e.loopedSlides += i.loopAdditionalSlides),
-          e.loopedSlides > o.length && (e.loopedSlides = o.length);
-        const a = [],
+          e.loopedSlides > a.length && (e.loopedSlides = a.length);
+        const o = [],
           r = [];
-        o.each((t, i) => {
+        a.each((t, i) => {
           const n = P(t);
           i < e.loopedSlides && r.push(t),
-            i < o.length && i >= o.length - e.loopedSlides && a.push(t),
+            i < a.length && i >= a.length - e.loopedSlides && o.push(t),
             n.attr("data-swiper-slide-index", i);
         });
         for (let e = 0; e < r.length; e += 1)
           s.append(P(r[e].cloneNode(!0)).addClass(i.slideDuplicateClass));
-        for (let e = a.length - 1; e >= 0; e -= 1)
-          s.prepend(P(a[e].cloneNode(!0)).addClass(i.slideDuplicateClass));
+        for (let e = o.length - 1; e >= 0; e -= 1)
+          s.prepend(P(o[e].cloneNode(!0)).addClass(i.slideDuplicateClass));
       },
       loopFix: function () {
         const e = this;
@@ -9548,13 +9548,13 @@
           slides: i,
           loopedSlides: n,
           allowSlidePrev: s,
-          allowSlideNext: o,
-          snapGrid: a,
+          allowSlideNext: a,
+          snapGrid: o,
           rtlTranslate: r,
         } = e;
         let l;
         (e.allowSlidePrev = !0), (e.allowSlideNext = !0);
-        const c = -a[t] - e.getTranslate();
+        const c = -o[t] - e.getTranslate();
         if (t < n) {
           (l = i.length - 3 * n + t), (l += n);
           e.slideTo(l, 0, !1, !0) &&
@@ -9566,7 +9566,7 @@
             0 !== c &&
             e.setTranslate((r ? -e.translate : e.translate) - c);
         }
-        (e.allowSlidePrev = s), (e.allowSlideNext = o), e.emit("loopFix");
+        (e.allowSlidePrev = s), (e.allowSlideNext = a), e.emit("loopFix");
       },
       loopDestroy: function () {
         const { $wrapperEl: e, params: t, slides: i } = this;
@@ -9583,14 +9583,14 @@
         i = y(),
         n = w(),
         s = t.touchEventsData,
-        { params: o, touches: a, enabled: r } = t;
+        { params: a, touches: o, enabled: r } = t;
       if (!r) return;
-      if (t.animating && o.preventInteractionOnTransition) return;
-      !t.animating && o.cssMode && o.loop && t.loopFix();
+      if (t.animating && a.preventInteractionOnTransition) return;
+      !t.animating && a.cssMode && a.loop && t.loopFix();
       let l = e;
       l.originalEvent && (l = l.originalEvent);
       let c = P(l.target);
-      if ("wrapper" === o.touchEventsTarget && !c.closest(t.wrapperEl).length)
+      if ("wrapper" === a.touchEventsTarget && !c.closest(t.wrapperEl).length)
         return;
       if (
         ((s.isTouchEvent = "touchstart" === l.type),
@@ -9599,19 +9599,19 @@
         return;
       if (!s.isTouchEvent && "button" in l && l.button > 0) return;
       if (s.isTouched && s.isMoved) return;
-      !!o.noSwipingClass &&
-        "" !== o.noSwipingClass &&
+      !!a.noSwipingClass &&
+        "" !== a.noSwipingClass &&
         l.target &&
         l.target.shadowRoot &&
         e.path &&
         e.path[0] &&
         (c = P(e.path[0]));
-      const d = o.noSwipingSelector
-          ? o.noSwipingSelector
-          : `.${o.noSwipingClass}`,
+      const d = a.noSwipingSelector
+          ? a.noSwipingSelector
+          : `.${a.noSwipingClass}`,
         u = !(!l.target || !l.target.shadowRoot);
       if (
-        o.noSwiping &&
+        a.noSwiping &&
         (u
           ? (function (e, t) {
               return (
@@ -9627,15 +9627,15 @@
           : c.closest(d)[0])
       )
         return void (t.allowClick = !0);
-      if (o.swipeHandler && !c.closest(o.swipeHandler)[0]) return;
-      (a.currentX =
+      if (a.swipeHandler && !c.closest(a.swipeHandler)[0]) return;
+      (o.currentX =
         "touchstart" === l.type ? l.targetTouches[0].pageX : l.pageX),
-        (a.currentY =
+        (o.currentY =
           "touchstart" === l.type ? l.targetTouches[0].pageY : l.pageY);
-      const p = a.currentX,
-        h = a.currentY,
-        f = o.edgeSwipeDetection || o.iOSEdgeSwipeDetection,
-        g = o.edgeSwipeThreshold || o.iOSEdgeSwipeThreshold;
+      const p = o.currentX,
+        h = o.currentY,
+        f = a.edgeSwipeDetection || a.iOSEdgeSwipeDetection,
+        g = a.edgeSwipeThreshold || a.iOSEdgeSwipeThreshold;
       if (f && (p <= g || p >= n.innerWidth - g)) {
         if ("prevent" !== f) return;
         e.preventDefault();
@@ -9648,13 +9648,13 @@
           isScrolling: void 0,
           startMoving: void 0,
         }),
-        (a.startX = p),
-        (a.startY = h),
-        (s.touchStartTime = O()),
+        (o.startX = p),
+        (o.startY = h),
+        (s.touchStartTime = I()),
         (t.allowClick = !0),
         t.updateSize(),
         (t.swipeDirection = void 0),
-        o.threshold > 0 && (s.allowThresholdMove = !1),
+        a.threshold > 0 && (s.allowThresholdMove = !1),
         "touchstart" !== l.type)
       ) {
         let e = !0;
@@ -9664,8 +9664,8 @@
             P(i.activeElement).is(s.focusableElements) &&
             i.activeElement !== c[0] &&
             i.activeElement.blur();
-        const n = e && t.allowTouchMove && o.touchStartPreventDefault;
-        (!o.touchStartForcePreventDefault && !n) ||
+        const n = e && t.allowTouchMove && a.touchStartPreventDefault;
+        (!a.touchStartForcePreventDefault && !n) ||
           c[0].isContentEditable ||
           l.preventDefault();
       }
@@ -9673,7 +9673,7 @@
         t.params.freeMode.enabled &&
         t.freeMode &&
         t.animating &&
-        !o.cssMode &&
+        !a.cssMode &&
         t.freeMode.onTouchStart(),
         t.emit("touchStart", l);
     }
@@ -9681,7 +9681,7 @@
       const t = y(),
         i = this,
         n = i.touchEventsData,
-        { params: s, touches: o, rtlTranslate: a, enabled: r } = i;
+        { params: s, touches: a, rtlTranslate: o, enabled: r } = i;
       if (!r) return;
       let l = e;
       if ((l.originalEvent && (l = l.originalEvent), !n.isTouched))
@@ -9697,31 +9697,31 @@
           (l.targetTouches[0] || l.changedTouches[0]),
         d = "touchmove" === l.type ? c.pageX : l.pageX,
         u = "touchmove" === l.type ? c.pageY : l.pageY;
-      if (l.preventedByNestedSwiper) return (o.startX = d), void (o.startY = u);
+      if (l.preventedByNestedSwiper) return (a.startX = d), void (a.startY = u);
       if (!i.allowTouchMove)
         return (
           P(l.target).is(n.focusableElements) || (i.allowClick = !1),
           void (
             n.isTouched &&
-            (Object.assign(o, {
+            (Object.assign(a, {
               startX: d,
               startY: u,
               currentX: d,
               currentY: u,
             }),
-            (n.touchStartTime = O()))
+            (n.touchStartTime = I()))
           )
         );
       if (n.isTouchEvent && s.touchReleaseOnEdges && !s.loop)
         if (i.isVertical()) {
           if (
-            (u < o.startY && i.translate <= i.maxTranslate()) ||
-            (u > o.startY && i.translate >= i.minTranslate())
+            (u < a.startY && i.translate <= i.maxTranslate()) ||
+            (u > a.startY && i.translate >= i.minTranslate())
           )
             return (n.isTouched = !1), void (n.isMoved = !1);
         } else if (
-          (d < o.startX && i.translate <= i.maxTranslate()) ||
-          (d > o.startX && i.translate >= i.minTranslate())
+          (d < a.startX && i.translate <= i.maxTranslate()) ||
+          (d > a.startX && i.translate >= i.minTranslate())
         )
           return;
       if (
@@ -9736,15 +9736,15 @@
         l.targetTouches && l.targetTouches.length > 1)
       )
         return;
-      (o.currentX = d), (o.currentY = u);
-      const p = o.currentX - o.startX,
-        h = o.currentY - o.startY;
+      (a.currentX = d), (a.currentY = u);
+      const p = a.currentX - a.startX,
+        h = a.currentY - a.startY;
       if (i.params.threshold && Math.sqrt(p ** 2 + h ** 2) < i.params.threshold)
         return;
       if (void 0 === n.isScrolling) {
         let e;
-        (i.isHorizontal() && o.currentY === o.startY) ||
-        (i.isVertical() && o.currentX === o.startX)
+        (i.isHorizontal() && a.currentY === a.startY) ||
+        (i.isVertical() && a.currentX === a.startX)
           ? (n.isScrolling = !1)
           : p * p + h * h >= 25 &&
             ((e = (180 * Math.atan2(Math.abs(h), Math.abs(p))) / Math.PI),
@@ -9755,7 +9755,7 @@
       if (
         (n.isScrolling && i.emit("touchMoveOpposite", l),
         void 0 === n.startMoving &&
-          ((o.currentX === o.startX && o.currentY === o.startY) ||
+          ((a.currentX === a.startX && a.currentY === a.startY) ||
             (n.startMoving = !0)),
         n.isScrolling)
       )
@@ -9778,9 +9778,9 @@
         i.emit("sliderMove", l),
         (n.isMoved = !0);
       let f = i.isHorizontal() ? p : h;
-      (o.diff = f),
+      (a.diff = f),
         (f *= s.touchRatio),
-        a && (f = -f),
+        o && (f = -f),
         (i.swipeDirection = f > 0 ? "prev" : "next"),
         (n.currentTranslate = f + n.startTranslate);
       let g = !0,
@@ -9821,12 +9821,12 @@
         if (!n.allowThresholdMove)
           return (
             (n.allowThresholdMove = !0),
-            (o.startX = o.currentX),
-            (o.startY = o.currentY),
+            (a.startX = a.currentX),
+            (a.startY = a.currentY),
             (n.currentTranslate = n.startTranslate),
-            void (o.diff = i.isHorizontal()
-              ? o.currentX - o.startX
-              : o.currentY - o.startY)
+            void (a.diff = i.isHorizontal()
+              ? a.currentX - a.startX
+              : a.currentY - a.startY)
           );
       }
       s.followFinger &&
@@ -9847,8 +9847,8 @@
         {
           params: n,
           touches: s,
-          rtlTranslate: o,
-          slidesGrid: a,
+          rtlTranslate: a,
+          slidesGrid: o,
           enabled: r,
         } = t;
       if (!r) return;
@@ -9869,7 +9869,7 @@
         i.isTouched &&
         (!0 === t.allowSlideNext || !0 === t.allowSlidePrev) &&
         t.setGrabCursor(!1);
-      const c = O(),
+      const c = I(),
         d = c - i.touchStartTime;
       if (t.allowClick) {
         const e = l.path || (l.composedPath && l.composedPath());
@@ -9880,8 +9880,8 @@
             t.emit("doubleTap doubleClick", l);
       }
       if (
-        ((i.lastClickTime = O()),
-        I(() => {
+        ((i.lastClickTime = I()),
+        O(() => {
           t.destroyed || (t.allowClick = !0);
         }),
         !i.isTouched ||
@@ -9897,7 +9897,7 @@
         (i.isMoved = !1),
         (i.startMoving = !1),
         (u = n.followFinger
-          ? o
+          ? a
             ? t.translate
             : -t.translate
           : -i.currentTranslate),
@@ -9910,13 +9910,13 @@
         h = t.slidesSizesGrid[0];
       for (
         let e = 0;
-        e < a.length;
+        e < o.length;
         e += e < n.slidesPerGroupSkip ? 1 : n.slidesPerGroup
       ) {
         const t = e < n.slidesPerGroupSkip - 1 ? 1 : n.slidesPerGroup;
-        void 0 !== a[e + t]
-          ? u >= a[e] && u < a[e + t] && ((p = e), (h = a[e + t] - a[e]))
-          : u >= a[e] && ((p = e), (h = a[a.length - 1] - a[a.length - 2]));
+        void 0 !== o[e + t]
+          ? u >= o[e] && u < o[e + t] && ((p = e), (h = o[e + t] - o[e]))
+          : u >= o[e] && ((p = e), (h = o[o.length - 1] - o[o.length - 2]));
       }
       let f = null,
         g = null;
@@ -9927,7 +9927,7 @@
                 ? t.virtual.slides.length - 1
                 : t.slides.length - 1)
           : t.isEnd && (f = 0));
-      const m = (u - a[p]) / h,
+      const m = (u - o[p]) / h,
         v = p < n.slidesPerGroupSkip - 1 ? 1 : n.slidesPerGroup;
       if (d > n.longSwipesMs) {
         if (!n.longSwipes) return void t.slideTo(t.activeIndex);
@@ -9957,7 +9957,7 @@
         { params: t, el: i } = e;
       if (i && 0 === i.offsetWidth) return;
       t.breakpoints && e.setBreakpoint();
-      const { allowSlideNext: n, allowSlidePrev: s, snapGrid: o } = e;
+      const { allowSlideNext: n, allowSlidePrev: s, snapGrid: a } = e;
       (e.allowSlideNext = !0),
         (e.allowSlidePrev = !0),
         e.updateSize(),
@@ -9975,7 +9975,7 @@
           e.autoplay.run(),
         (e.allowSlidePrev = s),
         (e.allowSlideNext = n),
-        e.params.watchOverflow && o !== e.snapGrid && e.checkOverflow();
+        e.params.watchOverflow && a !== e.snapGrid && e.checkOverflow();
     }
     function J(e) {
       const t = this;
@@ -9998,8 +9998,8 @@
         -0 === e.translate && (e.translate = 0),
         e.updateActiveIndex(),
         e.updateSlidesClasses();
-      const o = e.maxTranslate() - e.minTranslate();
-      (s = 0 === o ? 0 : (e.translate - e.minTranslate()) / o),
+      const a = e.maxTranslate() - e.minTranslate();
+      (s = 0 === a ? 0 : (e.translate - e.minTranslate()) / a),
         s !== e.progress && e.updateProgress(i ? -e.translate : e.translate),
         e.emit("setTranslate", e.translate, !1);
     }
@@ -10010,8 +10010,8 @@
         {
           params: n,
           touchEvents: s,
-          el: o,
-          wrapperEl: a,
+          el: a,
+          wrapperEl: o,
           device: r,
           support: l,
         } = e,
@@ -10024,21 +10024,21 @@
           !l.passiveListener ||
           !n.passiveListeners
         ) && { passive: !0, capture: !1 };
-        o[d](s.start, e.onTouchStart, t),
-          o[d](
+        a[d](s.start, e.onTouchStart, t),
+          a[d](
             s.move,
             e.onTouchMove,
             l.passiveListener ? { passive: !1, capture: c } : c
           ),
-          o[d](s.end, e.onTouchEnd, t),
-          s.cancel && o[d](s.cancel, e.onTouchEnd, t);
+          a[d](s.end, e.onTouchEnd, t),
+          s.cancel && a[d](s.cancel, e.onTouchEnd, t);
       } else
-        o[d](s.start, e.onTouchStart, !1),
+        a[d](s.start, e.onTouchStart, !1),
           i[d](s.move, e.onTouchMove, c),
           i[d](s.end, e.onTouchEnd, !1);
       (n.preventClicks || n.preventClicksPropagation) &&
-        o[d]("click", e.onClick, !0),
-        n.cssMode && a[d]("scroll", e.onScroll),
+        a[d]("click", e.onClick, !0),
+        n.cssMode && o[d]("scroll", e.onScroll),
         n.updateOnWindowResize
           ? e[u](
               r.ios || r.android
@@ -10066,8 +10066,8 @@
           ne(this, "off");
         },
       },
-      oe = (e, t) => e.grid && t.grid && t.grid.rows > 1;
-    const ae = {
+      ae = (e, t) => e.grid && t.grid && t.grid.rows > 1;
+    const oe = {
       setBreakpoint: function () {
         const e = this,
           {
@@ -10075,27 +10075,27 @@
             initialized: i,
             loopedSlides: n = 0,
             params: s,
-            $el: o,
+            $el: a,
           } = e,
-          a = s.breakpoints;
-        if (!a || (a && 0 === Object.keys(a).length)) return;
-        const r = e.getBreakpoint(a, e.params.breakpointsBase, e.el);
+          o = s.breakpoints;
+        if (!o || (o && 0 === Object.keys(o).length)) return;
+        const r = e.getBreakpoint(o, e.params.breakpointsBase, e.el);
         if (!r || e.currentBreakpoint === r) return;
-        const l = (r in a ? a[r] : void 0) || e.originalParams,
-          c = oe(e, s),
-          d = oe(e, l),
+        const l = (r in o ? o[r] : void 0) || e.originalParams,
+          c = ae(e, s),
+          d = ae(e, l),
           u = s.enabled;
         c && !d
-          ? (o.removeClass(
+          ? (a.removeClass(
               `${s.containerModifierClass}grid ${s.containerModifierClass}grid-column`
             ),
             e.emitContainerClasses())
           : !c &&
             d &&
-            (o.addClass(`${s.containerModifierClass}grid`),
+            (a.addClass(`${s.containerModifierClass}grid`),
             ((l.grid.fill && "column" === l.grid.fill) ||
               (!l.grid.fill && "column" === s.grid.fill)) &&
-              o.addClass(`${s.containerModifierClass}grid-column`),
+              a.addClass(`${s.containerModifierClass}grid-column`),
             e.emitContainerClasses());
         const p = l.direction && l.direction !== s.direction,
           h = s.loop && (l.slidesPerView !== s.slidesPerView || p);
@@ -10122,20 +10122,20 @@
           return;
         let n = !1;
         const s = w(),
-          o = "window" === t ? s.innerHeight : i.clientHeight,
-          a = Object.keys(e).map((e) => {
+          a = "window" === t ? s.innerHeight : i.clientHeight,
+          o = Object.keys(e).map((e) => {
             if ("string" == typeof e && 0 === e.indexOf("@")) {
               const t = parseFloat(e.substr(1));
-              return { value: o * t, point: e };
+              return { value: a * t, point: e };
             }
             return { value: e, point: e };
           });
-        a.sort((e, t) => parseInt(e.value, 10) - parseInt(t.value, 10));
-        for (let e = 0; e < a.length; e += 1) {
-          const { point: o, value: r } = a[e];
+        o.sort((e, t) => parseInt(e.value, 10) - parseInt(t.value, 10));
+        for (let e = 0; e < o.length; e += 1) {
+          const { point: a, value: r } = o[e];
           "window" === t
-            ? s.matchMedia(`(min-width: ${r}px)`).matches && (n = o)
-            : r <= i.clientWidth && (n = o);
+            ? s.matchMedia(`(min-width: ${r}px)`).matches && (n = a)
+            : r <= i.clientWidth && (n = a);
         }
         return n || "max";
       },
@@ -10148,8 +10148,8 @@
             params: i,
             rtl: n,
             $el: s,
-            device: o,
-            support: a,
+            device: a,
+            support: o,
           } = e,
           r = (function (e, t) {
             const i = [];
@@ -10167,7 +10167,7 @@
             [
               "initialized",
               i.direction,
-              { "pointer-events": !a.touch },
+              { "pointer-events": !o.touch },
               { "free-mode": e.params.freeMode && i.freeMode.enabled },
               { autoheight: i.autoHeight },
               { rtl: n },
@@ -10176,8 +10176,8 @@
                 "grid-column":
                   i.grid && i.grid.rows > 1 && "column" === i.grid.fill,
               },
-              { android: o.android },
-              { ios: o.ios },
+              { android: a.android },
+              { ios: a.ios },
               { "css-mode": i.cssMode },
               { centered: i.cssMode && i.centeredSlides },
             ],
@@ -10361,7 +10361,7 @@
           },
         },
         events: se,
-        breakpoints: ae,
+        breakpoints: oe,
         checkOverflow: {
           checkOverflow: function () {
             const e = this,
@@ -10380,16 +10380,16 @@
         },
         classes: re,
         images: {
-          loadImage: function (e, t, i, n, s, o) {
-            const a = w();
+          loadImage: function (e, t, i, n, s, a) {
+            const o = w();
             let r;
             function l() {
-              o && o();
+              a && a();
             }
             P(e).parent("picture")[0] || (e.complete && s)
               ? l()
               : t
-              ? ((r = new a.Image()),
+              ? ((r = new o.Image()),
                 (r.onload = l),
                 (r.onerror = l),
                 n && (r.sizes = n),
@@ -10449,48 +10449,48 @@
             e
           );
         }
-        const o = this;
-        (o.__swiper__ = !0),
-          (o.support = j()),
-          (o.device = R({ userAgent: t.userAgent })),
-          (o.browser = V()),
-          (o.eventsListeners = {}),
-          (o.eventsAnyListeners = []),
-          (o.modules = [...o.__modules__]),
-          t.modules && Array.isArray(t.modules) && o.modules.push(...t.modules);
-        const a = {};
-        o.modules.forEach((e) => {
+        const a = this;
+        (a.__swiper__ = !0),
+          (a.support = j()),
+          (a.device = R({ userAgent: t.userAgent })),
+          (a.browser = V()),
+          (a.eventsListeners = {}),
+          (a.eventsAnyListeners = []),
+          (a.modules = [...a.__modules__]),
+          t.modules && Array.isArray(t.modules) && a.modules.push(...t.modules);
+        const o = {};
+        a.modules.forEach((e) => {
           e({
-            swiper: o,
-            extendParams: ce(t, a),
-            on: o.on.bind(o),
-            once: o.once.bind(o),
-            off: o.off.bind(o),
-            emit: o.emit.bind(o),
+            swiper: a,
+            extendParams: ce(t, o),
+            on: a.on.bind(a),
+            once: a.once.bind(a),
+            off: a.off.bind(a),
+            emit: a.emit.bind(a),
           });
         });
-        const r = D({}, le, a);
+        const r = D({}, le, o);
         return (
-          (o.params = D({}, r, ue, t)),
-          (o.originalParams = D({}, o.params)),
-          (o.passedParams = D({}, t)),
-          o.params &&
-            o.params.on &&
-            Object.keys(o.params.on).forEach((e) => {
-              o.on(e, o.params.on[e]);
+          (a.params = D({}, r, ue, t)),
+          (a.originalParams = D({}, a.params)),
+          (a.passedParams = D({}, t)),
+          a.params &&
+            a.params.on &&
+            Object.keys(a.params.on).forEach((e) => {
+              a.on(e, a.params.on[e]);
             }),
-          o.params && o.params.onAny && o.onAny(o.params.onAny),
-          (o.$ = P),
-          Object.assign(o, {
-            enabled: o.params.enabled,
+          a.params && a.params.onAny && a.onAny(a.params.onAny),
+          (a.$ = P),
+          Object.assign(a, {
+            enabled: a.params.enabled,
             el: e,
             classNames: [],
             slides: P(),
             slidesGrid: [],
             snapGrid: [],
             slidesSizesGrid: [],
-            isHorizontal: () => "horizontal" === o.params.direction,
-            isVertical: () => "vertical" === o.params.direction,
+            isHorizontal: () => "horizontal" === a.params.direction,
+            isVertical: () => "vertical" === a.params.direction,
             activeIndex: 0,
             realIndex: 0,
             isBeginning: !0,
@@ -10500,22 +10500,22 @@
             progress: 0,
             velocity: 0,
             animating: !1,
-            allowSlideNext: o.params.allowSlideNext,
-            allowSlidePrev: o.params.allowSlidePrev,
+            allowSlideNext: a.params.allowSlideNext,
+            allowSlidePrev: a.params.allowSlidePrev,
             touchEvents: (function () {
               const e = ["touchstart", "touchmove", "touchend", "touchcancel"],
                 t = ["pointerdown", "pointermove", "pointerup"];
               return (
-                (o.touchEventsTouch = {
+                (a.touchEventsTouch = {
                   start: e[0],
                   move: e[1],
                   end: e[2],
                   cancel: e[3],
                 }),
-                (o.touchEventsDesktop = { start: t[0], move: t[1], end: t[2] }),
-                o.support.touch || !o.params.simulateTouch
-                  ? o.touchEventsTouch
-                  : o.touchEventsDesktop
+                (a.touchEventsDesktop = { start: t[0], move: t[1], end: t[2] }),
+                a.support.touch || !a.params.simulateTouch
+                  ? a.touchEventsTouch
+                  : a.touchEventsDesktop
               );
             })(),
             touchEventsData: {
@@ -10527,8 +10527,8 @@
               currentTranslate: void 0,
               startTranslate: void 0,
               allowThresholdMove: void 0,
-              focusableElements: o.params.focusableElements,
-              lastClickTime: O(),
+              focusableElements: a.params.focusableElements,
+              lastClickTime: I(),
               clickTimeout: void 0,
               velocities: [],
               allowMomentumBounce: void 0,
@@ -10536,7 +10536,7 @@
               startMoving: void 0,
             },
             allowClick: !0,
-            allowTouchMove: o.params.allowTouchMove,
+            allowTouchMove: a.params.allowTouchMove,
             touches: {
               startX: 0,
               startY: 0,
@@ -10547,9 +10547,9 @@
             imagesToLoad: [],
             imagesLoaded: 0,
           }),
-          o.emit("_swiper"),
-          o.params.init && o.init(),
-          o
+          a.emit("_swiper"),
+          a.params.init && a.init(),
+          a
         );
       }
       enable() {
@@ -10614,8 +10614,8 @@
           params: i,
           slides: n,
           slidesGrid: s,
-          slidesSizesGrid: o,
-          size: a,
+          slidesSizesGrid: a,
+          size: o,
           activeIndex: r,
         } = this;
         let l = 1;
@@ -10625,18 +10625,18 @@
           for (let i = r + 1; i < n.length; i += 1)
             n[i] &&
               !e &&
-              ((t += n[i].swiperSlideSize), (l += 1), t > a && (e = !0));
+              ((t += n[i].swiperSlideSize), (l += 1), t > o && (e = !0));
           for (let i = r - 1; i >= 0; i -= 1)
             n[i] &&
               !e &&
-              ((t += n[i].swiperSlideSize), (l += 1), t > a && (e = !0));
+              ((t += n[i].swiperSlideSize), (l += 1), t > o && (e = !0));
         } else if ("current" === e)
           for (let e = r + 1; e < n.length; e += 1) {
-            (t ? s[e] + o[e] - s[r] < a : s[e] - s[r] < a) && (l += 1);
+            (t ? s[e] + a[e] - s[r] < o : s[e] - s[r] < o) && (l += 1);
           }
         else
           for (let e = r - 1; e >= 0; e -= 1) {
-            s[r] - s[e] < a && (l += 1);
+            s[r] - s[e] < o && (l += 1);
           }
         return l;
       }
@@ -10768,7 +10768,7 @@
       destroy(e, t) {
         void 0 === e && (e = !0), void 0 === t && (t = !0);
         const i = this,
-          { params: n, $el: s, $wrapperEl: o, slides: a } = i;
+          { params: n, $el: s, $wrapperEl: a, slides: o } = i;
         return (
           void 0 === i.params ||
             i.destroyed ||
@@ -10779,10 +10779,10 @@
             t &&
               (i.removeClasses(),
               s.removeAttr("style"),
-              o.removeAttr("style"),
-              a &&
-                a.length &&
-                a
+              a.removeAttr("style"),
+              o &&
+                o.length &&
+                o
                   .removeClass(
                     [
                       n.slideVisibleClass,
@@ -10843,8 +10843,8 @@
         function (e) {
           let { swiper: t, on: i, emit: n } = e;
           const s = w();
-          let o = null,
-            a = null;
+          let a = null,
+            o = null;
           const r = () => {
               t &&
                 !t.destroyed &&
@@ -10859,46 +10859,46 @@
               ? t &&
                 !t.destroyed &&
                 t.initialized &&
-                ((o = new ResizeObserver((e) => {
-                  a = s.requestAnimationFrame(() => {
+                ((a = new ResizeObserver((e) => {
+                  o = s.requestAnimationFrame(() => {
                     const { width: i, height: n } = t;
                     let s = i,
-                      o = n;
+                      a = n;
                     e.forEach((e) => {
-                      let { contentBoxSize: i, contentRect: n, target: a } = e;
-                      (a && a !== t.el) ||
+                      let { contentBoxSize: i, contentRect: n, target: o } = e;
+                      (o && o !== t.el) ||
                         ((s = n ? n.width : (i[0] || i).inlineSize),
-                        (o = n ? n.height : (i[0] || i).blockSize));
+                        (a = n ? n.height : (i[0] || i).blockSize));
                     }),
-                      (s === i && o === n) || r();
+                      (s === i && a === n) || r();
                   });
                 })),
-                o.observe(t.el))
+                a.observe(t.el))
               : (s.addEventListener("resize", r),
                 s.addEventListener("orientationchange", l));
           }),
             i("destroy", () => {
-              a && s.cancelAnimationFrame(a),
-                o && o.unobserve && t.el && (o.unobserve(t.el), (o = null)),
+              o && s.cancelAnimationFrame(o),
+                a && a.unobserve && t.el && (a.unobserve(t.el), (a = null)),
                 s.removeEventListener("resize", r),
                 s.removeEventListener("orientationchange", l);
             });
         },
         function (e) {
           let { swiper: t, extendParams: i, on: n, emit: s } = e;
-          const o = [],
-            a = w(),
+          const a = [],
+            o = w(),
             r = function (e, t) {
               void 0 === t && (t = {});
-              const i = new (a.MutationObserver || a.WebkitMutationObserver)(
+              const i = new (o.MutationObserver || o.WebkitMutationObserver)(
                 (e) => {
                   if (1 === e.length) return void s("observerUpdate", e[0]);
                   const t = function () {
                     s("observerUpdate", e[0]);
                   };
-                  a.requestAnimationFrame
-                    ? a.requestAnimationFrame(t)
-                    : a.setTimeout(t, 0);
+                  o.requestAnimationFrame
+                    ? o.requestAnimationFrame(t)
+                    : o.setTimeout(t, 0);
                 }
               );
               i.observe(e, {
@@ -10906,7 +10906,7 @@
                 childList: void 0 === t.childList || t.childList,
                 characterData: void 0 === t.characterData || t.characterData,
               }),
-                o.push(i);
+                a.push(i);
             };
           i({ observer: !1, observeParents: !1, observeSlideChildren: !1 }),
             n("init", () => {
@@ -10920,10 +10920,10 @@
               }
             }),
             n("destroy", () => {
-              o.forEach((e) => {
+              a.forEach((e) => {
                 e.disconnect();
               }),
-                o.splice(0, o.length);
+                a.splice(0, a.length);
             });
         },
       ]);
@@ -10932,15 +10932,15 @@
       const s = y();
       return (
         e.params.createElements &&
-          Object.keys(n).forEach((o) => {
-            if (!i[o] && !0 === i.auto) {
-              let a = e.$el.children(`.${n[o]}`)[0];
-              a ||
-                ((a = s.createElement("div")),
-                (a.className = n[o]),
-                e.$el.append(a)),
-                (i[o] = a),
-                (t[o] = a);
+          Object.keys(n).forEach((a) => {
+            if (!i[a] && !0 === i.auto) {
+              let o = e.$el.children(`.${n[a]}`)[0];
+              o ||
+                ((o = s.createElement("div")),
+                (o.className = n[a]),
+                e.$el.append(o)),
+                (i[a] = o),
+                (t[a] = o);
             }
           }),
         i
@@ -10948,7 +10948,7 @@
     }
     function ge(e) {
       let { swiper: t, extendParams: i, on: n, emit: s } = e;
-      function o(e) {
+      function a(e) {
         let i;
         return (
           e &&
@@ -10961,7 +10961,7 @@
           i
         );
       }
-      function a(e, i) {
+      function o(e, i) {
         const n = t.params.navigation;
         e &&
           e.length > 0 &&
@@ -10974,8 +10974,8 @@
       function r() {
         if (t.params.loop) return;
         const { $nextEl: e, $prevEl: i } = t.navigation;
-        a(i, t.isBeginning && !t.params.rewind),
-          a(e, t.isEnd && !t.params.rewind);
+        o(i, t.isBeginning && !t.params.rewind),
+          o(e, t.isEnd && !t.params.rewind);
       }
       function l(e) {
         e.preventDefault(),
@@ -10997,8 +10997,8 @@
           !e.nextEl && !e.prevEl)
         )
           return;
-        const i = o(e.nextEl),
-          n = o(e.prevEl);
+        const i = a(e.nextEl),
+          n = a(e.prevEl);
         i && i.length > 0 && i.on("click", c),
           n && n.length > 0 && n.on("click", l),
           Object.assign(t.navigation, {
@@ -11057,23 +11057,23 @@
               );
         }),
         n("click", (e, i) => {
-          const { $nextEl: n, $prevEl: o } = t.navigation,
-            a = i.target;
-          if (t.params.navigation.hideOnClick && !P(a).is(o) && !P(a).is(n)) {
+          const { $nextEl: n, $prevEl: a } = t.navigation,
+            o = i.target;
+          if (t.params.navigation.hideOnClick && !P(o).is(a) && !P(o).is(n)) {
             if (
               t.pagination &&
               t.params.pagination &&
               t.params.pagination.clickable &&
-              (t.pagination.el === a || t.pagination.el.contains(a))
+              (t.pagination.el === o || t.pagination.el.contains(o))
             )
               return;
             let e;
             n
               ? (e = n.hasClass(t.params.navigation.hiddenClass))
-              : o && (e = o.hasClass(t.params.navigation.hiddenClass)),
+              : a && (e = a.hasClass(t.params.navigation.hiddenClass)),
               s(!0 === e ? "navigationShow" : "navigationHide"),
               n && n.toggleClass(t.params.navigation.hiddenClass),
-              o && o.toggleClass(t.params.navigation.hiddenClass);
+              a && a.toggleClass(t.params.navigation.hiddenClass);
           }
         }),
         Object.assign(t.navigation, { update: r, init: d, destroy: u });
@@ -11089,8 +11089,8 @@
     }
     function ve(e) {
       let { swiper: t, extendParams: i, on: n, emit: s } = e;
-      const o = "swiper-pagination";
-      let a;
+      const a = "swiper-pagination";
+      let o;
       i({
         pagination: {
           el: null,
@@ -11107,18 +11107,18 @@
           dynamicMainBullets: 1,
           formatFractionCurrent: (e) => e,
           formatFractionTotal: (e) => e,
-          bulletClass: `${o}-bullet`,
-          bulletActiveClass: `${o}-bullet-active`,
-          modifierClass: `${o}-`,
-          currentClass: `${o}-current`,
-          totalClass: `${o}-total`,
-          hiddenClass: `${o}-hidden`,
-          progressbarFillClass: `${o}-progressbar-fill`,
-          progressbarOppositeClass: `${o}-progressbar-opposite`,
-          clickableClass: `${o}-clickable`,
-          lockClass: `${o}-lock`,
-          horizontalClass: `${o}-horizontal`,
-          verticalClass: `${o}-vertical`,
+          bulletClass: `${a}-bullet`,
+          bulletActiveClass: `${a}-bullet-active`,
+          modifierClass: `${a}-`,
+          currentClass: `${a}-current`,
+          totalClass: `${a}-total`,
+          hiddenClass: `${a}-hidden`,
+          progressbarFillClass: `${a}-progressbar-fill`,
+          progressbarOppositeClass: `${a}-progressbar-opposite`,
+          clickableClass: `${a}-clickable`,
+          lockClass: `${a}-lock`,
+          horizontalClass: `${a}-horizontal`,
+          verticalClass: `${a}-vertical`,
         },
       }),
         (t.pagination = { el: null, $el: null, bullets: [] });
@@ -11143,7 +11143,7 @@
             t.virtual && t.params.virtual.enabled
               ? t.virtual.slides.length
               : t.slides.length,
-          o = t.pagination.$el;
+          a = t.pagination.$el;
         let d;
         const u = t.params.loop
           ? Math.ceil((n - 2 * t.loopedSlides) / t.params.slidesPerGroup)
@@ -11165,12 +11165,12 @@
           let s, l, u;
           if (
             (i.dynamicBullets &&
-              ((a = n
+              ((o = n
                 .eq(0)
                 [t.isHorizontal() ? "outerWidth" : "outerHeight"](!0)),
-              o.css(
+              a.css(
                 t.isHorizontal() ? "width" : "height",
-                a * (i.dynamicMainBullets + 4) + "px"
+                o * (i.dynamicMainBullets + 4) + "px"
               ),
               i.dynamicMainBullets > 1 &&
                 void 0 !== t.previousIndex &&
@@ -11186,7 +11186,7 @@
                 .map((e) => `${i.bulletActiveClass}${e}`)
                 .join(" ")
             ),
-            o.length > 1)
+            a.length > 1)
           )
             n.each((e) => {
               const t = P(e),
@@ -11201,34 +11201,34 @@
             });
           else {
             const e = n.eq(d),
-              o = e.index();
+              a = e.index();
             if ((e.addClass(i.bulletActiveClass), i.dynamicBullets)) {
               const e = n.eq(s),
-                a = n.eq(l);
+                o = n.eq(l);
               for (let e = s; e <= l; e += 1)
                 n.eq(e).addClass(`${i.bulletActiveClass}-main`);
               if (t.params.loop)
-                if (o >= n.length) {
+                if (a >= n.length) {
                   for (let e = i.dynamicMainBullets; e >= 0; e -= 1)
                     n.eq(n.length - e).addClass(`${i.bulletActiveClass}-main`);
                   n.eq(n.length - i.dynamicMainBullets - 1).addClass(
                     `${i.bulletActiveClass}-prev`
                   );
-                } else c(e, "prev"), c(a, "next");
-              else c(e, "prev"), c(a, "next");
+                } else c(e, "prev"), c(o, "next");
+              else c(e, "prev"), c(o, "next");
             }
           }
           if (i.dynamicBullets) {
             const s = Math.min(n.length, i.dynamicMainBullets + 4),
-              o = (a * s - a) / 2 - u * a,
+              a = (o * s - o) / 2 - u * o,
               r = e ? "right" : "left";
-            n.css(t.isHorizontal() ? r : "top", `${o}px`);
+            n.css(t.isHorizontal() ? r : "top", `${a}px`);
           }
         }
         if (
           ("fraction" === i.type &&
-            (o.find(me(i.currentClass)).text(i.formatFractionCurrent(d + 1)),
-            o.find(me(i.totalClass)).text(i.formatFractionTotal(u))),
+            (a.find(me(i.currentClass)).text(i.formatFractionCurrent(d + 1)),
+            a.find(me(i.totalClass)).text(i.formatFractionTotal(u))),
           "progressbar" === i.type)
         ) {
           let e;
@@ -11241,19 +11241,19 @@
             : "vertical";
           const n = (d + 1) / u;
           let s = 1,
-            a = 1;
-          "horizontal" === e ? (s = n) : (a = n),
-            o
+            o = 1;
+          "horizontal" === e ? (s = n) : (o = n),
+            a
               .find(me(i.progressbarFillClass))
-              .transform(`translate3d(0,0,0) scaleX(${s}) scaleY(${a})`)
+              .transform(`translate3d(0,0,0) scaleX(${s}) scaleY(${o})`)
               .transition(t.params.speed);
         }
         "custom" === i.type && i.renderCustom
-          ? (o.html(i.renderCustom(t, d + 1, u)), s("paginationRender", o[0]))
-          : s("paginationUpdate", o[0]),
+          ? (a.html(i.renderCustom(t, d + 1, u)), s("paginationRender", a[0]))
+          : s("paginationUpdate", a[0]),
           t.params.watchOverflow &&
             t.enabled &&
-            o[t.isLocked ? "addClass" : "removeClass"](i.lockClass);
+            a[t.isLocked ? "addClass" : "removeClass"](i.lockClass);
       }
       function u() {
         const e = t.params.pagination;
@@ -11263,7 +11263,7 @@
               ? t.virtual.slides.length
               : t.slides.length,
           n = t.pagination.$el;
-        let o = "";
+        let a = "";
         if ("bullets" === e.type) {
           let s = t.params.loop
             ? Math.ceil((i - 2 * t.loopedSlides) / t.params.slidesPerGroup)
@@ -11275,20 +11275,20 @@
             (s = i);
           for (let i = 0; i < s; i += 1)
             e.renderBullet
-              ? (o += e.renderBullet.call(t, i, e.bulletClass))
-              : (o += `<${e.bulletElement} class="${e.bulletClass}"></${e.bulletElement}>`);
-          n.html(o), (t.pagination.bullets = n.find(me(e.bulletClass)));
+              ? (a += e.renderBullet.call(t, i, e.bulletClass))
+              : (a += `<${e.bulletElement} class="${e.bulletClass}"></${e.bulletElement}>`);
+          n.html(a), (t.pagination.bullets = n.find(me(e.bulletClass)));
         }
         "fraction" === e.type &&
-          ((o = e.renderFraction
+          ((a = e.renderFraction
             ? e.renderFraction.call(t, e.currentClass, e.totalClass)
             : `<span class="${e.currentClass}"></span> / <span class="${e.totalClass}"></span>`),
-          n.html(o)),
+          n.html(a)),
           "progressbar" === e.type &&
-            ((o = e.renderProgressbar
+            ((a = e.renderProgressbar
               ? e.renderProgressbar.call(t, e.progressbarFillClass)
               : `<span class="${e.progressbarFillClass}"></span>`),
-            n.html(o)),
+            n.html(a)),
           "custom" !== e.type && s("paginationRender", t.pagination.$el[0]);
       }
       function p() {
@@ -11370,11 +11370,11 @@
         }),
         n("click", (e, i) => {
           const n = i.target,
-            { $el: o } = t.pagination;
+            { $el: a } = t.pagination;
           if (
             t.params.pagination.el &&
             t.params.pagination.hideOnClick &&
-            o.length > 0 &&
+            a.length > 0 &&
             !P(n).hasClass(t.params.pagination.bulletClass)
           ) {
             if (
@@ -11383,9 +11383,9 @@
                 (t.navigation.prevEl && n === t.navigation.prevEl))
             )
               return;
-            const e = o.hasClass(t.params.pagination.hiddenClass);
+            const e = a.hasClass(t.params.pagination.hiddenClass);
             s(!0 === e ? "paginationShow" : "paginationHide"),
-              o.toggleClass(t.params.pagination.hiddenClass);
+              a.toggleClass(t.params.pagination.hiddenClass);
           }
         }),
         Object.assign(t.pagination, {
@@ -11395,7 +11395,148 @@
           destroy: h,
         });
     }
-    function ye() {
+    function ye(e) {
+      let t,
+        { swiper: i, extendParams: n, on: s, emit: a } = e;
+      function o() {
+        const e = i.slides.eq(i.activeIndex);
+        let n = i.params.autoplay.delay;
+        e.attr("data-swiper-autoplay") &&
+          (n = e.attr("data-swiper-autoplay") || i.params.autoplay.delay),
+          clearTimeout(t),
+          (t = O(() => {
+            let e;
+            i.params.autoplay.reverseDirection
+              ? i.params.loop
+                ? (i.loopFix(),
+                  (e = i.slidePrev(i.params.speed, !0, !0)),
+                  a("autoplay"))
+                : i.isBeginning
+                ? i.params.autoplay.stopOnLastSlide
+                  ? l()
+                  : ((e = i.slideTo(
+                      i.slides.length - 1,
+                      i.params.speed,
+                      !0,
+                      !0
+                    )),
+                    a("autoplay"))
+                : ((e = i.slidePrev(i.params.speed, !0, !0)), a("autoplay"))
+              : i.params.loop
+              ? (i.loopFix(),
+                (e = i.slideNext(i.params.speed, !0, !0)),
+                a("autoplay"))
+              : i.isEnd
+              ? i.params.autoplay.stopOnLastSlide
+                ? l()
+                : ((e = i.slideTo(0, i.params.speed, !0, !0)), a("autoplay"))
+              : ((e = i.slideNext(i.params.speed, !0, !0)), a("autoplay")),
+              ((i.params.cssMode && i.autoplay.running) || !1 === e) && o();
+          }, n));
+      }
+      function r() {
+        return (
+          void 0 === t &&
+          !i.autoplay.running &&
+          ((i.autoplay.running = !0), a("autoplayStart"), o(), !0)
+        );
+      }
+      function l() {
+        return (
+          !!i.autoplay.running &&
+          void 0 !== t &&
+          (t && (clearTimeout(t), (t = void 0)),
+          (i.autoplay.running = !1),
+          a("autoplayStop"),
+          !0)
+        );
+      }
+      function c(e) {
+        i.autoplay.running &&
+          (i.autoplay.paused ||
+            (t && clearTimeout(t),
+            (i.autoplay.paused = !0),
+            0 !== e && i.params.autoplay.waitForTransition
+              ? ["transitionend", "webkitTransitionEnd"].forEach((e) => {
+                  i.$wrapperEl[0].addEventListener(e, u);
+                })
+              : ((i.autoplay.paused = !1), o())));
+      }
+      function d() {
+        const e = y();
+        "hidden" === e.visibilityState && i.autoplay.running && c(),
+          "visible" === e.visibilityState &&
+            i.autoplay.paused &&
+            (o(), (i.autoplay.paused = !1));
+      }
+      function u(e) {
+        i &&
+          !i.destroyed &&
+          i.$wrapperEl &&
+          e.target === i.$wrapperEl[0] &&
+          (["transitionend", "webkitTransitionEnd"].forEach((e) => {
+            i.$wrapperEl[0].removeEventListener(e, u);
+          }),
+          (i.autoplay.paused = !1),
+          i.autoplay.running ? o() : l());
+      }
+      function p() {
+        i.params.autoplay.disableOnInteraction
+          ? l()
+          : (a("autoplayPause"), c()),
+          ["transitionend", "webkitTransitionEnd"].forEach((e) => {
+            i.$wrapperEl[0].removeEventListener(e, u);
+          });
+      }
+      function h() {
+        i.params.autoplay.disableOnInteraction ||
+          ((i.autoplay.paused = !1), a("autoplayResume"), o());
+      }
+      (i.autoplay = { running: !1, paused: !1 }),
+        n({
+          autoplay: {
+            enabled: !1,
+            delay: 3e3,
+            waitForTransition: !0,
+            disableOnInteraction: !0,
+            stopOnLastSlide: !1,
+            reverseDirection: !1,
+            pauseOnMouseEnter: !1,
+          },
+        }),
+        s("init", () => {
+          if (i.params.autoplay.enabled) {
+            r();
+            y().addEventListener("visibilitychange", d),
+              i.params.autoplay.pauseOnMouseEnter &&
+                (i.$el.on("mouseenter", p), i.$el.on("mouseleave", h));
+          }
+        }),
+        s("beforeTransitionStart", (e, t, n) => {
+          i.autoplay.running &&
+            (n || !i.params.autoplay.disableOnInteraction
+              ? i.autoplay.pause(t)
+              : l());
+        }),
+        s("sliderFirstMove", () => {
+          i.autoplay.running &&
+            (i.params.autoplay.disableOnInteraction ? l() : c());
+        }),
+        s("touchEnd", () => {
+          i.params.cssMode &&
+            i.autoplay.paused &&
+            !i.params.autoplay.disableOnInteraction &&
+            o();
+        }),
+        s("destroy", () => {
+          i.$el.off("mouseenter", p),
+            i.$el.off("mouseleave", h),
+            i.autoplay.running && l();
+          y().removeEventListener("visibilitychange", d);
+        }),
+        Object.assign(i.autoplay, { pause: c, run: o, start: r, stop: l });
+    }
+    function be() {
       let e = document.querySelectorAll(
         '[class*="__swiper"]:not(.swiper-wrapper)'
       );
@@ -11407,10 +11548,12 @@
         });
     }
     window.addEventListener("load", function (e) {
-      ye(),
+      be(),
         document.querySelector(".main__swiper") &&
           new he(".main__body-left", {
-            modules: [ge, ve],
+            modules: [ge, ve, ye],
+            effect: "fade",
+            autoplay: { delay: 4e3, disableOnInteraction: !1 },
             observer: !0,
             observeParents: !0,
             slidesPerView: 1,
@@ -11453,18 +11596,18 @@
       class_loaded: "_lazy-loaded",
       use_native: !1,
     }).update();
-    let be = !1;
+    let we = !1;
     setTimeout(() => {
-      if (be) {
+      if (we) {
         let e = new Event("windowScroll");
         window.addEventListener("scroll", function (t) {
           document.dispatchEvent(e);
         });
       }
     }, 0);
-    var we = function () {
+    var xe = function () {
       return (
-        (we =
+        (xe =
           Object.assign ||
           function (e) {
             for (var t, i = 1, n = arguments.length; i < n; i++)
@@ -11472,29 +11615,29 @@
                 Object.prototype.hasOwnProperty.call(t, s) && (e[s] = t[s]);
             return e;
           }),
-        we.apply(this, arguments)
+        xe.apply(this, arguments)
       );
     };
-    var xe = "lgAfterAppendSlide",
-      Se = "lgInit",
-      ke = "lgHasVideo",
-      Ce = "lgContainerResize",
-      Ee = "lgUpdateSlides",
+    var Se = "lgAfterAppendSlide",
+      ke = "lgInit",
+      Ce = "lgHasVideo",
+      Ee = "lgContainerResize",
+      Te = "lgUpdateSlides",
       _e = "lgAfterAppendSubHtml",
-      Te = "lgBeforeOpen",
-      Pe = "lgAfterOpen",
+      Pe = "lgBeforeOpen",
+      Oe = "lgAfterOpen",
       Ie = "lgSlideItemLoad",
-      Oe = "lgBeforeSlide",
-      Me = "lgAfterSlide",
-      Le = "lgPosterClick",
-      Ae = "lgDragStart",
-      De = "lgDragMove",
-      ze = "lgDragEnd",
+      Me = "lgBeforeSlide",
+      Le = "lgAfterSlide",
+      Ae = "lgPosterClick",
+      De = "lgDragStart",
+      ze = "lgDragMove",
+      $e = "lgDragEnd",
       Be = "lgBeforeNextSlide",
-      $e = "lgBeforePrevSlide",
-      Ge = "lgBeforeClose",
-      Fe = "lgAfterClose",
-      je = {
+      Ge = "lgBeforePrevSlide",
+      Fe = "lgBeforeClose",
+      je = "lgAfterClose",
+      Re = {
         mode: "lg-slide",
         easing: "ease",
         speed: 400,
@@ -11565,7 +11708,7 @@
           playVideo: "Play video",
         },
       };
-    var Re = (function () {
+    var Ve = (function () {
       function e(e) {
         return (
           (this.cssVenderPrefixes = [
@@ -11647,18 +11790,18 @@
               this);
         }),
         (e.prototype.find = function (e) {
-          return Ve(this._getSelector(e, this.selector));
+          return Ne(this._getSelector(e, this.selector));
         }),
         (e.prototype.first = function () {
           return this.selector && void 0 !== this.selector.length
-            ? Ve(this.selector[0])
-            : Ve(this.selector);
+            ? Ne(this.selector[0])
+            : Ne(this.selector);
         }),
         (e.prototype.eq = function (e) {
-          return Ve(this.selector[e]);
+          return Ne(this.selector[e]);
         }),
         (e.prototype.parent = function () {
-          return Ve(this.selector.parentElement);
+          return Ne(this.selector.parentElement);
         }),
         (e.prototype.get = function () {
           return this._getFirstEl();
@@ -11845,7 +11988,7 @@
         (e.prototype.offset = function () {
           if (!this.firstElement) return { left: 0, top: 0 };
           var e = this.firstElement.getBoundingClientRect(),
-            t = Ve("body").style().marginLeft;
+            t = Ne("body").style().marginLeft;
           return {
             left: e.left - parseFloat(t) + this.scrollLeft(),
             top: e.top + this.scrollTop(),
@@ -11877,7 +12020,7 @@
         e
       );
     })();
-    function Ve(e) {
+    function Ne(e) {
       return (
         (function () {
           if ("function" == typeof window.CustomEvent) return !1;
@@ -11891,10 +12034,10 @@
           (Element.prototype.matches =
             Element.prototype.msMatchesSelector ||
             Element.prototype.webkitMatchesSelector),
-        new Re(e)
+        new Ve(e)
       );
     }
-    var Ne = [
+    var He = [
       "src",
       "sources",
       "subHtml",
@@ -11920,7 +12063,7 @@
       "disqusIdentifier",
       "disqusUrl",
     ];
-    function He(e) {
+    function qe(e) {
       return "href" === e
         ? "src"
         : (e = (e =
@@ -11929,19 +12072,19 @@
             return e[1].toUpperCase();
           }));
     }
-    var qe = function (e, t, i, n) {
+    var Ye = function (e, t, i, n) {
         void 0 === i && (i = 0);
-        var s = Ve(e).attr("data-lg-size") || n;
+        var s = Ne(e).attr("data-lg-size") || n;
         if (s) {
-          var o = s.split(",");
-          if (o[1])
-            for (var a = window.innerWidth, r = 0; r < o.length; r++) {
-              var l = o[r];
-              if (parseInt(l.split("-")[2], 10) > a) {
+          var a = s.split(",");
+          if (a[1])
+            for (var o = window.innerWidth, r = 0; r < a.length; r++) {
+              var l = a[r];
+              if (parseInt(l.split("-")[2], 10) > o) {
                 s = l;
                 break;
               }
-              r === o.length - 1 && (s = l);
+              r === a.length - 1 && (s = l);
             }
           var c = s.split("-"),
             d = parseInt(c[0], 10),
@@ -11954,29 +12097,29 @@
           return { width: d * m, height: u * m };
         }
       },
-      Ye = function (e, t, i, n, s) {
+      Xe = function (e, t, i, n, s) {
         if (s) {
-          var o = Ve(e).find("img").first();
-          if (o.get()) {
-            var a = t.get().getBoundingClientRect(),
-              r = a.width,
+          var a = Ne(e).find("img").first();
+          if (a.get()) {
+            var o = t.get().getBoundingClientRect(),
+              r = o.width,
               l = t.height() - (i + n),
-              c = o.width(),
-              d = o.height(),
-              u = o.style(),
+              c = a.width(),
+              d = a.height(),
+              u = a.style(),
               p =
                 (r - c) / 2 -
-                o.offset().left +
+                a.offset().left +
                 (parseFloat(u.paddingLeft) || 0) +
                 (parseFloat(u.borderLeft) || 0) +
-                Ve(window).scrollLeft() +
-                a.left,
+                Ne(window).scrollLeft() +
+                o.left,
               h =
                 (l - d) / 2 -
-                o.offset().top +
+                a.offset().top +
                 (parseFloat(u.paddingTop) || 0) +
                 (parseFloat(u.borderTop) || 0) +
-                Ve(window).scrollTop() +
+                Ne(window).scrollTop() +
                 i;
             return (
               "translate3d(" +
@@ -11992,7 +12135,7 @@
           }
         }
       },
-      Xe = function (e, t, i, n, s, o) {
+      We = function (e, t, i, n, s, a) {
         return (
           '<div class="lg-video-cont lg-has-iframe" style="width:' +
           e +
@@ -12003,14 +12146,14 @@
           "; max-height:" +
           n +
           '">\n                    <iframe class="lg-object" frameborder="0" ' +
-          (o ? 'title="' + o + '"' : "") +
+          (a ? 'title="' + a + '"' : "") +
           ' src="' +
           s +
           '"  allowfullscreen="true"></iframe>\n                </div>'
         );
       },
-      We = function (e, t, i, n, s, o) {
-        var a =
+      Ue = function (e, t, i, n, s, a) {
+        var o =
             "<img " +
             i +
             " " +
@@ -12023,8 +12166,8 @@
             t +
             '" />',
           r = "";
-        o &&
-          (r = ("string" == typeof o ? JSON.parse(o) : o).map(function (e) {
+        a &&
+          (r = ("string" == typeof a ? JSON.parse(a) : a).map(function (e) {
             var t = "";
             return (
               Object.keys(e).forEach(function (i) {
@@ -12033,24 +12176,24 @@
               "<source " + t + "></source>"
             );
           }));
-        return "" + r + a;
+        return "" + r + o;
       },
-      Ue = function (e) {
+      Ke = function (e) {
         for (var t = [], i = [], n = "", s = 0; s < e.length; s++) {
-          var o = e[s].split(" ");
-          "" === o[0] && o.splice(0, 1), i.push(o[0]), t.push(o[1]);
+          var a = e[s].split(" ");
+          "" === a[0] && a.splice(0, 1), i.push(a[0]), t.push(a[1]);
         }
-        for (var a = window.innerWidth, r = 0; r < t.length; r++)
-          if (parseInt(t[r], 10) > a) {
+        for (var o = window.innerWidth, r = 0; r < t.length; r++)
+          if (parseInt(t[r], 10) > o) {
             n = i[r];
             break;
           }
         return n;
       },
-      Ke = function (e) {
+      Ze = function (e) {
         return !!e && !!e.complete && 0 !== e.naturalWidth;
       },
-      Ze = function (e, t, i, n, s) {
+      Qe = function (e, t, i, n, s) {
         return (
           '<div class="lg-video-cont ' +
           (s && s.youtube
@@ -12071,29 +12214,29 @@
           '" />\n        </div>'
         );
       },
-      Qe = function (e, t, i, n) {
+      Je = function (e, t, i, n) {
         var s = [],
-          o = (function () {
+          a = (function () {
             for (var e = 0, t = 0, i = arguments.length; t < i; t++)
               e += arguments[t].length;
             var n = Array(e),
               s = 0;
             for (t = 0; t < i; t++)
-              for (var o = arguments[t], a = 0, r = o.length; a < r; a++, s++)
-                n[s] = o[a];
+              for (var a = arguments[t], o = 0, r = a.length; o < r; o++, s++)
+                n[s] = a[o];
             return n;
-          })(Ne, t);
+          })(He, t);
         return (
           [].forEach.call(e, function (e) {
-            for (var t = {}, a = 0; a < e.attributes.length; a++) {
-              var r = e.attributes[a];
+            for (var t = {}, o = 0; o < e.attributes.length; o++) {
+              var r = e.attributes[o];
               if (r.specified) {
-                var l = He(r.name),
+                var l = qe(r.name),
                   c = "";
-                o.indexOf(l) > -1 && (c = l), c && (t[c] = r.value);
+                a.indexOf(l) > -1 && (c = l), c && (t[c] = r.value);
               }
             }
-            var d = Ve(e),
+            var d = Ne(e),
               u = d.find("img").first().attr("alt"),
               p = d.attr("title"),
               h = n ? d.attr(n) : d.find("img").first().attr("src");
@@ -12105,10 +12248,10 @@
           s
         );
       },
-      Je = function () {
+      et = function () {
         return /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
       },
-      et = function (e, t, i) {
+      tt = function (e, t, i) {
         if (!e)
           return t
             ? { html5: !0 }
@@ -12123,19 +12266,19 @@
           s = e.match(
             /\/\/(?:www\.)?(?:player\.)?vimeo.com\/(?:video\/)?([0-9a-z\-_]+)(.*)?/i
           ),
-          o = e.match(
+          a = e.match(
             /https?:\/\/(.+)?(wistia\.com|wi\.st)\/(medias|embed)\/([0-9a-z\-_]+)(.*)/
           );
         return n
           ? { youtube: n }
           : s
           ? { vimeo: s }
-          : o
-          ? { wistia: o }
+          : a
+          ? { wistia: a }
           : void 0;
       },
-      tt = 0,
-      it = (function () {
+      it = 0,
+      nt = (function () {
         function e(e, t) {
           if (
             ((this.lgOpened = !1),
@@ -12152,10 +12295,10 @@
           )
             return this;
           if (
-            (tt++,
-            (this.lgId = tt),
+            (it++,
+            (this.lgId = it),
             (this.el = e),
-            (this.LGel = Ve(e)),
+            (this.LGel = Ne(e)),
             this.generateSettings(t),
             this.buildModules(),
             this.settings.dynamic &&
@@ -12174,17 +12317,17 @@
         return (
           (e.prototype.generateSettings = function (e) {
             if (
-              ((this.settings = we(we({}, je), e)),
+              ((this.settings = xe(xe({}, Re), e)),
               this.settings.isMobile &&
               "function" == typeof this.settings.isMobile
                 ? this.settings.isMobile()
-                : Je())
+                : et())
             ) {
-              var t = we(
-                we({}, this.settings.mobileSettings),
+              var t = xe(
+                xe({}, this.settings.mobileSettings),
                 this.settings.mobileSettings
               );
-              this.settings = we(we({}, this.settings), t);
+              this.settings = xe(xe({}, this.settings), t);
             }
           }),
           (e.prototype.normalizeSettings = function () {
@@ -12204,7 +12347,7 @@
             var e = this;
             this.addSlideVideoInfo(this.galleryItems),
               this.buildStructure(),
-              this.LGel.trigger(Se, { instance: this }),
+              this.LGel.trigger(ke, { instance: this }),
               this.settings.keyPress && this.keyPress(),
               setTimeout(function () {
                 e.enableDrag(), e.enableSwipe(), e.triggerPosterClick();
@@ -12218,10 +12361,10 @@
               var e = this,
                 t = function (t) {
                   var n = i.items[t],
-                    s = Ve(n),
-                    o = Re.generateUUID();
-                  s.attr("data-lg-id", o).on(
-                    "click.lgcustom-item-" + o,
+                    s = Ne(n),
+                    a = Ve.generateUUID();
+                  s.attr("data-lg-id", a).on(
+                    "click.lgcustom-item-" + a,
                     function (i) {
                       i.preventDefault();
                       var s = e.settings.index || t;
@@ -12239,7 +12382,7 @@
           (e.prototype.buildModules = function () {
             var e = this;
             this.settings.plugins.forEach(function (t) {
-              e.plugins.push(new t(e, Ve));
+              e.plugins.push(new t(e, Ne));
             });
           }),
           (e.prototype.validateLicense = function () {
@@ -12253,7 +12396,7 @@
               : console.error("Please provide a valid license key");
           }),
           (e.prototype.getSlideItem = function (e) {
-            return Ve(this.getSlideItemId(e));
+            return Ne(this.getSlideItemId(e));
           }),
           (e.prototype.getSlideItemId = function (e) {
             return "#lg-item-" + this.lgId + "-" + e;
@@ -12262,7 +12405,7 @@
             return e + "-" + this.lgId;
           }),
           (e.prototype.getElementById = function (e) {
-            return Ve("#" + this.getIdName(e));
+            return Ne("#" + this.getIdName(e));
           }),
           (e.prototype.manageSingleSlideClassName = function () {
             this.galleryItems.length < 2
@@ -12297,10 +12440,10 @@
               var s = this.settings.ariaLabelledby
                   ? 'aria-labelledby="' + this.settings.ariaLabelledby + '"'
                   : "",
-                o = this.settings.ariaDescribedby
+                a = this.settings.ariaDescribedby
                   ? 'aria-describedby="' + this.settings.ariaDescribedby + '"'
                   : "",
-                a =
+                o =
                   "lg-container " +
                   this.settings.addClass +
                   " " +
@@ -12324,13 +12467,13 @@
                   : "",
                 c =
                   '\n        <div class="' +
-                  a +
+                  o +
                   '" id="' +
                   this.getIdName("lg-container") +
                   '" tabindex="-1" aria-modal="true" ' +
                   s +
                   " " +
-                  o +
+                  a +
                   ' role="dialog"\n        >\n            <div id="' +
                   this.getIdName("lg-backdrop") +
                   '" class="lg-backdrop"></div>\n\n            <div id="' +
@@ -12356,9 +12499,9 @@
                   '" class="lg-components">\n                    ' +
                   (".lg-sub-html" === this.settings.appendSubHtmlTo ? i : "") +
                   "\n                </div>\n            </div>\n        </div>\n        ";
-              Ve(this.settings.container).append(c),
+              Ne(this.settings.container).append(c),
                 document.body !== this.settings.container &&
-                  Ve(this.settings.container).css("position", "relative"),
+                  Ne(this.settings.container).css("position", "relative"),
                 (this.outer = this.getElementById("lg-outer")),
                 (this.$lgComponents = this.getElementById("lg-components")),
                 (this.$backdrop = this.getElementById("lg-backdrop")),
@@ -12391,7 +12534,7 @@
                       '" download class="lg-download lg-icon"></a>'
                   ),
                 this.counter(),
-                Ve(window).on(
+                Ne(window).on(
                   "resize.lg.global" +
                     this.lgId +
                     " orientationchange.lg.global" +
@@ -12414,7 +12557,7 @@
                 i = t.top,
                 n = t.bottom;
               if (
-                ((this.currentImageSize = qe(
+                ((this.currentImageSize = Ye(
                   this.items[this.index],
                   this.outer,
                   i + n,
@@ -12429,7 +12572,7 @@
                   .first()
                   .attr("style", s);
               }
-              this.LGel.trigger(Ce);
+              this.LGel.trigger(Ee);
             }
           }),
           (e.prototype.resizeVideoSlide = function (e, t) {
@@ -12456,7 +12599,7 @@
                 this.getSlideItem(n).addClass("lg-current"),
                 (this.index = n),
                 this.updateCurrentCounter(n),
-                this.LGel.trigger(Ee);
+                this.LGel.trigger(Te);
             } else this.closeGallery();
           }),
           (e.prototype.getItems = function () {
@@ -12466,13 +12609,13 @@
             else if (this.settings.selector)
               if ("string" == typeof this.settings.selector)
                 if (this.settings.selectWithin) {
-                  var e = Ve(this.settings.selectWithin);
+                  var e = Ne(this.settings.selectWithin);
                   this.items = e.find(this.settings.selector).get();
                 } else
                   this.items = this.el.querySelectorAll(this.settings.selector);
               else this.items = this.settings.selector;
             else this.items = this.el.children;
-            return Qe(
+            return Je(
               this.items,
               this.settings.extraProps,
               this.settings.getCaptionFromTitleOrAlt,
@@ -12494,24 +12637,24 @@
               }),
                 this.$inner.append(s),
                 this.addHtml(e);
-              var o = "";
+              var a = "";
               this.mediaContainerPosition = this.getMediaContainerPosition();
-              var a = this.mediaContainerPosition,
-                r = a.top,
-                l = a.bottom;
+              var o = this.mediaContainerPosition,
+                r = o.top,
+                l = o.bottom;
               this.settings.allowMediaOverlap ||
                 this.setMediaContainerPosition(r, l);
               var c = this.galleryItems[e].__slideVideoInfo;
               this.zoomFromOrigin &&
                 t &&
-                ((this.currentImageSize = qe(
+                ((this.currentImageSize = Ye(
                   t,
                   this.outer,
                   r + l,
                   c && this.settings.videoMaxSize
                 )),
-                (o = Ye(t, this.outer, r, l, this.currentImageSize))),
-                (this.zoomFromOrigin && o) ||
+                (a = Xe(t, this.outer, r, l, this.currentImageSize))),
+                (this.zoomFromOrigin && a) ||
                   (this.outer.addClass(this.settings.startClass),
                   this.getSlideItem(e).removeClass("lg-complete"));
               var d = this.settings.zoomFromOrigin
@@ -12521,14 +12664,14 @@
                 i.outer.addClass("lg-components-open");
               }, d),
                 (this.index = e),
-                this.LGel.trigger(Te),
+                this.LGel.trigger(Pe),
                 this.getSlideItem(e).addClass("lg-current"),
                 (this.lGalleryOn = !1),
-                (this.prevScrollTop = Ve(window).scrollTop()),
+                (this.prevScrollTop = Ne(window).scrollTop()),
                 setTimeout(function () {
-                  if (i.zoomFromOrigin && o) {
+                  if (i.zoomFromOrigin && a) {
                     var t = i.getSlideItem(e);
-                    t.css("transform", o),
+                    t.css("transform", a),
                       setTimeout(function () {
                         t
                           .addClass("lg-start-progress lg-start-end-progress")
@@ -12546,15 +12689,15 @@
                     i.$backdrop.addClass("in"),
                       i.$container.addClass("lg-show-in");
                   }, 10),
-                    (i.zoomFromOrigin && o) ||
+                    (i.zoomFromOrigin && a) ||
                       setTimeout(function () {
                         i.outer.addClass("lg-visible");
                       }, i.settings.backdropDuration),
                     i.slide(e, !1, !1, !1),
-                    i.LGel.trigger(Pe);
+                    i.LGel.trigger(Oe);
                 }),
                 document.body === this.settings.container &&
-                  Ve("html").addClass("lg-on");
+                  Ne("html").addClass("lg-on");
             }
           }),
           (e.prototype.getMediaContainerPosition = function () {
@@ -12630,15 +12773,15 @@
                   (t =
                     this.settings.subHtmlSelectorRelative &&
                     !this.settings.dynamic
-                      ? Ve(this.items).eq(e).find(t).first().html()
-                      : Ve(t).first().html());
+                      ? Ne(this.items).eq(e).find(t).first().html()
+                      : Ne(t).first().html());
               } else t = "";
             if (".lg-item" !== this.settings.appendSubHtmlTo)
               i
                 ? this.outer.find(".lg-sub-html").load(i)
                 : this.outer.find(".lg-sub-html").html(t);
             else {
-              var s = Ve(this.getSlideItemId(e));
+              var s = Ne(this.getSlideItemId(e));
               i
                 ? s.load(i)
                 : s.append('<div class="lg-sub-html">' + t + "</div>");
@@ -12688,7 +12831,7 @@
           }),
           (e.prototype.getDummyImageContent = function (e, t, i) {
             var n;
-            if ((this.settings.dynamic || (n = Ve(this.items).eq(t)), n)) {
+            if ((this.settings.dynamic || (n = Ne(this.items).eq(t)), n)) {
               var s = void 0;
               if (
                 !(s = this.settings.exThumbImage
@@ -12696,7 +12839,7 @@
                   : n.find("img").first().attr("src"))
               )
                 return "";
-              var o =
+              var a =
                 "<img " +
                 i +
                 ' style="' +
@@ -12707,7 +12850,7 @@
               return (
                 e.addClass("lg-first-slide"),
                 this.outer.addClass("lg-first-slide-loading"),
-                o
+                a
               );
             }
             return "";
@@ -12715,21 +12858,21 @@
           (e.prototype.setImgMarkup = function (e, t, i) {
             var n = this.galleryItems[i],
               s = n.alt,
-              o = n.srcset,
-              a = n.sizes,
+              a = n.srcset,
+              o = n.sizes,
               r = n.sources,
               l = s ? 'alt="' + s + '"' : "",
               c =
                 '<picture class="lg-img-wrap"> ' +
                 (this.isFirstSlideWithZoomAnimation()
                   ? this.getDummyImageContent(t, i, l)
-                  : We(i, e, l, o, a, r)) +
+                  : Ue(i, e, l, a, o, r)) +
                 "</picture>";
             t.prepend(c);
           }),
           (e.prototype.onSlideObjectLoad = function (e, t, i, n) {
             var s = e.find(".lg-object").first();
-            Ke(s.get()) || t
+            Ze(s.get()) || t
               ? i()
               : (s.on("load.lg error.lg", function () {
                   i && i();
@@ -12738,13 +12881,13 @@
                   n && n();
                 }));
           }),
-          (e.prototype.onLgObjectLoad = function (e, t, i, n, s, o) {
-            var a = this;
+          (e.prototype.onLgObjectLoad = function (e, t, i, n, s, a) {
+            var o = this;
             this.onSlideObjectLoad(
               e,
-              o,
+              a,
               function () {
-                a.triggerSlideItemLoad(e, t, i, n, s);
+                o.triggerSlideItemLoad(e, t, i, n, s);
               },
               function () {
                 e.addClass("lg-complete lg-complete_"),
@@ -12755,12 +12898,12 @@
             );
           }),
           (e.prototype.triggerSlideItemLoad = function (e, t, i, n, s) {
-            var o = this,
-              a = this.galleryItems[t],
-              r = s && "video" === this.getSlideType(a) && !a.poster ? n : 0;
+            var a = this,
+              o = this.galleryItems[t],
+              r = s && "video" === this.getSlideType(o) && !o.poster ? n : 0;
             setTimeout(function () {
               e.addClass("lg-complete lg-complete_"),
-                o.LGel.trigger(Ie, {
+                a.LGel.trigger(Ie, {
                   index: t,
                   delay: i || 0,
                   isFirstSlide: s,
@@ -12777,7 +12920,7 @@
           (e.prototype.addSlideVideoInfo = function (e) {
             var t = this;
             e.forEach(function (e, i) {
-              (e.__slideVideoInfo = et(e.src, !!e.video, i)),
+              (e.__slideVideoInfo = tt(e.src, !!e.video, i)),
                 e.__slideVideoInfo &&
                   t.settings.loadYouTubePoster &&
                   !e.poster &&
@@ -12791,9 +12934,9 @@
           (e.prototype.loadContent = function (e, t) {
             var i = this,
               n = this.galleryItems[e],
-              s = Ve(this.getSlideItemId(e)),
-              o = n.poster,
-              a = n.srcset,
+              s = Ne(this.getSlideItemId(e)),
+              a = n.poster,
+              o = n.srcset,
               r = n.sizes,
               l = n.sources,
               c = n.src,
@@ -12801,7 +12944,7 @@
               u = d && "string" == typeof d ? JSON.parse(d) : d;
             if (n.responsive) {
               var p = n.responsive.split(",");
-              c = Ue(p) || c;
+              c = Ke(p) || c;
             }
             var h = n.__slideVideoInfo,
               f = "",
@@ -12820,7 +12963,7 @@
                 var y = this.mediaContainerPosition,
                   b = y.top,
                   w = y.bottom,
-                  x = qe(
+                  x = Ye(
                     this.items[e],
                     this.outer,
                     b + w,
@@ -12829,7 +12972,7 @@
                 f = this.getVideoContStyle(x);
               }
               if (g) {
-                var S = Xe(
+                var S = We(
                   this.settings.iframeWidth,
                   this.settings.iframeHeight,
                   this.settings.iframeMaxWidth,
@@ -12838,35 +12981,35 @@
                   n.iframeTitle
                 );
                 s.prepend(S);
-              } else if (o) {
+              } else if (a) {
                 var k = "";
                 m &&
                   this.zoomFromOrigin &&
                   this.currentImageSize &&
                   (k = this.getDummyImageContent(s, e, ""));
-                S = Ze(o, k || "", f, this.settings.strings.playVideo, h);
+                S = Qe(a, k || "", f, this.settings.strings.playVideo, h);
                 s.prepend(S);
               } else if (h) {
                 S = '<div class="lg-video-cont " style="' + f + '"></div>';
                 s.prepend(S);
-              } else if ((this.setImgMarkup(c, s, e), a || l)) {
+              } else if ((this.setImgMarkup(c, s, e), o || l)) {
                 var C = s.find(".lg-object");
                 this.initPictureFill(C);
               }
-              (o || h) &&
-                this.LGel.trigger(ke, {
+              (a || h) &&
+                this.LGel.trigger(Ce, {
                   index: e,
                   src: c,
                   html5Video: u,
-                  hasPoster: !!o,
+                  hasPoster: !!a,
                 }),
-                this.LGel.trigger(xe, { index: e }),
+                this.LGel.trigger(Se, { index: e }),
                 this.lGalleryOn &&
                   ".lg-item" === this.settings.appendSubHtmlTo &&
                   this.addHtml(e);
             }
             var E = 0;
-            v && !Ve(document.body).hasClass("lg-from-hash") && (E = v),
+            v && !Ne(document.body).hasClass("lg-from-hash") && (E = v),
               this.isFirstSlideWithZoomAnimation() &&
                 (setTimeout(function () {
                   s.removeClass(
@@ -12879,18 +13022,18 @@
                       "image" === i.getSlideType(n) &&
                       (s
                         .find(".lg-img-wrap")
-                        .append(We(e, c, "", a, r, n.sources)),
-                      a || l)
+                        .append(Ue(e, c, "", o, r, n.sources)),
+                      o || l)
                     ) {
                       var t = s.find(".lg-object");
                       i.initPictureFill(t);
                     }
                     ("image" === i.getSlideType(n) ||
-                      ("video" === i.getSlideType(n) && o)) &&
+                      ("video" === i.getSlideType(n) && a)) &&
                       (i.onLgObjectLoad(s, e, v, E, !0, !1),
                       i.onSlideObjectLoad(
                         s,
-                        !(!h || !h.html5 || o),
+                        !(!h || !h.html5 || a),
                         function () {
                           i.loadContentOnFirstSlideLoad(e, s, E);
                         },
@@ -12901,8 +13044,8 @@
                   }, this.settings.startAnimationDuration + 100)),
               s.addClass("lg-loaded"),
               (this.isFirstSlideWithZoomAnimation() &&
-                ("video" !== this.getSlideType(n) || o)) ||
-                this.onLgObjectLoad(s, e, v, E, m, !(!h || !h.html5 || o)),
+                ("video" !== this.getSlideType(n) || a)) ||
+                this.onLgObjectLoad(s, e, v, E, m, !(!h || !h.html5 || a)),
               (this.zoomFromOrigin && this.currentImageSize) ||
                 !s.hasClass("lg-complete_") ||
                 this.lGalleryOn ||
@@ -12934,9 +13077,9 @@
             var n = this;
             void 0 === i && (i = 0);
             var s = [],
-              o = Math.max(i, 3);
-            o = Math.min(o, this.galleryItems.length);
-            var a = "lg-item-" + this.lgId + "-" + t;
+              a = Math.max(i, 3);
+            a = Math.min(a, this.galleryItems.length);
+            var o = "lg-item-" + this.lgId + "-" + t;
             if (this.galleryItems.length <= 3)
               return (
                 this.galleryItems.forEach(function (e, t) {
@@ -12945,19 +13088,19 @@
                 s
               );
             if (e < (this.galleryItems.length - 1) / 2) {
-              for (var r = e; r > e - o / 2 && r >= 0; r--)
+              for (var r = e; r > e - a / 2 && r >= 0; r--)
                 s.push("lg-item-" + this.lgId + "-" + r);
               var l = s.length;
-              for (r = 0; r < o - l; r++)
+              for (r = 0; r < a - l; r++)
                 s.push("lg-item-" + this.lgId + "-" + (e + r + 1));
             } else {
               for (
                 r = e;
-                r <= this.galleryItems.length - 1 && r < e + o / 2;
+                r <= this.galleryItems.length - 1 && r < e + a / 2;
                 r++
               )
                 s.push("lg-item-" + this.lgId + "-" + r);
-              for (l = s.length, r = 0; r < o - l; r++)
+              for (l = s.length, r = 0; r < a - l; r++)
                 s.push("lg-item-" + this.lgId + "-" + (e - r - 1));
             }
             return (
@@ -12971,7 +13114,7 @@
                         "-" +
                         (this.galleryItems.length - 1)
                     )),
-              -1 === s.indexOf(a) && s.push("lg-item-" + this.lgId + "-" + t),
+              -1 === s.indexOf(o) && s.push("lg-item-" + this.lgId + "-" + t),
               s
             );
           }),
@@ -12988,7 +13131,7 @@
                   i.$inner.append('<div id="' + e + '" class="lg-item"></div>');
               }),
               this.currentItemsInDom.forEach(function (e) {
-                -1 === n.indexOf(e) && Ve("#" + e).remove();
+                -1 === n.indexOf(e) && Ne("#" + e).remove();
               }),
               n
             );
@@ -13041,16 +13184,16 @@
           }),
           (e.prototype.slide = function (e, t, i, n) {
             var s = this,
-              o = this.getPreviousSlideIndex();
+              a = this.getPreviousSlideIndex();
             if (
-              ((this.currentItemsInDom = this.organizeSlideItems(e, o)),
-              !this.lGalleryOn || o !== e)
+              ((this.currentItemsInDom = this.organizeSlideItems(e, a)),
+              !this.lGalleryOn || a !== e)
             ) {
-              var a = this.galleryItems.length;
+              var o = this.galleryItems.length;
               if (!this.lgBusy) {
                 this.settings.counter && this.updateCurrentCounter(e);
                 var r = this.getSlideItem(e),
-                  l = this.getSlideItem(o),
+                  l = this.getSlideItem(a),
                   c = this.galleryItems[e],
                   d = c.__slideVideoInfo;
                 if (
@@ -13061,7 +13204,7 @@
                   var u = this.mediaContainerPosition,
                     p = u.top,
                     h = u.bottom,
-                    f = qe(
+                    f = Ye(
                       this.items[e],
                       this.outer,
                       p + h,
@@ -13070,8 +13213,8 @@
                   this.resizeVideoSlide(e, f);
                 }
                 if (
-                  (this.LGel.trigger(Oe, {
-                    prevIndex: o,
+                  (this.LGel.trigger(Me, {
+                    prevIndex: a,
                     index: e,
                     fromTouch: !!t,
                     fromThumb: !!i,
@@ -13079,7 +13222,7 @@
                   (this.lgBusy = !0),
                   clearTimeout(this.hideBarTimeout),
                   this.arrowDisable(e),
-                  n || (e < o ? (n = "prev") : e > o && (n = "next")),
+                  n || (e < a ? (n = "prev") : e > a && (n = "next")),
                   t)
                 ) {
                   this.outer
@@ -13087,11 +13230,11 @@
                     .removeClass("lg-prev-slide lg-current lg-next-slide");
                   var g = void 0,
                     m = void 0;
-                  a > 2
+                  o > 2
                     ? ((g = e - 1),
                       (m = e + 1),
-                      ((0 === e && o === a - 1) || (e === a - 1 && 0 === o)) &&
-                        ((m = 0), (g = a - 1)))
+                      ((0 === e && a === o - 1) || (e === o - 1 && 0 === a)) &&
+                        ((m = 0), (g = o - 1)))
                     : ((g = 0), (m = 1)),
                     "prev" === n
                       ? this.getSlideItem(m).addClass("lg-next-slide")
@@ -13110,8 +13253,8 @@
                   setTimeout(function () {
                     (s.lgBusy = !1),
                       l.removeClass("lg-slide-progress"),
-                      s.LGel.trigger(Me, {
-                        prevIndex: o,
+                      s.LGel.trigger(Le, {
+                        prevIndex: a,
                         index: e,
                         fromTouch: t,
                         fromThumb: i,
@@ -13136,22 +13279,22 @@
           (e.prototype.touchMove = function (e, t, i) {
             var n = t.pageX - e.pageX,
               s = t.pageY - e.pageY,
-              o = !1;
+              a = !1;
             if (
               (this.swipeDirection
-                ? (o = !0)
+                ? (a = !0)
                 : Math.abs(n) > 15
-                ? ((this.swipeDirection = "horizontal"), (o = !0))
+                ? ((this.swipeDirection = "horizontal"), (a = !0))
                 : Math.abs(s) > 15 &&
-                  ((this.swipeDirection = "vertical"), (o = !0)),
-              o)
+                  ((this.swipeDirection = "vertical"), (a = !0)),
+              a)
             ) {
-              var a = this.getSlideItem(this.index);
+              var o = this.getSlideItem(this.index);
               if ("horizontal" === this.swipeDirection) {
                 null == i || i.preventDefault(),
                   this.outer.addClass("lg-dragging"),
-                  this.setTranslate(a, n, 0);
-                var r = a.get().offsetWidth,
+                  this.setTranslate(o, n, 0);
+                var r = o.get().offsetWidth,
                   l = (15 * r) / 100 - Math.abs((10 * n) / 100);
                 this.setTranslate(
                   this.outer.find(".lg-prev-slide").first(),
@@ -13172,7 +13315,7 @@
                 var c = 1 - Math.abs(s) / window.innerHeight;
                 this.$backdrop.css("opacity", c);
                 var d = 1 - Math.abs(s) / (2 * window.innerWidth);
-                this.setTranslate(a, 0, s, d, d),
+                this.setTranslate(o, 0, s, d, d),
                   Math.abs(s) > 100 &&
                     this.outer
                       .addClass("lg-hide-items")
@@ -13190,15 +13333,15 @@
                   s.outer
                     .removeClass("lg-dragging lg-hide-items")
                     .addClass("lg-components-open");
-                var o = !0;
+                var a = !0;
                 if ("horizontal" === s.swipeDirection) {
                   n = e.pageX - t.pageX;
-                  var a = Math.abs(e.pageX - t.pageX);
-                  n < 0 && a > s.settings.swipeThreshold
-                    ? (s.goToNextSlide(!0), (o = !1))
+                  var o = Math.abs(e.pageX - t.pageX);
+                  n < 0 && o > s.settings.swipeThreshold
+                    ? (s.goToNextSlide(!0), (a = !1))
                     : n > 0 &&
-                      a > s.settings.swipeThreshold &&
-                      (s.goToPrevSlide(!0), (o = !1));
+                      o > s.settings.swipeThreshold &&
+                      (s.goToPrevSlide(!0), (a = !1));
                 } else if ("vertical" === s.swipeDirection) {
                   if (
                     ((n = Math.abs(e.pageY - t.pageY)),
@@ -13209,10 +13352,10 @@
                 }
                 if (
                   (s.outer.find(".lg-item").removeAttr("style"),
-                  o && Math.abs(e.pageX - t.pageX) < 5)
+                  a && Math.abs(e.pageX - t.pageX) < 5)
                 ) {
-                  var r = Ve(i.target);
-                  s.isPosterElement(r) && s.LGel.trigger(Le);
+                  var r = Ne(i.target);
+                  s.isPosterElement(r) && s.LGel.trigger(Ae);
                 }
                 s.swipeDirection = void 0;
               }),
@@ -13232,7 +13375,7 @@
               (this.$inner.on("touchstart.lg", function (i) {
                 e.dragOrSwipeEnabled = !0;
                 var n = e.getSlideItem(e.index);
-                (!Ve(i.target).hasClass("lg-item") &&
+                (!Ne(i.target).hasClass("lg-item") &&
                   !n.get().contains(i.target)) ||
                   e.outer.hasClass("lg-zoomed") ||
                   e.lgBusy ||
@@ -13245,23 +13388,23 @@
                     pageY: i.targetTouches[0].pageY,
                   }));
               }),
-              this.$inner.on("touchmove.lg", function (o) {
+              this.$inner.on("touchmove.lg", function (a) {
                 s &&
                   "swipe" === e.touchAction &&
-                  1 === o.targetTouches.length &&
+                  1 === a.targetTouches.length &&
                   ((i = {
-                    pageX: o.targetTouches[0].pageX,
-                    pageY: o.targetTouches[0].pageY,
+                    pageX: a.targetTouches[0].pageX,
+                    pageY: a.targetTouches[0].pageY,
                   }),
-                  e.touchMove(t, i, o),
+                  e.touchMove(t, i, a),
                   (n = !0));
               }),
-              this.$inner.on("touchend.lg", function (o) {
+              this.$inner.on("touchend.lg", function (a) {
                 if ("swipe" === e.touchAction) {
-                  if (n) (n = !1), e.touchEnd(i, t, o);
+                  if (n) (n = !1), e.touchEnd(i, t, a);
                   else if (s) {
-                    var a = Ve(o.target);
-                    e.isPosterElement(a) && e.LGel.trigger(Le);
+                    var o = Ne(a.target);
+                    e.isPosterElement(o) && e.LGel.trigger(Ae);
                   }
                   (e.touchAction = void 0), (s = !1);
                 }
@@ -13277,7 +13420,7 @@
               (this.outer.on("mousedown.lg", function (i) {
                 e.dragOrSwipeEnabled = !0;
                 var s = e.getSlideItem(e.index);
-                (Ve(i.target).hasClass("lg-item") ||
+                (Ne(i.target).hasClass("lg-item") ||
                   s.get().contains(i.target)) &&
                   (e.outer.hasClass("lg-zoomed") ||
                     e.lgBusy ||
@@ -13289,22 +13432,22 @@
                       (e.outer.get().scrollLeft += 1),
                       (e.outer.get().scrollLeft -= 1),
                       e.outer.removeClass("lg-grab").addClass("lg-grabbing"),
-                      e.LGel.trigger(Ae))));
+                      e.LGel.trigger(De))));
               }),
-              Ve(window).on("mousemove.lg.global" + this.lgId, function (o) {
+              Ne(window).on("mousemove.lg.global" + this.lgId, function (a) {
                 n &&
                   e.lgOpened &&
                   ((s = !0),
-                  (i = { pageX: o.pageX, pageY: o.pageY }),
+                  (i = { pageX: a.pageX, pageY: a.pageY }),
                   e.touchMove(t, i),
-                  e.LGel.trigger(De));
+                  e.LGel.trigger(ze));
               }),
-              Ve(window).on("mouseup.lg.global" + this.lgId, function (o) {
+              Ne(window).on("mouseup.lg.global" + this.lgId, function (a) {
                 if (e.lgOpened) {
-                  var a = Ve(o.target);
+                  var o = Ne(a.target);
                   s
-                    ? ((s = !1), e.touchEnd(i, t, o), e.LGel.trigger(ze))
-                    : e.isPosterElement(a) && e.LGel.trigger(Le),
+                    ? ((s = !1), e.touchEnd(i, t, a), e.LGel.trigger($e))
+                    : e.isPosterElement(o) && e.LGel.trigger(Ae),
                     n &&
                       ((n = !1),
                       e.outer.removeClass("lg-grabbing").addClass("lg-grab"));
@@ -13315,8 +13458,8 @@
             var e = this;
             this.$inner.on("click.lg", function (t) {
               !e.dragOrSwipeEnabled &&
-                e.isPosterElement(Ve(t.target)) &&
-                e.LGel.trigger(Le);
+                e.isPosterElement(Ne(t.target)) &&
+                e.LGel.trigger(Ae);
             });
           }),
           (e.prototype.manageSwipeClass = function () {
@@ -13360,11 +13503,11 @@
               this.lgBusy ||
                 (this.index > 0
                   ? (this.index--,
-                    this.LGel.trigger($e, { index: this.index, fromTouch: e }),
+                    this.LGel.trigger(Ge, { index: this.index, fromTouch: e }),
                     this.slide(this.index, !!e, !1, "prev"))
                   : i
                   ? ((this.index = this.galleryItems.length - 1),
-                    this.LGel.trigger($e, { index: this.index, fromTouch: e }),
+                    this.LGel.trigger(Ge, { index: this.index, fromTouch: e }),
                     this.slide(this.index, !!e, !1, "prev"))
                   : this.settings.slideEndAnimation &&
                     !e &&
@@ -13375,7 +13518,7 @@
           }),
           (e.prototype.keyPress = function () {
             var e = this;
-            Ve(window).on("keydown.lg.global" + this.lgId, function (t) {
+            Ne(window).on("keydown.lg.global" + this.lgId, function (t) {
               e.lgOpened &&
                 !0 === e.settings.escKey &&
                 27 === t.keyCode &&
@@ -13468,7 +13611,7 @@
           }),
           (e.prototype.invalidateItems = function () {
             for (var e = 0; e < this.items.length; e++) {
-              var t = Ve(this.items[e]);
+              var t = Ne(this.items[e]);
               t.off("click.lgcustom-item-" + t.attr("data-lg-id"));
             }
           }),
@@ -13481,14 +13624,14 @@
               }),
                 this.settings.closeOnTap &&
                   (this.outer.on("mousedown.lg", function (i) {
-                    var n = Ve(i.target);
+                    var n = Ne(i.target);
                     t = !!e.isSlideElement(n);
                   }),
                   this.outer.on("mousemove.lg", function () {
                     t = !1;
                   }),
                   this.outer.on("mouseup.lg", function (i) {
-                    var n = Ve(i.target);
+                    var n = Ne(i.target);
                     e.isSlideElement(n) &&
                       t &&
                       (e.outer.hasClass("lg-dragging") || e.closeGallery());
@@ -13498,23 +13641,23 @@
           (e.prototype.closeGallery = function (e) {
             var t = this;
             if (!this.lgOpened || (!this.settings.closable && !e)) return 0;
-            this.LGel.trigger(Ge), Ve(window).scrollTop(this.prevScrollTop);
+            this.LGel.trigger(Fe), Ne(window).scrollTop(this.prevScrollTop);
             var i,
               n = this.items[this.index];
             if (this.zoomFromOrigin && n) {
               var s = this.mediaContainerPosition,
-                o = s.top,
-                a = s.bottom,
+                a = s.top,
+                o = s.bottom,
                 r = this.galleryItems[this.index],
                 l = r.__slideVideoInfo,
                 c = r.poster,
-                d = qe(
+                d = Ye(
                   n,
                   this.outer,
-                  o + a,
+                  a + o,
                   l && c && this.settings.videoMaxSize
                 );
-              i = Ye(n, this.outer, o, a, d);
+              i = Xe(n, this.outer, a, o, d);
             }
             this.zoomFromOrigin && i
               ? (this.outer.addClass("lg-closing lg-zoom-from-image"),
@@ -13533,7 +13676,7 @@
               (this.zoomFromOrigin = this.settings.zoomFromOrigin),
               clearTimeout(this.hideBarTimeout),
               (this.hideBarTimeout = !1),
-              Ve("html").removeClass("lg-on"),
+              Ne("html").removeClass("lg-on"),
               this.outer.removeClass("lg-visible lg-components-open"),
               this.$backdrop.removeClass("in").css("opacity", 0);
             var u =
@@ -13559,7 +13702,7 @@
                   t.outer.removeClass("lg-closing " + t.settings.startClass),
                   t.getSlideItem(t.index).removeClass("lg-start-end-progress"),
                   t.$inner.empty(),
-                  t.lgOpened && t.LGel.trigger(Fe, { instance: t }),
+                  t.lgOpened && t.LGel.trigger(je, { instance: t }),
                   t.outer.get() && t.outer.get().blur(),
                   (t.lgOpened = !1);
               }, u + 100),
@@ -13593,7 +13736,7 @@
               (this.galleryItems = e || this.getItems()),
               this.updateControls(),
               this.openGalleryOnItemClick(),
-              this.LGel.trigger(Ee);
+              this.LGel.trigger(Te);
           }),
           (e.prototype.updateControls = function () {
             this.addSlideVideoInfo(this.galleryItems),
@@ -13607,7 +13750,7 @@
               setTimeout(function () {
                 e.destroyModules(!0),
                   e.settings.dynamic || e.invalidateItems(),
-                  Ve(window).off(".lg.global" + e.lgId),
+                  Ne(window).off(".lg.global" + e.lgId),
                   e.LGel.off(".lg"),
                   e.$container.remove();
               }, t),
@@ -13617,12 +13760,12 @@
           e
         );
       })();
-    const nt = function (e, t) {
-      return new it(e, t);
+    const st = function (e, t) {
+      return new nt(e, t);
     };
-    var st = function () {
+    var at = function () {
         return (
-          (st =
+          (at =
             Object.assign ||
             function (e) {
               for (var t, i = 1, n = arguments.length; i < n; i++)
@@ -13630,7 +13773,7 @@
                   Object.prototype.hasOwnProperty.call(t, s) && (e[s] = t[s]);
               return e;
             }),
-          st.apply(this, arguments)
+          at.apply(this, arguments)
         );
       },
       ot = {
@@ -13646,21 +13789,21 @@
           viewActualSize: "View actual size",
         },
       },
-      at = "lgContainerResize",
-      rt = "lgBeforeOpen",
-      lt = "lgAfterOpen",
-      ct = "lgSlideItemLoad",
-      dt = "lgAfterSlide",
-      ut = "lgRotateLeft",
-      pt = "lgRotateRight",
-      ht = "lgFlipHorizontal",
-      ft = "lgFlipVertical",
-      gt = (function () {
+      rt = "lgContainerResize",
+      lt = "lgBeforeOpen",
+      ct = "lgAfterOpen",
+      dt = "lgSlideItemLoad",
+      ut = "lgAfterSlide",
+      pt = "lgRotateLeft",
+      ht = "lgRotateRight",
+      ft = "lgFlipHorizontal",
+      gt = "lgFlipVertical",
+      mt = (function () {
         function e(e, t) {
           return (
             (this.core = e),
             (this.$LG = t),
-            (this.settings = st(st({}, ot), this.core.settings)),
+            (this.settings = at(at({}, ot), this.core.settings)),
             this
           );
         }
@@ -13702,33 +13845,33 @@
               }, i + 30));
           }),
           (e.prototype.enableZoomOnSlideItemLoad = function () {
-            this.core.LGel.on(ct + ".zoom", this.enableZoom.bind(this));
+            this.core.LGel.on(dt + ".zoom", this.enableZoom.bind(this));
           }),
           (e.prototype.getModifier = function (e, t, i) {
             var n = e;
             e = Math.abs(e);
             var s = this.getCurrentTransform(i);
             if (!s) return 1;
-            var o = 1;
+            var a = 1;
             if ("X" === t) {
-              var a = Math.sign(parseFloat(s[0]));
+              var o = Math.sign(parseFloat(s[0]));
               0 === e || 180 === e
-                ? (o = 1)
+                ? (a = 1)
                 : 90 === e &&
-                  (o =
-                    (-90 === n && 1 === a) || (90 === n && -1 === a) ? -1 : 1),
-                (o *= a);
+                  (a =
+                    (-90 === n && 1 === o) || (90 === n && -1 === o) ? -1 : 1),
+                (a *= o);
             } else {
               var r = Math.sign(parseFloat(s[3]));
-              if (0 === e || 180 === e) o = 1;
+              if (0 === e || 180 === e) a = 1;
               else if (90 === e) {
                 var l = parseFloat(s[1]),
                   c = parseFloat(s[2]);
-                o = Math.sign(l * c * n * r);
+                a = Math.sign(l * c * n * r);
               }
-              o *= r;
+              a *= r;
             }
-            return o;
+            return a;
           }),
           (e.prototype.getImageSize = function (e, t, i) {
             return (
@@ -13813,9 +13956,9 @@
                 (this.containerRect.width - this.imageXSize) / 2 +
                 this.containerRect.left,
               s = this.core.mediaContainerPosition,
-              o = s.top,
-              a = s.bottom,
-              r = Math.abs(o - a) / 2,
+              a = s.top,
+              o = s.bottom,
+              r = Math.abs(a - o) / 2,
               l =
                 (this.containerRect.height -
                   this.imageYSize -
@@ -13960,15 +14103,15 @@
                         }, 300)));
                 }),
                 this.core.LGel.on(
-                  at +
-                    ".zoom " +
-                    pt +
-                    ".zoom " +
-                    ut +
+                  rt +
                     ".zoom " +
                     ht +
                     ".zoom " +
+                    pt +
+                    ".zoom " +
                     ft +
+                    ".zoom " +
+                    gt +
                     ".zoom",
                   function () {
                     e.core.lgOpened &&
@@ -14004,16 +14147,16 @@
                   .on("click.lg", function () {
                     e.setActualSize(e.core.index);
                   }),
-                this.core.LGel.on(rt + ".zoom", function () {
+                this.core.LGel.on(lt + ".zoom", function () {
                   e.core.outer.find(".lg-item").removeClass("lg-zoomable");
                 }),
-                this.core.LGel.on(lt + ".zoom", function () {
+                this.core.LGel.on(ct + ".zoom", function () {
                   (e.scrollTop = e.$LG(window).scrollTop()),
                     (e.pageX = e.core.outer.width() / 2),
                     (e.pageY = e.core.outer.height() / 2 + e.scrollTop),
                     (e.scale = 1);
                 }),
-                this.core.LGel.on(dt + ".zoom", function (t) {
+                this.core.LGel.on(ut + ".zoom", function (t) {
                   var i = t.detail.prevIndex;
                   (e.scale = 1),
                     (e.positionChanged = !1),
@@ -14076,16 +14219,16 @@
                     (e.core.touchAction = "pinch"),
                     (t = e.getTouchDistance(i))));
             }),
-              this.core.$inner.on("touchmove.lg", function (o) {
+              this.core.$inner.on("touchmove.lg", function (a) {
                 if (
-                  2 === o.targetTouches.length &&
+                  2 === a.targetTouches.length &&
                   "pinch" === e.core.touchAction &&
-                  (e.$LG(o.target).hasClass("lg-item") ||
-                    s.get().contains(o.target))
+                  (e.$LG(a.target).hasClass("lg-item") ||
+                    s.get().contains(a.target))
                 ) {
-                  o.preventDefault();
-                  var a = e.getTouchDistance(o),
-                    r = t - a;
+                  a.preventDefault();
+                  var o = e.getTouchDistance(a),
+                    r = t - o;
                   !i && Math.abs(r) > 5 && (i = !0),
                     i &&
                       ((e.scale = Math.max(1, n + 0.008 * -r)),
@@ -14106,21 +14249,21 @@
                   (e.core.touchAction = void 0));
               });
           }),
-          (e.prototype.touchendZoom = function (e, t, i, n, s, o) {
-            var a = t.x - e.x,
+          (e.prototype.touchendZoom = function (e, t, i, n, s, a) {
+            var o = t.x - e.x,
               r = t.y - e.y,
-              l = Math.abs(a) / s + 1,
+              l = Math.abs(o) / s + 1,
               c = Math.abs(r) / s + 1;
-            l > 2 && (l += 1), c > 2 && (c += 1), (a *= l), (r *= c);
+            l > 2 && (l += 1), c > 2 && (c += 1), (o *= l), (r *= c);
             var d = this.core
                 .getSlideItem(this.core.index)
                 .find(".lg-img-wrap")
                 .first(),
               u = {};
-            (u.x = this.left + a * this.modifierX),
+            (u.x = this.left + o * this.modifierX),
               (u.y = this.top + r * this.modifierY);
-            var p = this.getPossibleSwipeDragCords(o);
-            (Math.abs(a) > 15 || Math.abs(r) > 15) &&
+            var p = this.getPossibleSwipeDragCords(a);
+            (Math.abs(o) > 15 || Math.abs(r) > 15) &&
               (n &&
                 (this.isBeyondPossibleTop(u.y, p.minY)
                   ? (u.y = p.minY)
@@ -14135,32 +14278,32 @@
               (this.positionChanged = !0));
           }),
           (e.prototype.getZoomSwipeCords = function (e, t, i, n, s) {
-            var o = {};
+            var a = {};
             if (n) {
               if (
-                ((o.y = this.top + (t.y - e.y) * this.modifierY),
-                this.isBeyondPossibleTop(o.y, s.minY))
+                ((a.y = this.top + (t.y - e.y) * this.modifierY),
+                this.isBeyondPossibleTop(a.y, s.minY))
               ) {
-                var a = s.minY - o.y;
-                o.y = s.minY - a / 6;
-              } else if (this.isBeyondPossibleBottom(o.y, s.maxY)) {
-                var r = o.y - s.maxY;
-                o.y = s.maxY + r / 6;
+                var o = s.minY - a.y;
+                a.y = s.minY - o / 6;
+              } else if (this.isBeyondPossibleBottom(a.y, s.maxY)) {
+                var r = a.y - s.maxY;
+                a.y = s.maxY + r / 6;
               }
-            } else o.y = this.top;
+            } else a.y = this.top;
             if (i) {
               if (
-                ((o.x = this.left + (t.x - e.x) * this.modifierX),
-                this.isBeyondPossibleLeft(o.x, s.minX))
+                ((a.x = this.left + (t.x - e.x) * this.modifierX),
+                this.isBeyondPossibleLeft(a.x, s.minX))
               ) {
-                var l = s.minX - o.x;
-                o.x = s.minX - l / 6;
-              } else if (this.isBeyondPossibleRight(o.x, s.maxX)) {
-                var c = o.x - s.maxX;
-                o.x = s.maxX + c / 6;
+                var l = s.minX - a.x;
+                a.x = s.minX - l / 6;
+              } else if (this.isBeyondPossibleRight(a.x, s.maxX)) {
+                var c = a.x - s.maxX;
+                a.x = s.maxX + c / 6;
               }
-            } else o.x = this.left;
-            return o;
+            } else a.x = this.left;
+            return a;
           }),
           (e.prototype.isBeyondPossibleLeft = function (e, t) {
             return e >= t;
@@ -14182,9 +14325,9 @@
             var i = t || this.scale || 1,
               n = Math.abs(i),
               s = this.core.mediaContainerPosition,
-              o = s.top,
-              a = s.bottom,
-              r = Math.abs(o - a) / 2,
+              a = s.top,
+              o = s.bottom,
+              r = Math.abs(a - o) / 2,
               l =
                 (this.imageYSize - this.containerRect.height) / 2 +
                 r * this.modifierX,
@@ -14207,8 +14350,8 @@
               i = this,
               n = {},
               s = {},
-              o = !1,
               a = !1,
+              o = !1,
               r = !1,
               l = new Date(),
               c = (new Date(), this.core.getSlideItem(this.core.index));
@@ -14228,9 +14371,9 @@
                     .getSlideItem(i.core.index)
                     .find(".lg-img-wrap")
                     .first());
-                var o = i.getDragAllowedAxises(Math.abs(i.rotateValue));
-                (r = o.allowY),
-                  ((a = o.allowX) || r) &&
+                var a = i.getDragAllowedAxises(Math.abs(i.rotateValue));
+                (r = a.allowY),
+                  ((o = a.allowX) || r) &&
                     (n = i.getSwipeCords(s, Math.abs(i.rotateValue))),
                   (e = i.getPossibleSwipeDragCords(i.rotateValue)),
                   i.core.outer.addClass(
@@ -14248,9 +14391,9 @@
                   l.preventDefault(),
                     (i.core.touchAction = "zoomSwipe"),
                     (s = i.getSwipeCords(l, Math.abs(i.rotateValue)));
-                  var d = i.getZoomSwipeCords(n, s, a, r, e);
+                  var d = i.getZoomSwipeCords(n, s, o, r, e);
                   (Math.abs(s.x - n.x) > 15 || Math.abs(s.y - n.y) > 15) &&
-                    ((o = !0), i.setZoomSwipeStyles(t, d));
+                    ((a = !0), i.setZoomSwipeStyles(t, d));
                 }
               }),
               this.core.$inner.on("touchend.lg", function (e) {
@@ -14262,12 +14405,12 @@
                   if (
                     ((i.core.touchAction = void 0),
                     i.core.outer.removeClass("lg-zoom-dragging"),
-                    !o)
+                    !a)
                   )
                     return;
-                  o = !1;
+                  a = !1;
                   var t = new Date().valueOf() - l.valueOf();
-                  i.touchendZoom(n, s, a, r, t, i.rotateValue);
+                  i.touchendZoom(n, s, o, r, t, i.rotateValue);
                 }
               });
           }),
@@ -14277,18 +14420,18 @@
               i,
               n,
               s = this,
-              o = {},
               a = {},
+              o = {},
               r = !1,
               l = !1,
               c = !1,
               d = !1;
             this.core.outer.on("mousedown.lg.zoom", function (t) {
               if (s.isImageSlide()) {
-                var a = s.core.getSlideItem(s.core.index);
+                var o = s.core.getSlideItem(s.core.index);
                 if (
                   s.$LG(t.target).hasClass("lg-item") ||
-                  a.get().contains(t.target)
+                  o.get().contains(t.target)
                 ) {
                   (e = new Date()),
                     (n = s.core
@@ -14302,7 +14445,7 @@
                       s.$LG(t.target).hasClass("lg-object") &&
                       (c || d) &&
                       (t.preventDefault(),
-                      (o = s.getDragCords(t, Math.abs(s.rotateValue))),
+                      (a = s.getDragCords(t, Math.abs(s.rotateValue))),
                       (i = s.getPossibleSwipeDragCords(s.rotateValue)),
                       (r = !0),
                       (s.core.outer.get().scrollLeft += 1),
@@ -14319,8 +14462,8 @@
                 "mousemove.lg.zoom.global" + this.core.lgId,
                 function (e) {
                   if (r) {
-                    (l = !0), (a = s.getDragCords(e, Math.abs(s.rotateValue)));
-                    var t = s.getZoomSwipeCords(o, a, c, d, i);
+                    (l = !0), (o = s.getDragCords(e, Math.abs(s.rotateValue)));
+                    var t = s.getZoomSwipeCords(a, o, c, d, i);
                     s.setZoomSwipeStyles(n, t);
                   }
                 }
@@ -14333,11 +14476,11 @@
                       ((t = new Date()),
                       (r = !1),
                       s.core.outer.removeClass("lg-zoom-dragging"),
-                      l && (o.x !== a.x || o.y !== a.y))
+                      l && (a.x !== o.x || a.y !== o.y))
                     ) {
-                      a = s.getDragCords(i, Math.abs(s.rotateValue));
+                      o = s.getDragCords(i, Math.abs(s.rotateValue));
                       var n = t.valueOf() - e.valueOf();
-                      s.touchendZoom(o, a, c, d, n, s.rotateValue);
+                      s.touchendZoom(a, o, c, d, n, s.rotateValue);
                     }
                     l = !1;
                   }
@@ -14358,10 +14501,10 @@
           e
         );
       })();
-    const mt = gt;
-    var vt = function () {
+    const vt = mt;
+    var yt = function () {
         return (
-          (vt =
+          (yt =
             Object.assign ||
             function (e) {
               for (var t, i = 1, n = arguments.length; i < n; i++)
@@ -14369,19 +14512,19 @@
                   Object.prototype.hasOwnProperty.call(t, s) && (e[s] = t[s]);
               return e;
             }),
-          vt.apply(this, arguments)
+          yt.apply(this, arguments)
         );
       },
-      yt = {
+      bt = {
         fullScreen: !0,
         fullscreenPluginStrings: { toggleFullscreen: "Toggle Fullscreen" },
       },
-      bt = (function () {
+      wt = (function () {
         function e(e, t) {
           return (
             (this.core = e),
             (this.$LG = t),
-            (this.settings = vt(vt({}, yt), this.core.settings)),
+            (this.settings = yt(yt({}, bt), this.core.settings)),
             this
           );
         }
@@ -14474,10 +14617,10 @@
           e
         );
       })();
-    const wt = bt;
-    var xt = function () {
+    const xt = wt;
+    var St = function () {
         return (
-          (xt =
+          (St =
             Object.assign ||
             function (e) {
               for (var t, i = 1, n = arguments.length; i < n; i++)
@@ -14485,16 +14628,16 @@
                   Object.prototype.hasOwnProperty.call(t, s) && (e[s] = t[s]);
               return e;
             }),
-          xt.apply(this, arguments)
+          St.apply(this, arguments)
         );
       },
-      St = "lgAfterAppendSlide",
-      kt = "lgBeforeSlide",
-      Ct = "lgRotateLeft",
-      Et = "lgRotateRight",
+      kt = "lgAfterAppendSlide",
+      Ct = "lgBeforeSlide",
+      Et = "lgRotateLeft",
+      Tt = "lgRotateRight",
       _t = "lgFlipHorizontal",
-      Tt = "lgFlipVertical",
-      Pt = {
+      Pt = "lgFlipVertical",
+      Ot = {
         rotate: !0,
         rotateSpeed: 400,
         rotateLeft: !0,
@@ -14513,7 +14656,7 @@
           return (
             (this.core = e),
             (this.$LG = t),
-            (this.settings = xt(xt({}, Pt), this.core.settings)),
+            (this.settings = St(St({}, Ot), this.core.settings)),
             this
           );
         }
@@ -14547,7 +14690,7 @@
             this.settings.rotate &&
               (this.buildTemplates(),
               (this.rotateValuesList = {}),
-              this.core.LGel.on(St + ".rotate", function (t) {
+              this.core.LGel.on(kt + ".rotate", function (t) {
                 var i = t.detail.index;
                 e.core
                   .getSlideItem(i)
@@ -14575,7 +14718,7 @@
                 .find("#lg-flip-ver")
                 .first()
                 .on("click.lg", this.flipVertical.bind(this)),
-              this.core.LGel.on(kt + ".rotate", function (t) {
+              this.core.LGel.on(Ct + ".rotate", function (t) {
                 e.rotateValuesList[t.detail.index] ||
                   (e.rotateValuesList[t.detail.index] = {
                     rotate: 0,
@@ -14603,14 +14746,14 @@
           (e.prototype.rotateLeft = function () {
             (this.rotateValuesList[this.core.index].rotate -= 90),
               this.applyStyles(),
-              this.triggerEvents(Ct, {
+              this.triggerEvents(Et, {
                 rotate: this.rotateValuesList[this.core.index].rotate,
               });
           }),
           (e.prototype.rotateRight = function () {
             (this.rotateValuesList[this.core.index].rotate += 90),
               this.applyStyles(),
-              this.triggerEvents(Et, {
+              this.triggerEvents(Tt, {
                 rotate: this.rotateValuesList[this.core.index].rotate,
               });
           }),
@@ -14659,7 +14802,7 @@
             (90 !== t && 270 !== t) || (i = "flipHorizontal"),
               (this.rotateValuesList[this.core.index][i] *= -1),
               this.applyStyles(),
-              this.triggerEvents(Tt, {
+              this.triggerEvents(Pt, {
                 flipVertical: this.rotateValuesList[this.core.index][i],
               });
           }),
@@ -14687,15 +14830,15 @@
           e
         );
       })();
-    const Ot = It,
-      Mt = document.querySelectorAll("[data-gallery]");
-    Mt.length &&
-      Mt.forEach((e) => {
+    const Mt = It,
+      Lt = document.querySelectorAll("[data-gallery]");
+    Lt.length &&
+      Lt.forEach((e) => {
         e.addEventListener("lgInit", (e) => {
           console.log(e);
         }),
-          nt(e, {
-            plugins: [mt, wt, Ot],
+          st(e, {
+            plugins: [vt, xt, Mt],
             fullScreen: !0,
             selector: "[data-gallery-item]",
             zoom: !0,
@@ -14713,13 +14856,13 @@
           return i.initCustomEvent(e, t.bubbles, t.cancelable, t.detail), i;
         };
       })();
-    var Lt = "slider__item_active",
-      At = "slider__control_show",
-      Dt = "slider__indicators",
-      zt = "slider__indicator",
+    var At = "slider__item_active",
+      Dt = "slider__control_show",
+      zt = "slider__indicators",
+      $t = "slider__indicator",
       Bt = "slider__indicator_active",
-      $t = "transition-none";
-    function Gt(e, t) {
+      Gt = "transition-none";
+    function Ft(e, t) {
       for (var i in ((this._$root = document.querySelector(e)),
       (this._$wrapper = this._$root.querySelector(".slider__wrapper")),
       (this._$items = this._$root.querySelector(".slider__items")),
@@ -14745,13 +14888,13 @@
           (this._$itemList[n].dataset.index = n),
           (this._$itemList[n].dataset.translate = 0);
       if (this._config.loop) {
-        var o = this._$itemList.length - 1,
-          a = 100 * -this._$itemList.length;
-        (this._$itemList[o].dataset.order = -1),
-          (this._$itemList[o].dataset.translate =
+        var a = this._$itemList.length - 1,
+          o = 100 * -this._$itemList.length;
+        (this._$itemList[a].dataset.order = -1),
+          (this._$itemList[a].dataset.translate =
             100 * -this._$itemList.length);
-        var r = "translateX(".concat(a, "%)");
-        this._$itemList[o].style.transform = r;
+        var r = "translateX(".concat(o, "%)");
+        this._$itemList[a].style.transform = r;
       }
       this._addIndicators(),
         this._refreshExtremeValues(),
@@ -14759,14 +14902,14 @@
         this._addEventListener(),
         this._autoplay();
     }
-    (Gt.prototype._setActiveClass = function () {
+    (Ft.prototype._setActiveClass = function () {
       var e, t, i, n;
       for (e = 0, t = this._$itemList.length; e < t; e++)
         (i = this._$itemList[e]),
           (n = parseInt(i.dataset.index)),
           this._currentIndex === n
-            ? i.classList.add(Lt)
-            : i.classList.remove(Lt);
+            ? i.classList.add(At)
+            : i.classList.remove(At);
       var s = this._$root.querySelectorAll(".slider__indicator");
       if (s.length)
         for (e = 0, t = s.length; e < t; e++)
@@ -14775,21 +14918,21 @@
             this._currentIndex === n
               ? i.classList.add(Bt)
               : i.classList.remove(Bt);
-      var o = this._$root.querySelectorAll(".slider__control");
-      if (o.length)
+      var a = this._$root.querySelectorAll(".slider__control");
+      if (a.length)
         if (this._config.loop)
-          for (e = 0, t = o.length; e < t; e++) o[e].classList.add(At);
+          for (e = 0, t = a.length; e < t; e++) a[e].classList.add(Dt);
         else
           0 === this._currentIndex
-            ? (o[0].classList.remove(At), o[1].classList.add(At))
+            ? (a[0].classList.remove(Dt), a[1].classList.add(Dt))
             : this._currentIndex === this._$itemList.length - 1
-            ? (o[0].classList.add(At), o[1].classList.remove(At))
-            : (o[0].classList.add(At), o[1].classList.add(At));
+            ? (a[0].classList.add(Dt), a[1].classList.remove(Dt))
+            : (a[0].classList.add(Dt), a[1].classList.add(Dt));
     }),
-      (Gt.prototype._move = function () {
+      (Ft.prototype._move = function () {
         if ("none" === this._direction)
           return (
-            this._$items.classList.remove($t),
+            this._$items.classList.remove(Gt),
             void (this._$items.style.transform = "translateX(".concat(
               this._transform,
               "%)"
@@ -14814,12 +14957,12 @@
           (this._$items.style.transform = "translateX(".concat(t, "%)")),
           this._setActiveClass();
       }),
-      (Gt.prototype._moveTo = function (e) {
+      (Ft.prototype._moveTo = function (e) {
         var t = this._currentIndex;
         this._direction = e > t ? "next" : "prev";
         for (var i = 0; i < Math.abs(e - t); i++) this._move();
       }),
-      (Gt.prototype._autoplay = function (e) {
+      (Ft.prototype._autoplay = function (e) {
         if (this._config.autoplay)
           return "stop" === e
             ? (clearInterval(this._intervalId), void (this._intervalId = null))
@@ -14833,18 +14976,18 @@
                 ))
               );
       }),
-      (Gt.prototype._addIndicators = function () {
+      (Ft.prototype._addIndicators = function () {
         if (!this._$root.querySelector(".slider__indicators")) {
           var e = document.createElement("ol");
-          e.className = Dt;
+          e.className = zt;
           for (var t = 0, i = this._$itemList.length; t < i; t++) {
             var n = document.createElement("li");
-            (n.className = zt), (n.dataset.slideTo = t), e.appendChild(n);
+            (n.className = $t), (n.dataset.slideTo = t), e.appendChild(n);
           }
           this._$root.appendChild(e);
         }
       }),
-      (Gt.prototype._refreshExtremeValues = function () {
+      (Ft.prototype._refreshExtremeValues = function () {
         var e = this._$itemList;
         (this._minOrder = parseInt(e[0].dataset.order)),
           (this._maxOrder = this._minOrder),
@@ -14865,7 +15008,7 @@
               (this._maxTranslate = parseInt(n.dataset.translate)));
         }
       }),
-      (Gt.prototype._balancingItems = function () {
+      (Ft.prototype._balancingItems = function () {
         if (this._balancingItemsFlag) {
           var e,
             t = this._$wrapper.getBoundingClientRect(),
@@ -14873,19 +15016,19 @@
             n = this._$itemList.length;
           if ("next" === this._direction) {
             var s = t.left,
-              o = this._$itemWithMinOrder;
+              a = this._$itemWithMinOrder;
             (e = this._minTranslate),
-              o.getBoundingClientRect().right < s - i &&
-                ((o.dataset.order = this._minOrder + n),
+              a.getBoundingClientRect().right < s - i &&
+                ((a.dataset.order = this._minOrder + n),
                 (e += 100 * n),
-                (o.dataset.translate = e),
-                (o.style.transform = "translateX(".concat(e, "%)")),
+                (a.dataset.translate = e),
+                (a.style.transform = "translateX(".concat(e, "%)")),
                 this._refreshExtremeValues());
           } else if ("prev" === this._direction) {
-            var a = t.right,
+            var o = t.right,
               r = this._$itemWithMaxOrder;
             (e = this._maxTranslate),
-              r.getBoundingClientRect().left > a + i &&
+              r.getBoundingClientRect().left > o + i &&
                 ((r.dataset.order = this._maxOrder - n),
                 (e -= 100 * n),
                 (r.dataset.translate = e),
@@ -14895,7 +15038,7 @@
           requestAnimationFrame(this._balancingItems.bind(this));
         }
       }),
-      (Gt.prototype._addEventListener = function () {
+      (Ft.prototype._addEventListener = function () {
         var e = this._$items;
         function t(e) {
           this._autoplay("stop");
@@ -14922,9 +15065,9 @@
                   (i /= 4),
                 this._currentIndex <= 0 && i <= 0 && (i /= 4));
             var s = (i / this._$wrapper.getBoundingClientRect().width) * 100,
-              o = this._transform - s;
-            this._$items.classList.add($t),
-              (this._$items.style.transform = "translateX(".concat(o, "%)"));
+              a = this._transform - s;
+            this._$items.classList.add(Gt),
+              (this._$items.style.transform = "translateX(".concat(a, "%)"));
           }
         }
         function n(e) {
@@ -14937,7 +15080,7 @@
                 (i /= 4),
               this._currentIndex <= 0 && i <= 0 && (i /= 4));
             var n = (i / this._$wrapper.getBoundingClientRect().width) * 100;
-            this._$items.classList.remove($t),
+            this._$items.classList.remove(Gt),
               n > 20
                 ? ((this._direction = "next"), this._move())
                 : n < -20
@@ -15001,12 +15144,12 @@
         ) {
           var s = !1;
           try {
-            var o = Object.defineProperty({}, "passive", {
+            var a = Object.defineProperty({}, "passive", {
               get: function () {
                 s = !0;
               },
             });
-            window.addEventListener("testPassiveListener", null, o);
+            window.addEventListener("testPassiveListener", null, a);
           } catch (e) {}
           this._$root.addEventListener(
             "touchstart",
@@ -15040,13 +15183,13 @@
             }.bind(this)
           );
       }),
-      (Gt.prototype.next = function () {
+      (Ft.prototype.next = function () {
         (this._direction = "next"), this._move();
       }),
-      (Gt.prototype.prev = function () {
+      (Ft.prototype.prev = function () {
         (this._direction = "prev"), this._move();
       }),
-      (Gt.prototype.autoplay = function (e) {
+      (Ft.prototype.autoplay = function (e) {
         this._autoplay("stop");
       });
     document.querySelector(".menu__item");
@@ -15058,10 +15201,10 @@
           t.click();
         });
     }
-    const Ft = document.querySelectorAll(".card-preview-slider");
-    Ft.length > 0 &&
+    const jt = document.querySelectorAll(".card-preview-slider");
+    jt.length > 0 &&
       (n.any()
-        ? Ft.forEach((e) => {
+        ? jt.forEach((e) => {
             const t = e.querySelector(".swiper");
             new Swiper(t, {
               slidePreview: 1,
@@ -15097,7 +15240,7 @@
               window.location.href = i;
             }
           }),
-          Ft.forEach((e) => {
+          jt.forEach((e) => {
             e.addEventListener("mouseleave", (e) => {
               const t = e.currentTarget,
                 i = t.querySelectorAll(".swiper-slide");
@@ -15129,7 +15272,7 @@
         let e = document.querySelector(".icon-menu");
         e &&
           e.addEventListener("click", function (e) {
-            o && (a(), document.documentElement.classList.toggle("menu-open"));
+            a && (o(), document.documentElement.classList.toggle("menu-open"));
           });
       })(),
       new t({}),
@@ -15179,11 +15322,11 @@
                 s = t.getAttribute("method")
                   ? t.getAttribute("method").trim()
                   : "GET",
-                o = new FormData(t);
+                a = new FormData(t);
               t.classList.add("_sending");
-              const a = await fetch(e, { method: s, body: o });
-              if (a.ok) {
-                await a.json();
+              const o = await fetch(e, { method: s, body: a });
+              if (o.ok) {
+                await o.json();
                 t.classList.remove("_sending"), n(t);
               } else alert("Ошибка"), t.classList.remove("_sending");
             } else t.hasAttribute("data-dev") && (i.preventDefault(), n(t));
