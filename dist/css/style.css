@@ -349,6 +349,7 @@ body.popup-show::after {
   align-items: flex-start;
   display: flex;
   flex-direction: column;
+  padding-right: 10px;
 }
 .popup__tuya-left p {
   font-family: "Kelson";
@@ -505,8 +506,7 @@ body.popup-show::after {
   height: 20px;
   left: 0;
   bottom: 15%;
-  background: url("../img/icons/phone.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons/phone.png") no-repeat;
 }
 @media (max-width: 47.99875em) {
   .header__phone-item::before {
@@ -531,8 +531,7 @@ body.popup-show::after {
   height: 13px;
   left: 0;
   bottom: 35%;
-  background: url("../img/icons/mail.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons/mail.png") no-repeat;
 }
 @media (max-width: 47.99875em) {
   .header__mail-item::before {
@@ -770,8 +769,7 @@ body.popup-show::after {
   height: 20px;
   left: 0;
   bottom: 15%;
-  background: url("../img/icons/phone.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons/phone.png") no-repeat;
 }
 @media (max-width: 29.99875em) {
   .footer__phone-item {
@@ -796,8 +794,7 @@ body.popup-show::after {
   height: 20px;
   left: 0;
   bottom: 15%;
-  background: url("../img/icons/mail.png");
-  background-repeat: no-repeat;
+  background: url("../img/icons/mail.png") no-repeat;
 }
 @media (any-hover: hover) {
   .footer__mail-item:hover {
@@ -1045,7 +1042,7 @@ body.popup-show::after {
   height: 65px;
   left: -55%;
   bottom: 40%;
-  background: url("../img/main/arrow.png");
+  background-image: url("../img/main/arrow.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -1133,8 +1130,7 @@ body.popup-show::after {
   height: 20px;
   right: 5px;
   bottom: 8%;
-  background: url("../img/main/fail.png");
-  background-repeat: no-repeat;
+  background: url("../img/main/fail.png") no-repeat;
 }
 @media (max-width: 47.99875em) {
   .main__form-fail label::before {
@@ -1156,7 +1152,7 @@ body.popup-show::after {
   height: 20px;
   right: 5px;
   bottom: -20%;
-  background: url("../img/main/right-arrow.png");
+  background-image: url("../img/main/right-arrow.png");
   background-repeat: no-repeat;
   background-size: 20px;
 }
@@ -1227,7 +1223,7 @@ body.popup-show::after {
 }
 
 .advantages__section {
-  background: url("../img/advantages/advantages_bg.png");
+  background-image: url("../img/advantages/advantages_bg.png");
   background-repeat: no-repeat;
   background-size: cover;
   padding-top: calc(3.4375rem + 0.9375 * (100vw - 75rem) / 45);
@@ -1440,13 +1436,14 @@ body.popup-show::after {
 .cooperation__section {
   padding-top: calc(3.4375rem + 0.9375 * (100vw - 75rem) / 45);
   padding-bottom: calc(3.125rem + 1.25 * (100vw - 75rem) / 45);
-  background: url("../img/cooperation/man.png");
+  background-image: url("../img/cooperation/man.png");
+  background-repeat: no-repeat;
   background-position: right bottom;
   background-size: cover;
 }
 @media (max-width: 950px) {
   .cooperation__section {
-    background: none;
+    background-image: none;
   }
 }
 .cooperation__title {
