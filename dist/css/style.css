@@ -1134,7 +1134,7 @@ body.popup-show::after {
 }
 @media (max-width: 47.99875em) {
   .main__form-fail label::before {
-    bottom: -3%;
+    bottom: 3%;
   }
 }
 .main__form-text {
@@ -1443,7 +1443,7 @@ body.popup-show::after {
 }
 @media (max-width: 950px) {
   .cooperation__section {
-    background-image: none;
+    background-image: none !important;
   }
 }
 .cooperation__title {

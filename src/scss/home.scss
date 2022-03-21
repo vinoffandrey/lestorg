@@ -260,7 +260,7 @@
 				bottom: 8%;
 				background: url("../img/main/fail.png") no-repeat;
 				@media (max-width: $mobile) {
-					bottom: -3%;
+					bottom: 3%;
 				}
 			}
 		}
@@ -623,7 +623,7 @@
 		background-position: right bottom;
 		background-size: cover;
 		@media (max-width: 950px) {
-			background-image: none;
+			background-image: none !important;
 		}
 	}
 
