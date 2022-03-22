@@ -122,7 +122,13 @@
 
 	&__body-item {
 	}
-
+	&__text-info {
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 24, 18, 1, $containerWidth, $minWidth);
+		font-weight: 400;
+		color: $mainColor;
+		text-align: center;
+	}
 	&__body-subitem-top {
 		flex: 1 1 100%;
 		width: 100%;

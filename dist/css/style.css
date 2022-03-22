@@ -1657,6 +1657,13 @@ body.popup-show::after {
     min-width: max-content;
   }
 }
+.pilomaterial__text-info {
+  font-family: "Kelson";
+  font-size: calc(1.125rem + 0.375 * (100vw - 75rem) / 45);
+  font-weight: 400;
+  color: #252525;
+  text-align: center;
+}
 .pilomaterial__body-subitem-top {
   flex: 1 1 100%;
   width: 100%;
