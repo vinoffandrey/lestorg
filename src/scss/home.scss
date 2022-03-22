@@ -138,6 +138,11 @@
 		margin-bottom: -2%;
 		margin-left: 0;
 		margin-right: 0;
+		opacity: 0;
+		transition: all 0.3s ease 0s;
+		&.swiper-initialized {
+			opacity: 1;
+		}
 		&::before {
 			content: "";
 			@include adaptiveValue("width", 380, 280, 1, $containerWidth, $minWidth);
@@ -288,7 +293,22 @@
 			}
 		}
 	}
-
+	&__form-politics {
+		text-align: center;
+		@include adaptiveValue("margin-top", 12, 12, 1, $containerWidth, $minWidth);
+		a {
+			border-bottom: 1px dashed $mainColor;
+			color: $mainColor;
+			transition: all 0.3s ease 0s;
+			line-height: 1.2;
+			@media (any-hover: hover) {
+				&:hover {
+					border-bottom: 1 px dashed #f0a116;
+					color: #f0a116;
+				}
+			}
+		}
+	}
 	&__form-button {
 		@include adaptiveValue("margin-top", 25, 20, 1, $containerWidth, $minWidth);
 		button {
@@ -298,6 +318,13 @@
 }
 .swiper {
 	&__item {
+		&:not(:first-child) {
+			display: none;
+			.swiper-initialized & {
+				display: block;
+			}
+		}
+
 		img {
 			pointer-events: none;
 			max-width: 100%;
@@ -678,6 +705,53 @@
 				width: 20px;
 				height: 20px;
 				color: #f0a116;
+			}
+		}
+	}
+}
+
+//Privacy__container
+//=========================================================================================
+
+.privacy__section {
+	@include adaptiveValue("padding-top", 50, 35, 1, $containerWidth, $minWidth);
+	@include adaptiveValue("padding-bottom", 70, 50, 1, $containerWidth, $minWidth);
+}
+.privacy__container {
+	h1 {
+		font-family: $fontFamily;
+		@include adaptiveValue("font-size", 35, 28, 1, $containerWidth, $minWidth);
+		font-weight: 700;
+		color: $mainColor;
+	}
+	ul {
+		li {
+			font-family: $fontFamily;
+			@include adaptiveValue("font-size", 25, 20, 1, $containerWidth, $minWidth);
+			font-weight: 700;
+			color: $mainColor;
+			@include adaptiveValue("padding-top", 30, 20, 1, $containerWidth, $minWidth);
+			@include adaptiveValue("padding-bottom", 30, 20, 1, $containerWidth, $minWidth);
+		}
+		ul {
+			p {
+				@include adaptiveValue("padding-top", 8, 5, 1, $containerWidth, $minWidth);
+				@include adaptiveValue("padding-bottom", 8, 5, 1, $containerWidth, $minWidth);
+				line-height: 1.3;
+				font-family: $fontFamily;
+				@include adaptiveValue("font-size", 20, 17, 1, $containerWidth, $minWidth);
+				font-weight: 300;
+				color: $mainColor;
+			}
+			li {
+				font-family: $fontFamily;
+				@include adaptiveValue("font-size", 20, 17, 1, $containerWidth, $minWidth);
+				font-weight: 300;
+				color: $mainColor;
+				@include adaptiveValue("padding-top", 8, 6, 1, $containerWidth, $minWidth);
+				@include adaptiveValue("padding-bottom", 8, 6, 1, $containerWidth, $minWidth);
+				line-height: 1.3;
+				@include adaptiveValue("margin-left", 25, 20, 1, $containerWidth, $minWidth);
 			}
 		}
 	}
